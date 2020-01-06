@@ -1,0 +1,39 @@
+{
+  "results": {
+    "placed": [
+      {
+        "name": "Jimmy James",
+        "email": "jim@umich.edu",
+        "campus": "central",
+        "gender": "male",
+        "year": "freshman",
+        "group": 1
+      },
+      {
+        "name": "Hannah Connors",
+        "email": "han@umich.edu",
+        "campus": "north",
+        "gender": "female",
+        "year": "senior",
+        "group": 2
+      },
+      {
+        "name": "Malc Maturen",
+        "email": "malc@umich.edu",
+        "campus": "central",
+        "gender": "male",
+        "year": "junior",
+        "group": 1
+      }
+    ],
+    "flagged": [
+      {
+        "name": "Evan Jonokuchi",
+        "email": "jono@umich.edu",
+        "campus": "central",
+        "gender": "male",
+        "year": "junior"
+      }
+    ]
+  }
+}

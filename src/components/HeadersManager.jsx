@@ -5,7 +5,7 @@ class HeadersManager extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentSort: props.currentSort,
+      currentSort: 'Name',
     };
     this.selectActiveHeader = this.selectActiveHeader.bind(this);
   }
@@ -20,6 +20,7 @@ class HeadersManager extends React.Component {
           active={header === this.state.currentSort}
           setSortHandler={this.selectActiveHeader}
           sortHandler={this.props.sortHandler}
+          flagged={this.props.flagged}
         />
       );
       headers.push(newHeader);

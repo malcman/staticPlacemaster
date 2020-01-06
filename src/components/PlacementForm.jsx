@@ -69,7 +69,7 @@ class PlacementForm extends React.Component {
         {backButton}
         <form
           id="newPlacementForm"
-          action="/placement/create/"
+          action={this.props.actionURL}
           method="POST"
           encType="multipart/form-data"
           onSubmit={this.handleSubmit}
@@ -86,14 +86,14 @@ class PlacementForm extends React.Component {
           <h3>Sign-Up File:</h3>
           <input
             type="file"
-            name="signUpFile"
+            name="responses_csv_file"
             onChange={this.handleSignUpChange}
           />
 
           <h3>Groups File:</h3>
           <input
             type="file"
-            name="groupsFile"
+            name="rooms_csv_file"
             onChange={this.handleGroupsChange}
           />
           <input

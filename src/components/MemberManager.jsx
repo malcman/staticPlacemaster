@@ -16,20 +16,43 @@ class MemberManager extends React.Component {
     // TODO: change to get this from data
     // column headers for each member
     const memberHeaders = ['Group', 'Name', 'Email', 'Campus', 'Gender', 'Year'];
+
+    const flaggedSection = (!this.props.flaggedMembers) ? null : (
+      <div>
+        <h4 id="flaggedHeader">
+          Flagged
+          <div className="alert">
+            <p>{this.props.flaggedMembers.length}</p>
+          </div>
+        </h4>
+        <HeadersManager
+          headers={memberHeaders}
+          sortHandler={this.props.sortHandler}
+          flagged
+        />
+        <ul id="FlaggedMemberList">
+          {this.props.flaggedMembers}
+        </ul>
+      </div>
+    );
     return (
       <section
         className={className}
         id="MemberManager"
         aria-labelledby="MemberTag"
       >
-        <HeadersManager
-          headers={memberHeaders}
-          currentSort="Name"
-          sortHandler={this.props.sortHandler}
-        />
-        <ul id="MemberList">
-          {this.props.members}
-        </ul>
+        {flaggedSection}
+        <div>
+          <h4>Placed</h4>
+          <HeadersManager
+            headers={memberHeaders}
+            sortHandler={this.props.sortHandler}
+            flagged={false}
+          />
+          <ul id="MemberList">
+            {this.props.members}
+          </ul>
+        </div>
       </section>
     );
   }

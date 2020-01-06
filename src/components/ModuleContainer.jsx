@@ -83,6 +83,7 @@ class ModuleContainer extends React.Component {
         key={1}
         activeIndex={this.getActiveIndex(1)}
         backHandler={this.decrementFocusIndex}
+        actionURL={'http://localhost:8080/create-groups'}
       />,
     ];
     return panels;

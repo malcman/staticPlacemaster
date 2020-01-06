@@ -1,5 +1,6 @@
 $mainDark: #275076;
 $darkerMain: #2B4157;
+$warningRed: #BC1E1E;
 
 * {
   margin: 0;
@@ -51,6 +52,15 @@ ul {
   display: block;
   margin:  5% auto 10%;
   font-size: 1.3em;
+}
+
+#csvButton {
+  font-size: 0.9em;
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px 10px;
+  background-color: white;
+  border-radius: 5px;
+  margin-left: 15px;
 }
 
 #newPlacementForm {
@@ -222,6 +232,7 @@ ul {
   color: white;
   background-color: $mainDark;
   padding: 20px 0 10px 15px;
+  font-size: 1.5em;
 }
 
 #placementTabs {
@@ -264,7 +275,7 @@ ul {
   // border: solid black;
   // border-width: 0 1px 0 0;
   cursor: pointer;
-  h4 {
+  h5 {
     font-weight: 400;
     position: relative;
   }
@@ -272,10 +283,10 @@ ul {
     border-right: none;
   }
   &.active {
-    h4 {
+    h5 {
       font-weight: 600;
     }
-    h4::after {
+    h5::after {
       content: '';
       transition: transform 0.3s;
       position: absolute;
@@ -288,12 +299,12 @@ ul {
       border-left: 10px solid lighten(black, 20%);
     }
     &.down {
-      h4::after {
+      h5::after {
         transform: rotate(90deg);
       }
     }
     &.up {
-      h4::after {
+      h5::after {
         transform: rotate(-90deg);
       }
     }
@@ -325,11 +336,46 @@ ul {
   }
 }
 
+#PlacementHeader {
+  background-color: $mainDark;
+}
+
 .Manager {
+  background-color: white;
   &.hidden {
     display: none;
   }
+  h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.1em;
+    font-weight: normal;
+    margin: 20px 30px;
+    display: inline-block;
+  }
 }
+
+#flaggedHeader {
+  position: relative;
+  .alert {
+    position: absolute;
+    border-radius: 100%;
+    background-color: $warningRed;
+    position: absolute;
+    right: -25px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    p {
+      margin: auto;
+      width: fit-content;
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      font-size: 20px;
+      margin-top: 2px;
+    }
+  }
+}
+
 
 .Member, .Group {
   width: 100%;
@@ -341,15 +387,18 @@ ul {
     padding-right: 0;
     border:  1px solid rgba(0, 0, 0, 0.25);
     border-width: 0 1px 0 0 ;
+    margin-left: 15px;
     overflow: scroll;
 
     &:first-of-type {
-      margin-left: 15px;
     }
 
     &:last-of-type {
       border-width: 0;
     }
+  }
+  &:nth-of-type(odd) {
+    background-color: white;
   }
   &:nth-of-type(even) {
     background-color: #F0F6FD;

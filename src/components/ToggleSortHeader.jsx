@@ -13,14 +13,14 @@ class ToggleSortHeader extends React.Component {
     this.descendingComp = this.descendingComp.bind(this);
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     if (!prevProps.active && this.props.active) {
       if (this.state.ascending) {
         // perform ascending comparisons of a.props.headerName and b.props.headerName
-        this.props.sortHandler(this.ascendingComp);
+        this.props.sortHandler(this.ascendingComp, this.props.flagged);
       } else {
         // perform descending comparisons
-        this.props.sortHandler(this.descendingComp);
+        this.props.sortHandler(this.descendingComp, this.props.flagged);
       }
     }
   }
@@ -33,10 +33,10 @@ class ToggleSortHeader extends React.Component {
       }), () => {
         if (this.state.ascending) {
           // perform ascending comparisons of a.props.headerName and b.props.headerName
-          this.props.sortHandler(this.ascendingComp);
+          this.props.sortHandler(this.ascendingComp, this.props.flagged);
         } else {
           // perform descending comparisons
-          this.props.sortHandler(this.descendingComp);
+          this.props.sortHandler(this.descendingComp, this.props.flagged);
         }
       });
     }
@@ -77,7 +77,7 @@ class ToggleSortHeader extends React.Component {
     );
     return (
       <div className={headerClass} onClick={this.handleToggle}>
-        <h4>{this.props.headerName}</h4>
+        <h5>{this.props.headerName}</h5>
       </div>
     );
   }
