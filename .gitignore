@@ -53,6 +53,7 @@ typings/
 
 # dotenv environment variable files
 .env*
+env/
 
 # gatsby files
 .cache/
@@ -67,3 +68,9 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+
+# tutorial files
+src/pages/about-css-modules.*
+src/components/container.*
+src/pages/page-2.js
