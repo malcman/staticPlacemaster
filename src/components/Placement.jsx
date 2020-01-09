@@ -11,10 +11,18 @@ import JSONData from '../../content/placement.json';
 const classNames = require('classnames');
 
 class Placement extends React.Component {
+  static updateGroupData(groupData, member) {
+    if (!groupData.hasOwnProperty(member.props.group)) {
+      groupData[member.props.group] = [];
+    }
+    groupData[member.props.group].push(member);
+  }
+
   constructor(props) {
     super(props);
     this.state = {
       groups: [],
+      groupData: {},
       members: [],
       flaggedMembers: [],
       groupFocus: true,
@@ -24,6 +32,7 @@ class Placement extends React.Component {
     this.sortMembers = this.sortMembers.bind(this);
     this.sortGroups = this.sortGroups.bind(this);
     this.createMembersAndGroups = this.createMembersAndGroups.bind(this);
+    // this.updateGroups = this.updateGroups.bind(this);
   }
 
   componentDidMount() {
@@ -72,7 +81,7 @@ class Placement extends React.Component {
 
   createMembersAndGroups(data) {
     const groups = [];
-    const members = [];
+    const groupData = {};
     const flaggedMembers = [];
 
     // add placed members
@@ -83,7 +92,20 @@ class Placement extends React.Component {
           key={memberData.name}
         />
       );
-      members.push(newMember);
+      // members.push(newMember);
+      Placement.updateGroupData(groupData, newMember);
+    });
+
+    // create groups from groupData
+    Object.keys(groupData).forEach((group) => {
+      const newGroup = (
+        <Group
+          key={group}
+          number={group}
+          members={groupData[group]}
+        />
+      );
+      groups.push(newGroup);
     });
 
     // add flagged members
@@ -100,8 +122,16 @@ class Placement extends React.Component {
     // save in state
     this.setState({
       groups,
-      members,
       flaggedMembers,
+      groupData,
+    }, () => {
+      const allMembers = Object.keys(this.state.groupData).reduce(
+        (accum, groupNum) => accum.concat(this.state.groupData[groupNum]),
+        [],
+      );
+      this.setState({
+        members: allMembers,
+      });
     });
   }
 
@@ -141,7 +171,7 @@ class Placement extends React.Component {
         <GroupManager
           role="tabpanel"
           focused={this.state.groupFocus}
-          groups={this.state.groups}
+          groupData={this.state.groupData}
           sortHandler={this.sortGroups}
         />
         <MemberManager

@@ -11,12 +11,14 @@ function Member(props) {
   }
   return (
     <li className={memberClass}>
-      <p>{group}</p>
-      <p>{props.name}</p>
-      <p>{props.email}</p>
-      <p>{props.campus}</p>
-      <p>{props.gender}</p>
-      <p>{props.year}</p>
+      <div className="infoRow">
+        <p>{group}</p>
+        <p>{props.name}</p>
+        <p>{props.email}</p>
+        <p>{props.campus}</p>
+        <p>{props.gender}</p>
+        <p>{props.year}</p>
+      </div>
     </li>
   );
 }

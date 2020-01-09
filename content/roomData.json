@@ -1,0 +1,221 @@
+{
+  "rooms": [
+    {
+      "number": 1,
+      "day": "Monday",
+      "time": "4:00-5:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 2,
+      "day": "Monday",
+      "time": "4:00-5:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 3,
+      "day": "Monday",
+      "time": "5:00-6:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 4,
+      "day": "Monday",
+      "time": "5:00-6:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 5,
+      "day": "Monday",
+      "time": "7:00-8:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 6,
+      "day": "Monday",
+      "time": "7:00-8:00",
+      "campus": "central",
+      "level": "Grad"
+    },
+    {
+      "number": 7,
+      "day": "Monday",
+      "time": "8:00-9:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 8,
+      "day": "Tuesday",
+      "time": "4:00-5:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 9,
+      "day": "Tuesday",
+      "time": "5:00-6:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 10,
+      "day": "Tuesday",
+      "time": "6:00-7:00",
+      "campus": "north",
+      "level": "Undergrad"
+    },
+    {
+      "number": 11,
+      "day": "Tuesday",
+      "time": "6:00-7:00",
+      "campus": "central",
+      "level": "Grad"
+    },
+    {
+      "number": 12,
+      "day": "Tuesday",
+      "time": "6:00-7:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 13,
+      "day": "Tuesday",
+      "time": "7:00-8:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 14,
+      "day": "Tuesday",
+      "time": "7:00-8:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 15,
+      "day": "Tuesday",
+      "time": "8:00-9:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 16,
+      "day": "Wednesday",
+      "time": "4:00-5:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 17,
+      "day": "Wednesday",
+      "time": "5:00-6:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 18,
+      "day": "Wednesday",
+      "time": "5:00-6:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 19,
+      "day": "Wednesday",
+      "time": "6:00-7:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 20,
+      "day": "Wednesday",
+      "time": "6:00-7:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 21,
+      "day": "Wednesday",
+      "time": "6:00-7:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 22,
+      "day": "Wednesday",
+      "time": "7:00-8:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 23,
+      "day": "Wednesday",
+      "time": "7:00-8:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 24,
+      "day": "Wednesday",
+      "time": "8:00-9:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 25,
+      "day": "Thursday",
+      "time": "4:00-5:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 26,
+      "day": "Thursday",
+      "time": "4:00-5:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 27,
+      "day": "Thursday",
+      "time": "5:00-6:00",
+      "campus": "central",
+      "level": "Grad"
+    },
+    {
+      "number": 28,
+      "day": "Thursday",
+      "time": "5:00-6:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 29,
+      "day": "Thursday",
+      "time": "6:00-7:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 30,
+      "day": "Thursday",
+      "time": "6:00-7:00",
+      "campus": "central",
+      "level": "Undergrad"
+    },
+    {
+      "number": 31,
+      "day": "Thursday",
+      "time": "7:00-8:00",
+      "campus": "central",
+      "level": "Undergrad"
+    }
+  ]
+}

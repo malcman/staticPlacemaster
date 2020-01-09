@@ -6,7 +6,15 @@ class CompName extends React.Component {
     super(props);
     this.state = {
       group: -1,
+      expanded: false,
     };
+    this.toggleExpand = this.toggleExpand.bind(this);
+  }
+
+  toggleExpand() {
+    this.setState((prevState) => ({
+      expanded: !prevState.expanded,
+    }));
   }
 
   render() {

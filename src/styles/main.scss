@@ -262,7 +262,7 @@ ul {
 }
 
 .headersContainer {
-  width: 100%;
+  width: 95%;
   background-color: lighten(lightgrey, 5%);
   display: inline-grid;
   grid-template-columns: repeat(6, 1fr);
@@ -379,8 +379,12 @@ ul {
 
 .Member, .Group {
   width: 100%;
-  display: inline-grid;
-  grid-template-columns: repeat(6, 1fr);
+  position: relative;
+  .infoRow {
+    width: 95%;
+    display: inline-grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
   p {
     display: inline-block;
     padding: 5px;
@@ -402,6 +406,45 @@ ul {
   }
   &:nth-of-type(even) {
     background-color: #F0F6FD;
+  }
+  &.expanded {
+    .expandToggle {
+      transform: rotate(45deg) translateX(3px);
+    }
+  }
+}
+
+.expandToggle {
+  position: absolute;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  font-size: 1.5em;
+  transition: transform 0.3s;
+}
+
+.groupExpandedInfo {
+  width: 90%;
+  margin-left: 10%;
+  h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+  }
+  .groupMembers {
+    width: 90%;
+    margin-bottom: 5%;
+    list-style-type: none;
+    p:first-of-type {
+      display: none;
+    }
+    p {
+      font-size: 0.8em;
+    }
+  }
+  .groupMembersHeader, .groupLeadersHeader {
+    font-weight: normal;
+    font-size: 1.0em;
+    margin-top: 3%;
   }
 }
 
