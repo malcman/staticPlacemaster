@@ -5,7 +5,7 @@ const classNames = require('classnames');
 
 function Member(props) {
   const memberClass = classNames('Member');
-  let group = props.group;
+  let { group } = props;
   if (props.group === -1) {
     group = 'None';
   }

@@ -262,10 +262,10 @@ ul {
 }
 
 .headersContainer {
-  width: 95%;
+  width: 100%;
   background-color: lighten(lightgrey, 5%);
   display: inline-grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, 1fr) 50px;
 }
 
 .ToggleSortHeader {
@@ -377,7 +377,7 @@ ul {
 }
 
 
-.Member, .Group {
+.Member, .FlaggedMember, .Group {
   width: 100%;
   position: relative;
   .infoRow {
@@ -414,6 +414,45 @@ ul {
   }
 }
 
+.FlaggedMember .flaggedExpandedInfo {
+  p {
+    margin-left: 0;
+  }
+}
+
+.GroupAssigner {
+  width: 100%;
+  button {
+    color: $mainDark;
+    border: none;
+    padding: 10px 50% 10px 20px;
+    font-size: 1.8em;
+    box-shadow: 5px 4px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+}
+
+.groupsPreview {
+  width: 100%;
+  max-height: 50vh;
+  overflow: scroll;
+  margin-bottom: 20px;
+  .previewHeaders {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    h6 {
+      display: inline-block;
+    }
+  }
+  .groupsPreviewList {
+    li {
+      display: grid;
+      grid-template-columns: 50px repeat(4, 1fr);
+    }
+  }
+}
+
 .expandToggle {
   position: absolute;
   right: 20px;
@@ -423,7 +462,7 @@ ul {
   transition: transform 0.3s;
 }
 
-.groupExpandedInfo {
+.groupExpandedInfo, .flaggedExpandedInfo {
   width: 90%;
   margin-left: 10%;
   h6 {
@@ -441,11 +480,16 @@ ul {
       font-size: 0.8em;
     }
   }
-  .groupMembersHeader, .groupLeadersHeader {
+  .groupMembersHeader, .groupLeadersHeader, .conflictHeader {
     font-weight: normal;
-    font-size: 1.0em;
+    font-size: 1.4em;
     margin-top: 3%;
   }
 }
+
+.flaggedExpandedInfo {
+  width: 75%;
+}
+
 
 

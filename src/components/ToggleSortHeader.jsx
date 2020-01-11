@@ -75,9 +75,10 @@ class ToggleSortHeader extends React.Component {
         up: !this.state.ascending && this.props.active,
       },
     );
+    const upperHeader = `${this.props.headerName.charAt(0).toUpperCase()}${this.props.headerName.substr(1)}`;
     return (
       <div className={headerClass} onClick={this.handleToggle}>
-        <h5>{this.props.headerName}</h5>
+        <h5>{upperHeader}</h5>
       </div>
     );
   }

@@ -17,7 +17,7 @@ class MemberManager extends React.Component {
     // column headers for each member
     const memberHeaders = ['Group', 'Name', 'Email', 'Campus', 'Gender', 'Year'];
 
-    const flaggedSection = (!this.props.flaggedMembers) ? null : (
+    const flaggedSection = (!this.props.flaggedMembers.length) ? null : (
       <div>
         <h4 id="flaggedHeader">
           Flagged
@@ -35,6 +35,7 @@ class MemberManager extends React.Component {
         </ul>
       </div>
     );
+
     return (
       <section
         className={className}

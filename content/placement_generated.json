@@ -1,0 +1,4045 @@
+{
+  "results": {
+    "placed": [
+      {
+        "name": "NAB9IXWG",
+        "email": "NAB9@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 6,
+        "gender": "male"
+      },
+      {
+        "name": "OJA5LEJ2",
+        "email": "OJA5@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 13,
+        "gender": "female"
+      },
+      {
+        "name": "6CGHCNR4",
+        "email": "6CGH@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 11,
+        "gender": "male"
+      },
+      {
+        "name": "T3TWNAMB",
+        "email": "T3TW@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 14,
+        "gender": "non-binary"
+      },
+      {
+        "name": "6QX1L5LC",
+        "email": "6QX1@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 8,
+        "gender": "female"
+      },
+      {
+        "name": "96MB3BMW",
+        "email": "96MB@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 24,
+        "gender": "female"
+      },
+      {
+        "name": "8RA1SE2A",
+        "email": "8RA1@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 29,
+        "gender": "male"
+      },
+      {
+        "name": "PYOGLPG7",
+        "email": "PYOG@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 8,
+        "gender": "female"
+      },
+      {
+        "name": "PONM13J8",
+        "email": "PONM@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 7,
+        "gender": "female"
+      },
+      {
+        "name": "S5XMZ3T4",
+        "email": "S5XM@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 2,
+        "gender": "male"
+      },
+      {
+        "name": "YQKLAXHE",
+        "email": "YQKL@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 12,
+        "gender": "female"
+      },
+      {
+        "name": "3V10RKCB",
+        "email": "3V10@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 2,
+        "gender": "non-binary"
+      },
+      {
+        "name": "Y4YRLCGO",
+        "email": "Y4YR@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 24,
+        "gender": "non-binary"
+      },
+      {
+        "name": "QXXMYIEK",
+        "email": "QXXM@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 19,
+        "gender": "female"
+      },
+      {
+        "name": "G5J9RTRC",
+        "email": "G5J9@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 20,
+        "gender": "male"
+      },
+      {
+        "name": "ON9D95V3",
+        "email": "ON9D@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 12,
+        "gender": "male"
+      },
+      {
+        "name": "F2UO4IPF",
+        "email": "F2UO@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 23,
+        "gender": "non-binary"
+      },
+      {
+        "name": "B40KD1EV",
+        "email": "B40K@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 23,
+        "gender": "male"
+      },
+      {
+        "name": "RTTIYU1Y",
+        "email": "RTTI@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 3,
+        "gender": "non-binary"
+      },
+      {
+        "name": "QP439MCF",
+        "email": "QP43@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 11,
+        "gender": "male"
+      },
+      {
+        "name": "9OL9ORT7",
+        "email": "9OL9@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 14,
+        "gender": "non-binary"
+      },
+      {
+        "name": "HQM9SKRG",
+        "email": "HQM9@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 17,
+        "gender": "female"
+      },
+      {
+        "name": "BFNGEQ2V",
+        "email": "BFNG@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 29,
+        "gender": "female"
+      },
+      {
+        "name": "MOO2QOF2",
+        "email": "MOO2@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 15,
+        "gender": "non-binary"
+      },
+      {
+        "name": "TFC3XLJ4",
+        "email": "TFC3@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 10,
+        "gender": "female"
+      },
+      {
+        "name": "KCXF89RD",
+        "email": "KCXF@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 19,
+        "gender": "female"
+      },
+      {
+        "name": "CH26ALJF",
+        "email": "CH26@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 10,
+        "gender": "female"
+      },
+      {
+        "name": "L9U6E9SJ",
+        "email": "L9U6@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 25,
+        "gender": "female"
+      },
+      {
+        "name": "10U64FA9",
+        "email": "10U6@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 13,
+        "gender": "female"
+      },
+      {
+        "name": "W3ZPZ8OH",
+        "email": "W3ZP@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 23,
+        "gender": "female"
+      },
+      {
+        "name": "047LAETX",
+        "email": "047L@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 20,
+        "gender": "non-binary"
+      },
+      {
+        "name": "EU6PL768",
+        "email": "EU6P@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 5,
+        "gender": "male"
+      },
+      {
+        "name": "6DBANGMO",
+        "email": "6DBA@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 17,
+        "gender": "male"
+      },
+      {
+        "name": "XKY0CCY7",
+        "email": "XKY0@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 16,
+        "gender": "female"
+      },
+      {
+        "name": "GNIYGEPL",
+        "email": "GNIY@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 25,
+        "gender": "male"
+      },
+      {
+        "name": "BKBR13IY",
+        "email": "BKBR@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 8,
+        "gender": "non-binary"
+      },
+      {
+        "name": "TKTUU7IP",
+        "email": "TKTU@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 24,
+        "gender": "non-binary"
+      },
+      {
+        "name": "3W38XN22",
+        "email": "3W38@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 25,
+        "gender": "female"
+      },
+      {
+        "name": "630CTH6P",
+        "email": "630C@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 20,
+        "gender": "female"
+      },
+      {
+        "name": "SA4FVVDF",
+        "email": "SA4F@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 17,
+        "gender": "non-binary"
+      },
+      {
+        "name": "E7G33NZ4",
+        "email": "E7G3@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 14,
+        "gender": "female"
+      },
+      {
+        "name": "5K6YQ5AX",
+        "email": "5K6Y@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 26,
+        "gender": "female"
+      },
+      {
+        "name": "Q90IL3QS",
+        "email": "Q90I@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 5,
+        "gender": "female"
+      },
+      {
+        "name": "CL2F36N6",
+        "email": "CL2F@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 6,
+        "gender": "female"
+      },
+      {
+        "name": "8IG0HBJJ",
+        "email": "8IG0@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 9,
+        "gender": "female"
+      },
+      {
+        "name": "18C91NZA",
+        "email": "18C9@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 12,
+        "gender": "male"
+      },
+      {
+        "name": "K78UZZGS",
+        "email": "K78U@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 12,
+        "gender": "female"
+      },
+      {
+        "name": "8J7AX45K",
+        "email": "8J7A@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 1,
+        "gender": "male"
+      },
+      {
+        "name": "92VWW11M",
+        "email": "92VW@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 15,
+        "gender": "non-binary"
+      },
+      {
+        "name": "AAL7YVOL",
+        "email": "AAL7@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 30,
+        "gender": "non-binary"
+      },
+      {
+        "name": "YB8VAZPL",
+        "email": "YB8V@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 7,
+        "gender": "male"
+      },
+      {
+        "name": "N8SH5KA7",
+        "email": "N8SH@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 29,
+        "gender": "female"
+      },
+      {
+        "name": "05BB5QTJ",
+        "email": "05BB@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 21,
+        "gender": "non-binary"
+      },
+      {
+        "name": "E2V0OHI8",
+        "email": "E2V0@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 22,
+        "gender": "male"
+      },
+      {
+        "name": "KSFPMWTX",
+        "email": "KSFP@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 22,
+        "gender": "female"
+      },
+      {
+        "name": "FONRB3R9",
+        "email": "FONR@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 23,
+        "gender": "male"
+      },
+      {
+        "name": "PYHMZ96B",
+        "email": "PYHM@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 28,
+        "gender": "female"
+      },
+      {
+        "name": "X9YMZ43V",
+        "email": "X9YM@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 7,
+        "gender": "non-binary"
+      },
+      {
+        "name": "1ZGWTVL0",
+        "email": "1ZGW@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 25,
+        "gender": "male"
+      },
+      {
+        "name": "CW9A87FP",
+        "email": "CW9A@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 6,
+        "gender": "non-binary"
+      },
+      {
+        "name": "DMM3ASSR",
+        "email": "DMM3@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 10,
+        "gender": "male"
+      },
+      {
+        "name": "0DXRXW8M",
+        "email": "0DXR@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 19,
+        "gender": "non-binary"
+      },
+      {
+        "name": "5X22W66S",
+        "email": "5X22@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 29,
+        "gender": "male"
+      },
+      {
+        "name": "71T0WGQX",
+        "email": "71T0@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 16,
+        "gender": "male"
+      },
+      {
+        "name": "7NX639NU",
+        "email": "7NX6@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 6,
+        "gender": "male"
+      },
+      {
+        "name": "4TMA5OZ9",
+        "email": "4TMA@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 15,
+        "gender": "female"
+      },
+      {
+        "name": "T2MUW1DY",
+        "email": "T2MU@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 26,
+        "gender": "non-binary"
+      },
+      {
+        "name": "3Q0XEXHH",
+        "email": "3Q0X@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 20,
+        "gender": "non-binary"
+      },
+      {
+        "name": "BI1LST3M",
+        "email": "BI1L@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 15,
+        "gender": "male"
+      },
+      {
+        "name": "2YSJ7VQA",
+        "email": "2YSJ@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 28,
+        "gender": "male"
+      },
+      {
+        "name": "711JTGJJ",
+        "email": "711J@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 10,
+        "gender": "non-binary"
+      },
+      {
+        "name": "BEXCQPHP",
+        "email": "BEXC@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 26,
+        "gender": "female"
+      },
+      {
+        "name": "KKT5ZFXG",
+        "email": "KKT5@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 21,
+        "gender": "male"
+      },
+      {
+        "name": "HRD0ZMNR",
+        "email": "HRD0@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 15,
+        "gender": "non-binary"
+      },
+      {
+        "name": "O6P4S6E4",
+        "email": "O6P4@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 15,
+        "gender": "male"
+      },
+      {
+        "name": "3O3PXYFE",
+        "email": "3O3P@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 21,
+        "gender": "female"
+      },
+      {
+        "name": "EULLFOFA",
+        "email": "EULL@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 13,
+        "gender": "non-binary"
+      },
+      {
+        "name": "DRROPAAP",
+        "email": "DRRO@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 22,
+        "gender": "female"
+      },
+      {
+        "name": "375VNEST",
+        "email": "375V@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 15,
+        "gender": "male"
+      },
+      {
+        "name": "DVC5VQ2S",
+        "email": "DVC5@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 24,
+        "gender": "male"
+      },
+      {
+        "name": "CP4W65KP",
+        "email": "CP4W@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 17,
+        "gender": "male"
+      },
+      {
+        "name": "D1ICEGPN",
+        "email": "D1IC@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 8,
+        "gender": "female"
+      },
+      {
+        "name": "JF11SGRY",
+        "email": "JF11@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 14,
+        "gender": "non-binary"
+      },
+      {
+        "name": "QE1B9ICE",
+        "email": "QE1B@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 5,
+        "gender": "female"
+      },
+      {
+        "name": "XOUNFNK6",
+        "email": "XOUN@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 5,
+        "gender": "female"
+      },
+      {
+        "name": "P4AQ2ZBU",
+        "email": "P4AQ@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 4,
+        "gender": "male"
+      },
+      {
+        "name": "HPYMWFP1",
+        "email": "HPYM@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 20,
+        "gender": "male"
+      },
+      {
+        "name": "5VTKWOWD",
+        "email": "5VTK@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 8,
+        "gender": "non-binary"
+      },
+      {
+        "name": "W9Y5E92C",
+        "email": "W9Y5@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 26,
+        "gender": "female"
+      },
+      {
+        "name": "VHP3ERZK",
+        "email": "VHP3@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 28,
+        "gender": "female"
+      },
+      {
+        "name": "G0OG1A45",
+        "email": "G0OG@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 6,
+        "gender": "non-binary"
+      },
+      {
+        "name": "E7FPO6CC",
+        "email": "E7FP@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 20,
+        "gender": "male"
+      },
+      {
+        "name": "FJ64SDQ4",
+        "email": "FJ64@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 3,
+        "gender": "male"
+      },
+      {
+        "name": "GKMZK7K9",
+        "email": "GKMZ@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 17,
+        "gender": "female"
+      },
+      {
+        "name": "PCNYXPFM",
+        "email": "PCNY@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 21,
+        "gender": "non-binary"
+      },
+      {
+        "name": "1ANSJ0Q8",
+        "email": "1ANS@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 25,
+        "gender": "female"
+      },
+      {
+        "name": "3WN5RJIA",
+        "email": "3WN5@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 16,
+        "gender": "female"
+      },
+      {
+        "name": "DJ0VB0EK",
+        "email": "DJ0V@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 14,
+        "gender": "male"
+      },
+      {
+        "name": "DZELL002",
+        "email": "DZEL@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 13,
+        "gender": "non-binary"
+      },
+      {
+        "name": "QECJIN1D",
+        "email": "QECJ@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 14,
+        "gender": "non-binary"
+      },
+      {
+        "name": "LDVWQO95",
+        "email": "LDVW@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 23,
+        "gender": "female"
+      },
+      {
+        "name": "H1IIY3ZC",
+        "email": "H1II@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 10,
+        "gender": "male"
+      },
+      {
+        "name": "R46I9763",
+        "email": "R46I@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 18,
+        "gender": "male"
+      },
+      {
+        "name": "GSSX790G",
+        "email": "GSSX@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 6,
+        "gender": "female"
+      },
+      {
+        "name": "J8Y6M1UJ",
+        "email": "J8Y6@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 27,
+        "gender": "non-binary"
+      },
+      {
+        "name": "X9ANFH0P",
+        "email": "X9AN@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 28,
+        "gender": "female"
+      },
+      {
+        "name": "70P4ETEW",
+        "email": "70P4@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 5,
+        "gender": "female"
+      },
+      {
+        "name": "48NOVP7X",
+        "email": "48NO@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 14,
+        "gender": "male"
+      },
+      {
+        "name": "WFHZNQUP",
+        "email": "WFHZ@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 30,
+        "gender": "non-binary"
+      },
+      {
+        "name": "3RNSCMAM",
+        "email": "3RNS@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 1,
+        "gender": "male"
+      },
+      {
+        "name": "F7ILF9NW",
+        "email": "F7IL@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 27,
+        "gender": "non-binary"
+      },
+      {
+        "name": "TL6DTCHY",
+        "email": "TL6D@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 29,
+        "gender": "male"
+      },
+      {
+        "name": "A5X9SV52",
+        "email": "A5X9@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 5,
+        "gender": "non-binary"
+      },
+      {
+        "name": "51S7AYCV",
+        "email": "51S7@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 9,
+        "gender": "male"
+      },
+      {
+        "name": "I2GPU8VM",
+        "email": "I2GP@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 13,
+        "gender": "female"
+      },
+      {
+        "name": "FC1RA5QR",
+        "email": "FC1R@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 20,
+        "gender": "male"
+      },
+      {
+        "name": "8PRBQDKO",
+        "email": "8PRB@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 27,
+        "gender": "female"
+      },
+      {
+        "name": "0H60SR6I",
+        "email": "0H60@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 3,
+        "gender": "non-binary"
+      },
+      {
+        "name": "JXGR1LP1",
+        "email": "JXGR@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 1,
+        "gender": "female"
+      },
+      {
+        "name": "3KKV7A7A",
+        "email": "3KKV@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 17,
+        "gender": "non-binary"
+      },
+      {
+        "name": "Z065FVQS",
+        "email": "Z065@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 16,
+        "gender": "male"
+      },
+      {
+        "name": "HYLG1Z35",
+        "email": "HYLG@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 23,
+        "gender": "male"
+      },
+      {
+        "name": "IGCOEFA2",
+        "email": "IGCO@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 23,
+        "gender": "male"
+      },
+      {
+        "name": "H84UGZ8G",
+        "email": "H84U@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 15,
+        "gender": "male"
+      },
+      {
+        "name": "AKDQXSI2",
+        "email": "AKDQ@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 9,
+        "gender": "male"
+      },
+      {
+        "name": "14OLZ5E9",
+        "email": "14OL@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 22,
+        "gender": "non-binary"
+      },
+      {
+        "name": "EMHXHGU3",
+        "email": "EMHX@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 12,
+        "gender": "non-binary"
+      },
+      {
+        "name": "EU1VU6KV",
+        "email": "EU1V@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 28,
+        "gender": "female"
+      },
+      {
+        "name": "NTBMNMIP",
+        "email": "NTBM@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 11,
+        "gender": "non-binary"
+      },
+      {
+        "name": "PYQQ7VCE",
+        "email": "PYQQ@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 3,
+        "gender": "female"
+      },
+      {
+        "name": "MMIPYNC9",
+        "email": "MMIP@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 30,
+        "gender": "male"
+      },
+      {
+        "name": "JWZH79C7",
+        "email": "JWZH@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 6,
+        "gender": "male"
+      },
+      {
+        "name": "XHKR4MYX",
+        "email": "XHKR@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 19,
+        "gender": "male"
+      },
+      {
+        "name": "P37VARY5",
+        "email": "P37V@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 24,
+        "gender": "female"
+      },
+      {
+        "name": "CDO4I0YV",
+        "email": "CDO4@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 11,
+        "gender": "non-binary"
+      },
+      {
+        "name": "W14YMFFO",
+        "email": "W14Y@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 16,
+        "gender": "non-binary"
+      },
+      {
+        "name": "LBK2ORXD",
+        "email": "LBK2@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 2,
+        "gender": "female"
+      },
+      {
+        "name": "TZUAZXL1",
+        "email": "TZUA@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 9,
+        "gender": "female"
+      },
+      {
+        "name": "EHP32SJJ",
+        "email": "EHP3@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 15,
+        "gender": "female"
+      },
+      {
+        "name": "6RUBT7CV",
+        "email": "6RUB@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 25,
+        "gender": "male"
+      },
+      {
+        "name": "V12RL9FX",
+        "email": "V12R@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 1,
+        "gender": "male"
+      },
+      {
+        "name": "VCLDFB55",
+        "email": "VCLD@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 17,
+        "gender": "female"
+      },
+      {
+        "name": "5IS23ZYV",
+        "email": "5IS2@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 2,
+        "gender": "non-binary"
+      },
+      {
+        "name": "PH98HMKP",
+        "email": "PH98@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 3,
+        "gender": "non-binary"
+      },
+      {
+        "name": "RUCJK3RY",
+        "email": "RUCJ@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 11,
+        "gender": "non-binary"
+      },
+      {
+        "name": "O9JQPSLA",
+        "email": "O9JQ@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 12,
+        "gender": "non-binary"
+      },
+      {
+        "name": "SV7TPK20",
+        "email": "SV7T@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 28,
+        "gender": "male"
+      },
+      {
+        "name": "5PP1PJE3",
+        "email": "5PP1@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 30,
+        "gender": "male"
+      },
+      {
+        "name": "XWVSOQL4",
+        "email": "XWVS@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 18,
+        "gender": "non-binary"
+      },
+      {
+        "name": "60RY832I",
+        "email": "60RY@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 12,
+        "gender": "female"
+      },
+      {
+        "name": "K91Z6I6V",
+        "email": "K91Z@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 29,
+        "gender": "female"
+      },
+      {
+        "name": "C5G4IXMQ",
+        "email": "C5G4@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 18,
+        "gender": "non-binary"
+      },
+      {
+        "name": "S3TKVIE2",
+        "email": "S3TK@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 3,
+        "gender": "non-binary"
+      },
+      {
+        "name": "PJ8A0ANX",
+        "email": "PJ8A@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 21,
+        "gender": "male"
+      },
+      {
+        "name": "90FJE5W7",
+        "email": "90FJ@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 6,
+        "gender": "male"
+      },
+      {
+        "name": "PJQ4WO99",
+        "email": "PJQ4@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 4,
+        "gender": "female"
+      },
+      {
+        "name": "QRTVODRU",
+        "email": "QRTV@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 14,
+        "gender": "non-binary"
+      },
+      {
+        "name": "JF4F2Q34",
+        "email": "JF4F@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 8,
+        "gender": "female"
+      },
+      {
+        "name": "1MTZ86J3",
+        "email": "1MTZ@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 5,
+        "gender": "female"
+      },
+      {
+        "name": "57FG1SGB",
+        "email": "57FG@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 24,
+        "gender": "female"
+      },
+      {
+        "name": "XG6FE3VP",
+        "email": "XG6F@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 8,
+        "gender": "non-binary"
+      },
+      {
+        "name": "90SNWF6I",
+        "email": "90SN@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 13,
+        "gender": "male"
+      },
+      {
+        "name": "9ML0P3T8",
+        "email": "9ML0@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 9,
+        "gender": "male"
+      },
+      {
+        "name": "GTZ999S1",
+        "email": "GTZ9@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 12,
+        "gender": "female"
+      },
+      {
+        "name": "30DKQYZT",
+        "email": "30DK@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 22,
+        "gender": "female"
+      },
+      {
+        "name": "DX1W4F8R",
+        "email": "DX1W@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 13,
+        "gender": "female"
+      },
+      {
+        "name": "SYJ589IS",
+        "email": "SYJ5@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 15,
+        "gender": "female"
+      },
+      {
+        "name": "4TM0BHS2",
+        "email": "4TM0@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 7,
+        "gender": "female"
+      },
+      {
+        "name": "JKE496AE",
+        "email": "JKE4@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 8,
+        "gender": "male"
+      },
+      {
+        "name": "7B7Y2ULQ",
+        "email": "7B7Y@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 18,
+        "gender": "female"
+      },
+      {
+        "name": "3M607ZT1",
+        "email": "3M60@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 23,
+        "gender": "male"
+      },
+      {
+        "name": "DW8IDX0T",
+        "email": "DW8I@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 2,
+        "gender": "non-binary"
+      },
+      {
+        "name": "VFPNDLQA",
+        "email": "VFPN@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 23,
+        "gender": "non-binary"
+      },
+      {
+        "name": "HZ303R7A",
+        "email": "HZ30@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 14,
+        "gender": "female"
+      },
+      {
+        "name": "MO2R7V0U",
+        "email": "MO2R@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 23,
+        "gender": "female"
+      },
+      {
+        "name": "1FMH6FCF",
+        "email": "1FMH@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 21,
+        "gender": "male"
+      },
+      {
+        "name": "QS0V0XIE",
+        "email": "QS0V@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 1,
+        "gender": "non-binary"
+      },
+      {
+        "name": "OJNV06JQ",
+        "email": "OJNV@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 29,
+        "gender": "male"
+      },
+      {
+        "name": "K6F899TV",
+        "email": "K6F8@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 30,
+        "gender": "male"
+      },
+      {
+        "name": "W1L8BLFQ",
+        "email": "W1L8@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 2,
+        "gender": "male"
+      },
+      {
+        "name": "X4NL1BHC",
+        "email": "X4NL@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 11,
+        "gender": "male"
+      },
+      {
+        "name": "WW6OFF97",
+        "email": "WW6O@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 23,
+        "gender": "male"
+      },
+      {
+        "name": "ZNXN2GJQ",
+        "email": "ZNXN@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 16,
+        "gender": "male"
+      },
+      {
+        "name": "YG6FR0TO",
+        "email": "YG6F@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 9,
+        "gender": "female"
+      },
+      {
+        "name": "412190ZY",
+        "email": "4121@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 22,
+        "gender": "male"
+      },
+      {
+        "name": "DJ4GBADH",
+        "email": "DJ4G@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 26,
+        "gender": "non-binary"
+      },
+      {
+        "name": "BLZHDM44",
+        "email": "BLZH@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 24,
+        "gender": "female"
+      },
+      {
+        "name": "MPKHX5P9",
+        "email": "MPKH@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 4,
+        "gender": "female"
+      },
+      {
+        "name": "697CRG71",
+        "email": "697C@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 16,
+        "gender": "non-binary"
+      },
+      {
+        "name": "4T66R6X6",
+        "email": "4T66@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 28,
+        "gender": "non-binary"
+      },
+      {
+        "name": "XO8VQL2Q",
+        "email": "XO8V@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 11,
+        "gender": "non-binary"
+      },
+      {
+        "name": "0G6LU1MJ",
+        "email": "0G6L@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 22,
+        "gender": "male"
+      },
+      {
+        "name": "6D8IGXDT",
+        "email": "6D8I@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 23,
+        "gender": "female"
+      },
+      {
+        "name": "F9BONZO7",
+        "email": "F9BO@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 2,
+        "gender": "non-binary"
+      },
+      {
+        "name": "TD9KNYSB",
+        "email": "TD9K@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 7,
+        "gender": "female"
+      },
+      {
+        "name": "CXNPCPU0",
+        "email": "CXNP@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 14,
+        "gender": "male"
+      },
+      {
+        "name": "FUJRHXB3",
+        "email": "FUJR@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 3,
+        "gender": "male"
+      },
+      {
+        "name": "M0Y7ZN10",
+        "email": "M0Y7@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 25,
+        "gender": "non-binary"
+      },
+      {
+        "name": "F5SF9VWL",
+        "email": "F5SF@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 24,
+        "gender": "female"
+      },
+      {
+        "name": "WJKA1RD9",
+        "email": "WJKA@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 22,
+        "gender": "male"
+      },
+      {
+        "name": "K2W28FDB",
+        "email": "K2W2@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 2,
+        "gender": "female"
+      },
+      {
+        "name": "YOSZEXXK",
+        "email": "YOSZ@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 18,
+        "gender": "female"
+      },
+      {
+        "name": "PEREFNDX",
+        "email": "PERE@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 16,
+        "gender": "female"
+      },
+      {
+        "name": "L4XPHF49",
+        "email": "L4XP@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 12,
+        "gender": "female"
+      },
+      {
+        "name": "NWMDDJM9",
+        "email": "NWMD@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 28,
+        "gender": "non-binary"
+      },
+      {
+        "name": "VCNBBCBT",
+        "email": "VCNB@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 20,
+        "gender": "non-binary"
+      },
+      {
+        "name": "FXJ8F3SQ",
+        "email": "FXJ8@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 13,
+        "gender": "female"
+      },
+      {
+        "name": "ZKCYVFKB",
+        "email": "ZKCY@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 8,
+        "gender": "male"
+      },
+      {
+        "name": "T1V732X4",
+        "email": "T1V7@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 21,
+        "gender": "male"
+      },
+      {
+        "name": "X7A90CKP",
+        "email": "X7A9@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 16,
+        "gender": "male"
+      },
+      {
+        "name": "1JNAR7PS",
+        "email": "1JNA@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 14,
+        "gender": "male"
+      },
+      {
+        "name": "I4U8C1GQ",
+        "email": "I4U8@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 2,
+        "gender": "non-binary"
+      },
+      {
+        "name": "MLCGNDW9",
+        "email": "MLCG@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 5,
+        "gender": "male"
+      },
+      {
+        "name": "JMCD69PX",
+        "email": "JMCD@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 25,
+        "gender": "female"
+      },
+      {
+        "name": "7OEC4EYQ",
+        "email": "7OEC@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 15,
+        "gender": "male"
+      },
+      {
+        "name": "0U147E2Q",
+        "email": "0U14@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 18,
+        "gender": "male"
+      },
+      {
+        "name": "7FPQP8UC",
+        "email": "7FPQ@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 30,
+        "gender": "female"
+      },
+      {
+        "name": "QFY8ARU7",
+        "email": "QFY8@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 26,
+        "gender": "non-binary"
+      },
+      {
+        "name": "1KUM7N21",
+        "email": "1KUM@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 5,
+        "gender": "non-binary"
+      },
+      {
+        "name": "HLG8Z8XM",
+        "email": "HLG8@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 3,
+        "gender": "male"
+      },
+      {
+        "name": "SZYYZLQM",
+        "email": "SZYY@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 16,
+        "gender": "female"
+      },
+      {
+        "name": "YTRJ470S",
+        "email": "YTRJ@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 9,
+        "gender": "female"
+      },
+      {
+        "name": "1QNM42XK",
+        "email": "1QNM@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 30,
+        "gender": "female"
+      },
+      {
+        "name": "PVJ09HKW",
+        "email": "PVJ0@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 17,
+        "gender": "non-binary"
+      },
+      {
+        "name": "GXHNEPO2",
+        "email": "GXHN@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 20,
+        "gender": "male"
+      },
+      {
+        "name": "I5A4JDUF",
+        "email": "I5A4@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 3,
+        "gender": "non-binary"
+      },
+      {
+        "name": "F6BWPQ7R",
+        "email": "F6BW@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 14,
+        "gender": "male"
+      },
+      {
+        "name": "P4C9FDON",
+        "email": "P4C9@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 14,
+        "gender": "non-binary"
+      },
+      {
+        "name": "RJ8AGRXG",
+        "email": "RJ8A@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 10,
+        "gender": "female"
+      },
+      {
+        "name": "30XXB4LO",
+        "email": "30XX@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 5,
+        "gender": "non-binary"
+      },
+      {
+        "name": "Z7KJN6UI",
+        "email": "Z7KJ@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 1,
+        "gender": "female"
+      },
+      {
+        "name": "WBCJ44I1",
+        "email": "WBCJ@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 27,
+        "gender": "male"
+      },
+      {
+        "name": "0RMJI7Z2",
+        "email": "0RMJ@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 3,
+        "gender": "male"
+      },
+      {
+        "name": "7V33DPT6",
+        "email": "7V33@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 25,
+        "gender": "female"
+      },
+      {
+        "name": "ZIE4UK76",
+        "email": "ZIE4@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 18,
+        "gender": "female"
+      },
+      {
+        "name": "RRMP8QQK",
+        "email": "RRMP@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 18,
+        "gender": "non-binary"
+      },
+      {
+        "name": "8WDMB9AU",
+        "email": "8WDM@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 15,
+        "gender": "non-binary"
+      },
+      {
+        "name": "QENKYIAV",
+        "email": "QENK@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 28,
+        "gender": "female"
+      },
+      {
+        "name": "SZPIA1W4",
+        "email": "SZPI@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 25,
+        "gender": "female"
+      },
+      {
+        "name": "NYBWF05A",
+        "email": "NYBW@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 21,
+        "gender": "female"
+      },
+      {
+        "name": "1HPDW32Y",
+        "email": "1HPD@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 7,
+        "gender": "male"
+      },
+      {
+        "name": "OOE3NL60",
+        "email": "OOE3@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 8,
+        "gender": "female"
+      },
+      {
+        "name": "CO490CXN",
+        "email": "CO49@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 4,
+        "gender": "male"
+      },
+      {
+        "name": "Z169ZIT2",
+        "email": "Z169@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 29,
+        "gender": "non-binary"
+      },
+      {
+        "name": "E9USNND9",
+        "email": "E9US@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 2,
+        "gender": "female"
+      },
+      {
+        "name": "J1S0DSZN",
+        "email": "J1S0@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 16,
+        "gender": "female"
+      },
+      {
+        "name": "NHV4UGSM",
+        "email": "NHV4@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 8,
+        "gender": "male"
+      },
+      {
+        "name": "PQRDUCBR",
+        "email": "PQRD@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 24,
+        "gender": "female"
+      },
+      {
+        "name": "JBLSTG6L",
+        "email": "JBLS@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 1,
+        "gender": "non-binary"
+      },
+      {
+        "name": "K5RWCR6S",
+        "email": "K5RW@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 22,
+        "gender": "female"
+      },
+      {
+        "name": "O1S42GAR",
+        "email": "O1S4@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 8,
+        "gender": "female"
+      },
+      {
+        "name": "C7EO5IZ2",
+        "email": "C7EO@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 15,
+        "gender": "female"
+      },
+      {
+        "name": "FY3A0E4C",
+        "email": "FY3A@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 12,
+        "gender": "non-binary"
+      },
+      {
+        "name": "VYQPCCEW",
+        "email": "VYQP@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 17,
+        "gender": "female"
+      },
+      {
+        "name": "CR4IY9FX",
+        "email": "CR4I@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 6,
+        "gender": "male"
+      },
+      {
+        "name": "7XVY5LW2",
+        "email": "7XVY@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 2,
+        "gender": "non-binary"
+      },
+      {
+        "name": "R73UAED8",
+        "email": "R73U@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 21,
+        "gender": "non-binary"
+      },
+      {
+        "name": "XMOYEJCF",
+        "email": "XMOY@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 2,
+        "gender": "male"
+      },
+      {
+        "name": "EWUQ23X0",
+        "email": "EWUQ@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 10,
+        "gender": "non-binary"
+      },
+      {
+        "name": "BG8TBV9G",
+        "email": "BG8T@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 18,
+        "gender": "non-binary"
+      },
+      {
+        "name": "76JB8994",
+        "email": "76JB@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 10,
+        "gender": "female"
+      },
+      {
+        "name": "XS6WJA8G",
+        "email": "XS6W@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 25,
+        "gender": "non-binary"
+      },
+      {
+        "name": "RQND1H72",
+        "email": "RQND@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 2,
+        "gender": "non-binary"
+      },
+      {
+        "name": "W00USAEL",
+        "email": "W00U@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 19,
+        "gender": "non-binary"
+      },
+      {
+        "name": "S1DCKJYV",
+        "email": "S1DC@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 3,
+        "gender": "female"
+      },
+      {
+        "name": "7214IPBN",
+        "email": "7214@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 17,
+        "gender": "female"
+      },
+      {
+        "name": "DYGGBZ2Z",
+        "email": "DYGG@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 11,
+        "gender": "non-binary"
+      },
+      {
+        "name": "A60BRLO7",
+        "email": "A60B@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 19,
+        "gender": "male"
+      },
+      {
+        "name": "2H0DS5BG",
+        "email": "2H0D@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 17,
+        "gender": "male"
+      },
+      {
+        "name": "C6OSSJKX",
+        "email": "C6OS@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 11,
+        "gender": "female"
+      },
+      {
+        "name": "YMIPDF8N",
+        "email": "YMIP@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 27,
+        "gender": "female"
+      },
+      {
+        "name": "MRNLUDTS",
+        "email": "MRNL@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 13,
+        "gender": "male"
+      },
+      {
+        "name": "DDKHLI8W",
+        "email": "DDKH@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 19,
+        "gender": "female"
+      },
+      {
+        "name": "XJ5M4O80",
+        "email": "XJ5M@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 8,
+        "gender": "male"
+      },
+      {
+        "name": "JWLSYDO8",
+        "email": "JWLS@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 21,
+        "gender": "male"
+      },
+      {
+        "name": "4X89L8TM",
+        "email": "4X89@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 1,
+        "gender": "male"
+      },
+      {
+        "name": "TJH934DT",
+        "email": "TJH9@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 23,
+        "gender": "non-binary"
+      },
+      {
+        "name": "2XV6KBQX",
+        "email": "2XV6@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 10,
+        "gender": "male"
+      },
+      {
+        "name": "Y0ZT0S9N",
+        "email": "Y0ZT@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 25,
+        "gender": "female"
+      },
+      {
+        "name": "MNCQAN1N",
+        "email": "MNCQ@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 18,
+        "gender": "female"
+      },
+      {
+        "name": "NNIUR51S",
+        "email": "NNIU@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 12,
+        "gender": "male"
+      },
+      {
+        "name": "ZH3BEK0H",
+        "email": "ZH3B@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 16,
+        "gender": "female"
+      },
+      {
+        "name": "0WPD7QMD",
+        "email": "0WPD@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 14,
+        "gender": "male"
+      },
+      {
+        "name": "FQDVT3EZ",
+        "email": "FQDV@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 14,
+        "gender": "non-binary"
+      },
+      {
+        "name": "4T5UE7KR",
+        "email": "4T5U@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 2,
+        "gender": "male"
+      },
+      {
+        "name": "W6PSYRA7",
+        "email": "W6PS@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 10,
+        "gender": "female"
+      },
+      {
+        "name": "Z0ZUY53Z",
+        "email": "Z0ZU@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 27,
+        "gender": "female"
+      },
+      {
+        "name": "LSONC6DH",
+        "email": "LSON@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 8,
+        "gender": "non-binary"
+      },
+      {
+        "name": "QNAHL312",
+        "email": "QNAH@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 23,
+        "gender": "male"
+      },
+      {
+        "name": "44A2U1DZ",
+        "email": "44A2@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 6,
+        "gender": "female"
+      },
+      {
+        "name": "1FBDWEGX",
+        "email": "1FBD@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 16,
+        "gender": "male"
+      },
+      {
+        "name": "E48EGKEJ",
+        "email": "E48E@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 24,
+        "gender": "non-binary"
+      },
+      {
+        "name": "X1RWLDFJ",
+        "email": "X1RW@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 11,
+        "gender": "female"
+      },
+      {
+        "name": "ZAF2BHQT",
+        "email": "ZAF2@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 20,
+        "gender": "female"
+      },
+      {
+        "name": "T1TV7693",
+        "email": "T1TV@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 19,
+        "gender": "female"
+      },
+      {
+        "name": "HTD5MNE2",
+        "email": "HTD5@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 30,
+        "gender": "female"
+      },
+      {
+        "name": "1CBT8QZE",
+        "email": "1CBT@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 18,
+        "gender": "female"
+      },
+      {
+        "name": "DPVO9PJR",
+        "email": "DPVO@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 17,
+        "gender": "female"
+      },
+      {
+        "name": "XS17OMUD",
+        "email": "XS17@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 18,
+        "gender": "male"
+      },
+      {
+        "name": "7NEC3T6V",
+        "email": "7NEC@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 14,
+        "gender": "female"
+      },
+      {
+        "name": "LAVFAM6C",
+        "email": "LAVF@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 6,
+        "gender": "non-binary"
+      },
+      {
+        "name": "GNF8C8BY",
+        "email": "GNF8@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 12,
+        "gender": "male"
+      },
+      {
+        "name": "AL8BMPZ3",
+        "email": "AL8B@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 9,
+        "gender": "non-binary"
+      },
+      {
+        "name": "JQ5FIXUD",
+        "email": "JQ5F@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 1,
+        "gender": "female"
+      },
+      {
+        "name": "W58R1IHF",
+        "email": "W58R@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 2,
+        "gender": "male"
+      },
+      {
+        "name": "2PPK56ZJ",
+        "email": "2PPK@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 3,
+        "gender": "female"
+      },
+      {
+        "name": "G8EGPR8M",
+        "email": "G8EG@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 13,
+        "gender": "non-binary"
+      },
+      {
+        "name": "C8302540",
+        "email": "C830@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 6,
+        "gender": "male"
+      },
+      {
+        "name": "AZ8JLE7A",
+        "email": "AZ8J@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 25,
+        "gender": "female"
+      },
+      {
+        "name": "5I5TRQCR",
+        "email": "5I5T@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 21,
+        "gender": "male"
+      },
+      {
+        "name": "UV1KQXUE",
+        "email": "UV1K@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 16,
+        "gender": "non-binary"
+      },
+      {
+        "name": "KVOR4KWX",
+        "email": "KVOR@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 13,
+        "gender": "female"
+      },
+      {
+        "name": "TJS0THND",
+        "email": "TJS0@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 16,
+        "gender": "male"
+      },
+      {
+        "name": "5KC81CJL",
+        "email": "5KC8@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 24,
+        "gender": "male"
+      },
+      {
+        "name": "AC8JG0Q5",
+        "email": "AC8J@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 19,
+        "gender": "non-binary"
+      },
+      {
+        "name": "XXYEAKK3",
+        "email": "XXYE@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 20,
+        "gender": "non-binary"
+      },
+      {
+        "name": "T8FCYPU9",
+        "email": "T8FC@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 12,
+        "gender": "non-binary"
+      },
+      {
+        "name": "LXGS2HDC",
+        "email": "LXGS@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 8,
+        "gender": "male"
+      },
+      {
+        "name": "GFRTI41D",
+        "email": "GFRT@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 23,
+        "gender": "non-binary"
+      },
+      {
+        "name": "JT0YA3ZT",
+        "email": "JT0Y@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 25,
+        "gender": "non-binary"
+      },
+      {
+        "name": "WBX7IVMA",
+        "email": "WBX7@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 7,
+        "gender": "non-binary"
+      },
+      {
+        "name": "YSXSZRXC",
+        "email": "YSXS@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 29,
+        "gender": "non-binary"
+      },
+      {
+        "name": "D1Q8ISFT",
+        "email": "D1Q8@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 16,
+        "gender": "female"
+      },
+      {
+        "name": "BBRVINTP",
+        "email": "BBRV@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 9,
+        "gender": "male"
+      },
+      {
+        "name": "QJU3YP4B",
+        "email": "QJU3@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 8,
+        "gender": "female"
+      },
+      {
+        "name": "LQEMI4U0",
+        "email": "LQEM@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 27,
+        "gender": "female"
+      },
+      {
+        "name": "UK8LP0DQ",
+        "email": "UK8L@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 20,
+        "gender": "female"
+      },
+      {
+        "name": "ZUAOAW0F",
+        "email": "ZUAO@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 9,
+        "gender": "male"
+      },
+      {
+        "name": "ENYD8GFG",
+        "email": "ENYD@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 16,
+        "gender": "female"
+      },
+      {
+        "name": "QZ9RKMW3",
+        "email": "QZ9R@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 15,
+        "gender": "non-binary"
+      },
+      {
+        "name": "YIU25NPA",
+        "email": "YIU2@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 1,
+        "gender": "non-binary"
+      },
+      {
+        "name": "W5C26O7R",
+        "email": "W5C2@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 12,
+        "gender": "male"
+      },
+      {
+        "name": "ZGIGR19K",
+        "email": "ZGIG@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 30,
+        "gender": "non-binary"
+      },
+      {
+        "name": "80CKZ2LR",
+        "email": "80CK@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 25,
+        "gender": "female"
+      },
+      {
+        "name": "4GFK14WV",
+        "email": "4GFK@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 19,
+        "gender": "female"
+      },
+      {
+        "name": "MOA0XM0Q",
+        "email": "MOA0@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 7,
+        "gender": "non-binary"
+      },
+      {
+        "name": "PPYRZJ49",
+        "email": "PPYR@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 14,
+        "gender": "female"
+      },
+      {
+        "name": "CXVEMH4I",
+        "email": "CXVE@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 21,
+        "gender": "female"
+      },
+      {
+        "name": "MWQAWWPJ",
+        "email": "MWQA@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 27,
+        "gender": "male"
+      },
+      {
+        "name": "GLQSYC9Y",
+        "email": "GLQS@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 5,
+        "gender": "female"
+      },
+      {
+        "name": "MD6R9NMM",
+        "email": "MD6R@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 24,
+        "gender": "female"
+      },
+      {
+        "name": "LF3TZXVH",
+        "email": "LF3T@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 14,
+        "gender": "non-binary"
+      },
+      {
+        "name": "B0GDUJSD",
+        "email": "B0GD@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 12,
+        "gender": "male"
+      },
+      {
+        "name": "AXBET4E7",
+        "email": "AXBE@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 24,
+        "gender": "non-binary"
+      },
+      {
+        "name": "REG3S4ZR",
+        "email": "REG3@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 16,
+        "gender": "female"
+      },
+      {
+        "name": "SZG7NGZC",
+        "email": "SZG7@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 28,
+        "gender": "non-binary"
+      },
+      {
+        "name": "JXI834EI",
+        "email": "JXI8@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 17,
+        "gender": "female"
+      },
+      {
+        "name": "C3ARL67X",
+        "email": "C3AR@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 3,
+        "gender": "non-binary"
+      },
+      {
+        "name": "M5BDX8YH",
+        "email": "M5BD@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 3,
+        "gender": "non-binary"
+      },
+      {
+        "name": "3FHF5025",
+        "email": "3FHF@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 10,
+        "gender": "female"
+      },
+      {
+        "name": "4O6D0VZ3",
+        "email": "4O6D@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 22,
+        "gender": "non-binary"
+      },
+      {
+        "name": "XHCLXOBV",
+        "email": "XHCL@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 29,
+        "gender": "non-binary"
+      },
+      {
+        "name": "AV4S51ZY",
+        "email": "AV4S@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 3,
+        "gender": "non-binary"
+      },
+      {
+        "name": "WAHYWJDS",
+        "email": "WAHY@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 26,
+        "gender": "male"
+      },
+      {
+        "name": "FVS5PXYI",
+        "email": "FVS5@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 20,
+        "gender": "female"
+      },
+      {
+        "name": "KDT5UC27",
+        "email": "KDT5@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 1,
+        "gender": "non-binary"
+      },
+      {
+        "name": "QT3FXVFR",
+        "email": "QT3F@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 25,
+        "gender": "non-binary"
+      },
+      {
+        "name": "8H8LKPPO",
+        "email": "8H8L@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 7,
+        "gender": "male"
+      },
+      {
+        "name": "CUFR5Z0Q",
+        "email": "CUFR@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 18,
+        "gender": "female"
+      },
+      {
+        "name": "X8BPPU5B",
+        "email": "X8BP@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 22,
+        "gender": "male"
+      },
+      {
+        "name": "983QPU44",
+        "email": "983Q@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 27,
+        "gender": "non-binary"
+      },
+      {
+        "name": "JT7HT282",
+        "email": "JT7H@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 18,
+        "gender": "female"
+      },
+      {
+        "name": "ZV0TWZH2",
+        "email": "ZV0T@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 12,
+        "gender": "non-binary"
+      },
+      {
+        "name": "A8MZ7JP8",
+        "email": "A8MZ@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 19,
+        "gender": "non-binary"
+      },
+      {
+        "name": "3R7VH535",
+        "email": "3R7V@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 1,
+        "gender": "female"
+      },
+      {
+        "name": "83NWTXNI",
+        "email": "83NW@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 4,
+        "gender": "non-binary"
+      },
+      {
+        "name": "MGG0IPL1",
+        "email": "MGG0@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 30,
+        "gender": "non-binary"
+      },
+      {
+        "name": "XOLV7UB3",
+        "email": "XOLV@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 11,
+        "gender": "female"
+      },
+      {
+        "name": "P3VE1PI4",
+        "email": "P3VE@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 30,
+        "gender": "male"
+      },
+      {
+        "name": "ZJ5P60PR",
+        "email": "ZJ5P@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 25,
+        "gender": "female"
+      },
+      {
+        "name": "EIYQT0UE",
+        "email": "EIYQ@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 17,
+        "gender": "non-binary"
+      },
+      {
+        "name": "16JPE22M",
+        "email": "16JP@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 14,
+        "gender": "non-binary"
+      },
+      {
+        "name": "REUOOTUI",
+        "email": "REUO@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 2,
+        "gender": "non-binary"
+      },
+      {
+        "name": "E1P9O8NB",
+        "email": "E1P9@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 25,
+        "gender": "male"
+      },
+      {
+        "name": "D8G4BMM0",
+        "email": "D8G4@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 2,
+        "gender": "non-binary"
+      },
+      {
+        "name": "THU8762H",
+        "email": "THU8@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 2,
+        "gender": "female"
+      },
+      {
+        "name": "MFCXEWDK",
+        "email": "MFCX@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 10,
+        "gender": "female"
+      },
+      {
+        "name": "NSW66YS8",
+        "email": "NSW6@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 9,
+        "gender": "non-binary"
+      },
+      {
+        "name": "S16HFB27",
+        "email": "S16H@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 12,
+        "gender": "male"
+      },
+      {
+        "name": "Z2456SPE",
+        "email": "Z245@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 27,
+        "gender": "male"
+      },
+      {
+        "name": "UP234704",
+        "email": "UP23@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 12,
+        "gender": "female"
+      },
+      {
+        "name": "NX07024V",
+        "email": "NX07@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 1,
+        "gender": "non-binary"
+      },
+      {
+        "name": "UV8SCEKP",
+        "email": "UV8S@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 29,
+        "gender": "male"
+      },
+      {
+        "name": "88UYVLPV",
+        "email": "88UY@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 10,
+        "gender": "non-binary"
+      },
+      {
+        "name": "3IFY197B",
+        "email": "3IFY@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 25,
+        "gender": "male"
+      },
+      {
+        "name": "0ISOXZVI",
+        "email": "0ISO@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 21,
+        "gender": "female"
+      },
+      {
+        "name": "YEFP0V3Y",
+        "email": "YEFP@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 12,
+        "gender": "male"
+      },
+      {
+        "name": "6LLIEOJB",
+        "email": "6LLI@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 18,
+        "gender": "female"
+      },
+      {
+        "name": "RK84RNUH",
+        "email": "RK84@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 20,
+        "gender": "female"
+      },
+      {
+        "name": "C1XBTKMV",
+        "email": "C1XB@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 29,
+        "gender": "non-binary"
+      },
+      {
+        "name": "YXBBSL24",
+        "email": "YXBB@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 16,
+        "gender": "male"
+      },
+      {
+        "name": "FW2UPWCF",
+        "email": "FW2U@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 27,
+        "gender": "male"
+      },
+      {
+        "name": "R5YQEQ71",
+        "email": "R5YQ@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 10,
+        "gender": "non-binary"
+      },
+      {
+        "name": "5F9VZ13Q",
+        "email": "5F9V@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 22,
+        "gender": "male"
+      },
+      {
+        "name": "T7JWMAW0",
+        "email": "T7JW@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 24,
+        "gender": "female"
+      },
+      {
+        "name": "G13IX74C",
+        "email": "G13I@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 7,
+        "gender": "female"
+      },
+      {
+        "name": "3CTUHJZ3",
+        "email": "3CTU@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 16,
+        "gender": "male"
+      },
+      {
+        "name": "0TL4E6YV",
+        "email": "0TL4@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 9,
+        "gender": "male"
+      },
+      {
+        "name": "26FKG8MB",
+        "email": "26FK@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 18,
+        "gender": "male"
+      },
+      {
+        "name": "PG8B8PXS",
+        "email": "PG8B@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 7,
+        "gender": "non-binary"
+      },
+      {
+        "name": "SBYJ4SO2",
+        "email": "SBYJ@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 2,
+        "gender": "female"
+      },
+      {
+        "name": "HICFHG5S",
+        "email": "HICF@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 4,
+        "gender": "non-binary"
+      },
+      {
+        "name": "WFXH7BZR",
+        "email": "WFXH@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 14,
+        "gender": "non-binary"
+      },
+      {
+        "name": "E5W4Z6YX",
+        "email": "E5W4@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 27,
+        "gender": "male"
+      },
+      {
+        "name": "AA769L1R",
+        "email": "AA76@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 30,
+        "gender": "non-binary"
+      },
+      {
+        "name": "DIAUK1J0",
+        "email": "DIAU@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 10,
+        "gender": "female"
+      },
+      {
+        "name": "8ED4D6SF",
+        "email": "8ED4@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 6,
+        "gender": "female"
+      },
+      {
+        "name": "AZXUVILQ",
+        "email": "AZXU@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 25,
+        "gender": "female"
+      },
+      {
+        "name": "HGIHPSOA",
+        "email": "HGIH@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 7,
+        "gender": "non-binary"
+      },
+      {
+        "name": "TN2ZV50A",
+        "email": "TN2Z@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 28,
+        "gender": "female"
+      },
+      {
+        "name": "IPK5G29Q",
+        "email": "IPK5@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 28,
+        "gender": "non-binary"
+      },
+      {
+        "name": "4CC6MPM5",
+        "email": "4CC6@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 18,
+        "gender": "male"
+      },
+      {
+        "name": "06ZYHZPY",
+        "email": "06ZY@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 25,
+        "gender": "female"
+      },
+      {
+        "name": "THC0FWL6",
+        "email": "THC0@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 16,
+        "gender": "male"
+      },
+      {
+        "name": "E3S83NXT",
+        "email": "E3S8@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 10,
+        "gender": "female"
+      },
+      {
+        "name": "OWH0HVX0",
+        "email": "OWH0@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 11,
+        "gender": "non-binary"
+      },
+      {
+        "name": "G1QTT0YG",
+        "email": "G1QT@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 15,
+        "gender": "female"
+      },
+      {
+        "name": "MDJAVF28",
+        "email": "MDJA@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 30,
+        "gender": "female"
+      },
+      {
+        "name": "KYSV2LRV",
+        "email": "KYSV@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 25,
+        "gender": "non-binary"
+      },
+      {
+        "name": "SYM87ZNI",
+        "email": "SYM8@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 27,
+        "gender": "male"
+      },
+      {
+        "name": "1YJAKAOC",
+        "email": "1YJA@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 19,
+        "gender": "female"
+      },
+      {
+        "name": "80U8Q7HI",
+        "email": "80U8@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 28,
+        "gender": "non-binary"
+      },
+      {
+        "name": "T2XF6GEL",
+        "email": "T2XF@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 4,
+        "gender": "non-binary"
+      },
+      {
+        "name": "YM0YEYLH",
+        "email": "YM0Y@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 5,
+        "gender": "non-binary"
+      },
+      {
+        "name": "IOVL2Y58",
+        "email": "IOVL@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 24,
+        "gender": "non-binary"
+      },
+      {
+        "name": "9YRAMMTT",
+        "email": "9YRA@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 23,
+        "gender": "non-binary"
+      },
+      {
+        "name": "IHS8YIMI",
+        "email": "IHS8@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 30,
+        "gender": "male"
+      },
+      {
+        "name": "85ARLQ35",
+        "email": "85AR@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 1,
+        "gender": "non-binary"
+      },
+      {
+        "name": "XW9MQOQL",
+        "email": "XW9M@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 18,
+        "gender": "non-binary"
+      },
+      {
+        "name": "IF7LW6KF",
+        "email": "IF7L@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 9,
+        "gender": "female"
+      },
+      {
+        "name": "Z4TQIF52",
+        "email": "Z4TQ@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 8,
+        "gender": "non-binary"
+      },
+      {
+        "name": "67WVZTIU",
+        "email": "67WV@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 6,
+        "gender": "female"
+      },
+      {
+        "name": "ASY88UI0",
+        "email": "ASY8@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 12,
+        "gender": "non-binary"
+      },
+      {
+        "name": "3AW8R68M",
+        "email": "3AW8@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 12,
+        "gender": "non-binary"
+      },
+      {
+        "name": "2TL2TLQ1",
+        "email": "2TL2@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 26,
+        "gender": "male"
+      },
+      {
+        "name": "ASOJU2AW",
+        "email": "ASOJ@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 19,
+        "gender": "female"
+      },
+      {
+        "name": "3VDMPM9U",
+        "email": "3VDM@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 5,
+        "gender": "non-binary"
+      },
+      {
+        "name": "YG70FZT8",
+        "email": "YG70@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 24,
+        "gender": "male"
+      },
+      {
+        "name": "6J8Q6X13",
+        "email": "6J8Q@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 28,
+        "gender": "non-binary"
+      },
+      {
+        "name": "KZFMCLBU",
+        "email": "KZFM@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 22,
+        "gender": "non-binary"
+      },
+      {
+        "name": "ZE0832ED",
+        "email": "ZE08@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 3,
+        "gender": "female"
+      },
+      {
+        "name": "SGD41E4M",
+        "email": "SGD4@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 6,
+        "gender": "female"
+      },
+      {
+        "name": "BBJUOYSN",
+        "email": "BBJU@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 19,
+        "gender": "non-binary"
+      },
+      {
+        "name": "GVJZYYJF",
+        "email": "GVJZ@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 16,
+        "gender": "non-binary"
+      },
+      {
+        "name": "QTKYLI91",
+        "email": "QTKY@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 13,
+        "gender": "non-binary"
+      },
+      {
+        "name": "FEZ1MBW2",
+        "email": "FEZ1@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 3,
+        "gender": "female"
+      },
+      {
+        "name": "094GGAO2",
+        "email": "094G@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 24,
+        "gender": "female"
+      },
+      {
+        "name": "YSRERNIH",
+        "email": "YSRE@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 13,
+        "gender": "male"
+      },
+      {
+        "name": "J1Y16BG0",
+        "email": "J1Y1@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 21,
+        "gender": "non-binary"
+      },
+      {
+        "name": "BECCQE9T",
+        "email": "BECC@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 13,
+        "gender": "female"
+      },
+      {
+        "name": "S33WC5C6",
+        "email": "S33W@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 4,
+        "gender": "non-binary"
+      },
+      {
+        "name": "6CB8B86N",
+        "email": "6CB8@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 17,
+        "gender": "female"
+      },
+      {
+        "name": "KB86QBZJ",
+        "email": "KB86@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 7,
+        "gender": "female"
+      },
+      {
+        "name": "8Q8128Y6",
+        "email": "8Q81@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 25,
+        "gender": "male"
+      },
+      {
+        "name": "1EFKAQSV",
+        "email": "1EFK@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 11,
+        "gender": "male"
+      },
+      {
+        "name": "7Z905M8P",
+        "email": "7Z90@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 15,
+        "gender": "non-binary"
+      },
+      {
+        "name": "GYV200QB",
+        "email": "GYV2@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 30,
+        "gender": "non-binary"
+      },
+      {
+        "name": "1YEYPHBS",
+        "email": "1YEY@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 30,
+        "gender": "non-binary"
+      },
+      {
+        "name": "J53OXAOW",
+        "email": "J53O@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 23,
+        "gender": "female"
+      },
+      {
+        "name": "AMY776XE",
+        "email": "AMY7@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 29,
+        "gender": "non-binary"
+      },
+      {
+        "name": "RYSWUZVY",
+        "email": "RYSW@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 25,
+        "gender": "male"
+      },
+      {
+        "name": "P6ENL5X1",
+        "email": "P6EN@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 18,
+        "gender": "male"
+      },
+      {
+        "name": "3QZVAB66",
+        "email": "3QZV@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 28,
+        "gender": "male"
+      },
+      {
+        "name": "SOZDIW2I",
+        "email": "SOZD@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 2,
+        "gender": "non-binary"
+      },
+      {
+        "name": "XKH3XG94",
+        "email": "XKH3@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 24,
+        "gender": "male"
+      },
+      {
+        "name": "H8VKGO6Q",
+        "email": "H8VK@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 19,
+        "gender": "female"
+      },
+      {
+        "name": "VP9YP9WQ",
+        "email": "VP9Y@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 1,
+        "gender": "female"
+      },
+      {
+        "name": "NKSII2QG",
+        "email": "NKSI@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 22,
+        "gender": "non-binary"
+      },
+      {
+        "name": "URJ70TT4",
+        "email": "URJ7@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 29,
+        "gender": "female"
+      },
+      {
+        "name": "S3RH8ZI0",
+        "email": "S3RH@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 10,
+        "gender": "female"
+      },
+      {
+        "name": "5A73NYUJ",
+        "email": "5A73@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 20,
+        "gender": "non-binary"
+      },
+      {
+        "name": "0WCJQ2R8",
+        "email": "0WCJ@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 16,
+        "gender": "male"
+      },
+      {
+        "name": "RUMU5BSF",
+        "email": "RUMU@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 7,
+        "gender": "male"
+      },
+      {
+        "name": "450VS41Q",
+        "email": "450V@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 8,
+        "gender": "male"
+      },
+      {
+        "name": "PZE92KQ6",
+        "email": "PZE9@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 11,
+        "gender": "non-binary"
+      },
+      {
+        "name": "CFLA4HXC",
+        "email": "CFLA@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 9,
+        "gender": "male"
+      },
+      {
+        "name": "AK40DQBH",
+        "email": "AK40@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 9,
+        "gender": "female"
+      },
+      {
+        "name": "7SZ0G8GE",
+        "email": "7SZ0@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 15,
+        "gender": "male"
+      },
+      {
+        "name": "VZI5TLSU",
+        "email": "VZI5@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 26,
+        "gender": "non-binary"
+      },
+      {
+        "name": "5A057I2G",
+        "email": "5A05@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 16,
+        "gender": "male"
+      },
+      {
+        "name": "HY037N21",
+        "email": "HY03@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 2,
+        "gender": "non-binary"
+      },
+      {
+        "name": "7AX6JLPW",
+        "email": "7AX6@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "group": 9,
+        "gender": "female"
+      },
+      {
+        "name": "EBXDO8AG",
+        "email": "EBXD@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 18,
+        "gender": "female"
+      },
+      {
+        "name": "L84XSTOC",
+        "email": "L84X@umich.edu",
+        "campus": "central",
+        "year": "junior",
+        "group": 28,
+        "gender": "non-binary"
+      },
+      {
+        "name": "VN178N7M",
+        "email": "VN17@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 7,
+        "gender": "male"
+      },
+      {
+        "name": "5J1WBLDD",
+        "email": "5J1W@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 9,
+        "gender": "male"
+      },
+      {
+        "name": "HR8UVYXK",
+        "email": "HR8U@umich.edu",
+        "campus": "central",
+        "year": "freshman",
+        "group": 17,
+        "gender": "female"
+      },
+      {
+        "name": "NW9V34PK",
+        "email": "NW9V@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "group": 29,
+        "gender": "female"
+      },
+      {
+        "name": "BKLQESUG",
+        "email": "BKLQ@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 21,
+        "gender": "male"
+      },
+      {
+        "name": "MZ30J6MI",
+        "email": "MZ30@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 8,
+        "gender": "female"
+      },
+      {
+        "name": "B3O953B0",
+        "email": "B3O9@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "group": 1,
+        "gender": "non-binary"
+      },
+      {
+        "name": "205E4ZSO",
+        "email": "205E@umich.edu",
+        "campus": "central",
+        "year": "senior",
+        "group": 29,
+        "gender": "male"
+      },
+      {
+        "name": "T4Y72VHG",
+        "email": "T4Y7@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 9,
+        "gender": "female"
+      },
+      {
+        "name": "XT49YC99",
+        "email": "XT49@umich.edu",
+        "campus": "north",
+        "year": "sophomore",
+        "group": 20,
+        "gender": "non-binary"
+      },
+      {
+        "name": "R1XDL8ME",
+        "email": "R1XD@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 14,
+        "gender": "non-binary"
+      },
+      {
+        "name": "KCHEWUWY",
+        "email": "KCHE@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 26,
+        "gender": "male"
+      },
+      {
+        "name": "HE85DAJ9",
+        "email": "HE85@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "group": 12,
+        "gender": "male"
+      },
+      {
+        "name": "X9SO15EJ",
+        "email": "X9SO@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 26,
+        "gender": "non-binary"
+      },
+      {
+        "name": "5O9OB1AW",
+        "email": "5O9O@umich.edu",
+        "campus": "north",
+        "year": "junior",
+        "group": 20,
+        "gender": "non-binary"
+      },
+      {
+        "name": "CYDC0XN0",
+        "email": "CYDC@umich.edu",
+        "campus": "central",
+        "year": "grad",
+        "group": 17,
+        "gender": "non-binary"
+      }
+    ],
+    "flagged": [
+      {
+        "name": "2VKQH2F1",
+        "email": "2VKQ@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "gender": "non-binary",
+        "conflictMessage": "No available time for selected campus."
+      },
+      {
+        "name": "4YBHN19B",
+        "email": "4YBH@umich.edu",
+        "campus": "north",
+        "year": "grad",
+        "gender": "non-binary",
+        "conflictMessage": "Insufficient available times"
+      },
+      {
+        "name": "AFUJOL8Y",
+        "email": "AFUJ@umich.edu",
+        "campus": "north",
+        "year": "freshman",
+        "gender": "female"
+      },
+      {
+        "name": "8OQ79996",
+        "email": "8OQ7@umich.edu",
+        "campus": "north",
+        "year": "senior",
+        "gender": "female"
+      },
+      {
+        "name": "NUY6VIIM",
+        "email": "NUY6@umich.edu",
+        "campus": "central",
+        "year": "sophomore",
+        "gender": "male"
+      }
+    ]
+  }
+}

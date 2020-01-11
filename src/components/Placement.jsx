@@ -6,7 +6,7 @@ import MemberManager from './MemberManager';
 import Member from './Member';
 import FlaggedMember from './FlaggedMember';
 
-import JSONData from '../../content/placement.json';
+import JSONData from '../../content/placement_generated.json';
 
 const classNames = require('classnames');
 
@@ -21,7 +21,6 @@ class Placement extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      groups: [],
       groupData: {},
       members: [],
       flaggedMembers: [],
@@ -30,9 +29,7 @@ class Placement extends React.Component {
     this.fetchPlacement = this.fetchPlacement.bind(this);
     this.toggleFocusEl = this.toggleFocusEl.bind(this);
     this.sortMembers = this.sortMembers.bind(this);
-    this.sortGroups = this.sortGroups.bind(this);
     this.createMembersAndGroups = this.createMembersAndGroups.bind(this);
-    // this.updateGroups = this.updateGroups.bind(this);
   }
 
   componentDidMount() {
@@ -59,12 +56,6 @@ class Placement extends React.Component {
     }
   }
 
-  sortGroups(sortFunc) {
-    this.setState((prevState) => ({
-      groups: prevState.groups.sort(sortFunc),
-    }));
-  }
-
   fetchPlacement(fetchURL) {
     fetch(fetchURL, { credentials: 'same-origin' })
       .then((response) => {
@@ -80,7 +71,6 @@ class Placement extends React.Component {
   }
 
   createMembersAndGroups(data) {
-    const groups = [];
     const groupData = {};
     const flaggedMembers = [];
 
@@ -96,24 +86,18 @@ class Placement extends React.Component {
       Placement.updateGroupData(groupData, newMember);
     });
 
-    // create groups from groupData
-    Object.keys(groupData).forEach((group) => {
-      const newGroup = (
-        <Group
-          key={group}
-          number={group}
-          members={groupData[group]}
-        />
-      );
-      groups.push(newGroup);
-    });
-
     // add flagged members
+    const groupSizes = {};
+    // get size of each group
+    Object.keys(groupData).forEach((group) => {
+      groupSizes[group] = groupData[group].length;
+    });
     data.results.flagged.forEach((memberData) => {
       const newFlagged = (
         <FlaggedMember
           {...memberData}
           key={memberData.name}
+          groupSizes={groupSizes}
         />
       );
       flaggedMembers.push(newFlagged);
@@ -121,7 +105,6 @@ class Placement extends React.Component {
 
     // save in state
     this.setState({
-      groups,
       flaggedMembers,
       groupData,
     }, () => {

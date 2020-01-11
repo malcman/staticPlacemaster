@@ -19,6 +19,7 @@ class GroupManager extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
+    // create Group components after groupData object has properly loaded
     if (Object.entries(prevProps.groupData).length === 0
       && Object.entries(this.props.groupData).length > 0) {
       this.getGroups(roomData);
@@ -30,7 +31,7 @@ class GroupManager extends React.Component {
     let groupHeaders = [];
     // create groups from groupData
     groupData.rooms.forEach((group) => {
-      // record headers
+      // record data headers
       if (group.number === 1) {
         groupHeaders = Object.keys(group);
       }
