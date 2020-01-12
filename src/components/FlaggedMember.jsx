@@ -35,6 +35,8 @@ class FlaggedMember extends React.Component {
   setGroup(group) {
     this.setState({
       group,
+    }, () => {
+      this.props.placeFlaggedMember(this.state.group, this.props);
     });
   }
 

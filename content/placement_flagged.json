@@ -1,0 +1,282 @@
+{
+  "results": {
+    "placed": [
+      {
+        "first": "YR0S3FDB",
+        "last": "OO42XCDY",
+        "email": "OO42@umich.edu",
+        "gender": "O",
+        "campus": "North Campus",
+        "grad_standing": "Undergraduate",
+        "t_mon": "6-7 pm,7-8 pm, 8-9pm",
+        "t_tue": "6-7 pm,7-8 pm, 8-9pm",
+        "t_wed": "6-7 pm,7-8 pm, 8-9pm",
+        "t_thu": "6-7 pm,7-8 pm, 8-9pm",
+        "group_id": 22
+      },
+      {
+        "first": "CEIG3WZL",
+        "last": "XHF6T8R6",
+        "email": "XHF6@umich.edu",
+        "gender": "F",
+        "campus": "North Campus",
+        "grad_standing": "Graduate",
+        "t_mon": "6-7 pm,7-8 pm, 8-9pm",
+        "t_tue": "6-7 pm,7-8 pm, 8-9pm",
+        "t_wed": "6-7 pm,7-8 pm, 8-9pm",
+        "t_thu": "6-7 pm,7-8 pm, 8-9pm",
+        "group_id": 25
+      }
+    ],
+    "unplaced": [
+      {
+        "first": "Q4DWQX7B",
+        "last": "MADEQTRU",
+        "email": "MADE@umich.edu",
+        "gender": "F",
+        "campus": "North Campus",
+        "grad_standing": "Undergraduate",
+        "t_mon": "6-7 pm,7-8 pm, 8-9pm",
+        "t_tue": "6-7 pm,7-8 pm, 8-9pm",
+        "t_wed": "6-7 pm,7-8 pm, 8-9pm",
+        "t_thu": "6-7 pm,7-8 pm, 8-9pm"
+      },
+      {
+        "first": "OZFEQC4O",
+        "last": "2MDPYH7N",
+        "email": "2MDP@umich.edu",
+        "gender": "F",
+        "campus": "North Campus",
+        "grad_standing": "Graduate",
+        "t_mon": "6-7 pm,7-8 pm, 8-9pm",
+        "t_tue": "6-7 pm,7-8 pm, 8-9pm",
+        "t_wed": "6-7 pm,7-8 pm, 8-9pm",
+        "t_thu": "6-7 pm,7-8 pm, 8-9pm"
+      },
+      {
+        "first": "3WL6TPY4",
+        "last": "07WKOQDV",
+        "email": "07WK@umich.edu",
+        "gender": "O",
+        "campus": "Central Campus",
+        "grad_standing": "Undergraduate",
+        "t_mon": "6-7 pm,7-8 pm, 8-9pm",
+        "t_tue": "6-7 pm,7-8 pm, 8-9pm",
+        "t_wed": "6-7 pm,7-8 pm, 8-9pm",
+        "t_thu": "6-7 pm,7-8 pm, 8-9pm"
+      },
+      {
+        "first": "EZKIRN1B",
+        "last": "HJ5VWR4K",
+        "email": "HJ5V@umich.edu",
+        "gender": "F",
+        "campus": "Central Campus",
+        "grad_standing": "Undergraduate",
+        "t_mon": "6-7 pm,7-8 pm, 8-9pm",
+        "t_tue": "6-7 pm,7-8 pm, 8-9pm",
+        "t_wed": "6-7 pm,7-8 pm, 8-9pm",
+        "t_thu": "6-7 pm,7-8 pm, 8-9pm"
+      },
+      {
+        "first": "ZPDUHY3I",
+        "last": "NNPQSF2T",
+        "email": "NNPQ@umich.edu",
+        "gender": "F",
+        "campus": "North Campus",
+        "grad_standing": "Graduate",
+        "t_mon": "6-7 pm,7-8 pm, 8-9pm",
+        "t_tue": "6-7 pm,7-8 pm, 8-9pm",
+        "t_wed": "6-7 pm,7-8 pm, 8-9pm",
+        "t_thu": "6-7 pm,7-8 pm, 8-9pm"
+      }
+    ],
+    "groups": [
+      {
+        "group_id": 1,
+        "time": "Monday 4:00-5:00",
+        "campus": "North Campus",
+        "grad_standing": "Undergraduate"
+      },
+      {
+        "group_id": 2,
+        "time": "Monday 4:00-5:00",
+        "campus": "Central Campus",
+        "grad_standing": "Undergraduate"
+      },
+      {
+        "group_id": 3,
+        "time": "Monday 5:00-6:00",
+        "campus": "North Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 4,
+        "time": "Monday 5:00-6:00",
+        "campus": "Central Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 5,
+        "time": "Monday 7:00-8:00",
+        "campus": "North Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 6,
+        "time": "Monday 7:00-8:00",
+        "campus": "North Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 7,
+        "time": "Monday 8:00-9:00",
+        "campus": "Central Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 8,
+        "time": "Tuesday 4:00-5:00",
+        "campus": "North Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 9,
+        "time": "Tuesday 5:00-6:00",
+        "campus": "Central Campus",
+        "grad_standing": "Undergraduate"
+      },
+      {
+        "group_id": 10,
+        "time": "Tuesday 6:00-7:00",
+        "campus": "Central Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 11,
+        "time": "Tuesday 6:00-7:00",
+        "campus": "North Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 12,
+        "time": "Tuesday 6:00-7:00",
+        "campus": "Central Campus",
+        "grad_standing": "Undergraduate"
+      },
+      {
+        "group_id": 13,
+        "time": "Tuesday 7:00-8:00",
+        "campus": "North Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 14,
+        "time": "Tuesday 7:00-8:00",
+        "campus": "Central Campus",
+        "grad_standing": "Undergraduate"
+      },
+      {
+        "group_id": 15,
+        "time": "Tuesday 8:00-9:00",
+        "campus": "North Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 16,
+        "time": "Wednesday 4:00-5:00",
+        "campus": "North Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 17,
+        "time": "Wednesday 5:00-6:00",
+        "campus": "Central Campus",
+        "grad_standing": "Undergraduate"
+      },
+      {
+        "group_id": 18,
+        "time": "Wednesday 5:00-6:00",
+        "campus": "North Campus",
+        "grad_standing": "Undergraduate"
+      },
+      {
+        "group_id": 19,
+        "time": "Wednesday 6:00-7:00",
+        "campus": "North Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 20,
+        "time": "Wednesday 6:00-7:00",
+        "campus": "Central Campus",
+        "grad_standing": "Undergraduate"
+      },
+      {
+        "group_id": 21,
+        "time": "Wednesday 6:00-7:00",
+        "campus": "North Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 22,
+        "time": "Wednesday 7:00-8:00",
+        "campus": "Central Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 23,
+        "time": "Wednesday 7:00-8:00",
+        "campus": "North Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 24,
+        "time": "Wednesday 8:00-9:00",
+        "campus": "Central Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 25,
+        "time": "Thursday 4:00-5:00",
+        "campus": "North Campus",
+        "grad_standing": "Undergraduate"
+      },
+      {
+        "group_id": 26,
+        "time": "Thursday 4:00-5:00",
+        "campus": "Central Campus",
+        "grad_standing": "Undergraduate"
+      },
+      {
+        "group_id": 27,
+        "time": "Thursday 5:00-6:00",
+        "campus": "North Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 28,
+        "time": "Thursday 5:00-6:00",
+        "campus": "North Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 29,
+        "time": "Thursday 6:00-7:00",
+        "campus": "North Campus",
+        "grad_standing": "Undergraduate"
+      },
+      {
+        "group_id": 30,
+        "time": "Thursday 6:00-7:00",
+        "campus": "North Campus",
+        "grad_standing": "Graduate"
+      },
+      {
+        "group_id": 31,
+        "time": "Thursday 7:00-8:00",
+        "campus": "Central Campus",
+        "grad_standing": "Graduate"
+      }
+    ]
+  }
+}

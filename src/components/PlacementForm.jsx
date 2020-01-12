@@ -83,6 +83,14 @@ class PlacementForm extends React.Component {
             value={this.state.titleText}
           />
 
+          <input
+            type="text"
+            name="user"
+            value="michigan_spring_2019_dev"
+            disabled
+            className="hidden"
+          />
+
           <h3>Sign-Up File:</h3>
           <input
             type="file"

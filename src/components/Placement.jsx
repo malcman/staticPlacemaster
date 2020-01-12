@@ -5,7 +5,7 @@ import MemberManager from './MemberManager';
 import Member from './Member';
 import FlaggedMember from './FlaggedMember';
 
-import JSONData from '../../content/placement.json';
+import JSONData from '../../content/placement_flagged.json';
 
 const classNames = require('classnames');
 
@@ -38,6 +38,7 @@ class Placement extends React.Component {
     this.fetchPlacement = this.fetchPlacement.bind(this);
     this.toggleFocusEl = this.toggleFocusEl.bind(this);
     this.sortFlaggedMembers = this.sortFlaggedMembers.bind(this);
+    this.placeFlaggedMember = this.placeFlaggedMember.bind(this);
     this.createMembersAndGroups = this.createMembersAndGroups.bind(this);
   }
 
@@ -57,6 +58,66 @@ class Placement extends React.Component {
     this.setState((prevState) => ({
       flaggedMembers: prevState.flaggedMembers.sort(sortFunc),
     }));
+  }
+
+  placeFlaggedMember(newGroup, memberData) {
+    // add to allGroups
+
+    // create member with same props as previously flagged member
+    const newMember = (
+      <Member
+        key={memberData.email}
+        group_id={newGroup}
+        {...memberData}
+      />
+    );
+    // get existing members of this group and add newMember to the list
+    const existingMembers = this.state.allGroups[newGroup].members;
+    existingMembers.push(newMember);
+
+    // get object of existing group data
+    const existingGroup = this.state.allGroups[newGroup];
+
+    // create copy of group data object with updated members list
+    const newGroupObj = {};
+    newGroupObj[newGroup] = {
+      ...existingGroup,
+      size: existingMembers.length,
+      members: existingMembers,
+    };
+
+    // update state with new data for newGroup key
+    // all other allGroups data remains the same
+    this.setState((prevState) => ({
+      allGroups: {
+        ...prevState.allGroups,
+        ...newGroup,
+      },
+    }), () => {
+      // remove newly added member from flaggedMembers
+      // while passing updated allGroupsInfo
+      const newFlagged = [];
+      this.state.flaggedMembers.forEach((flagged) => {
+        if (flagged.props.email !== memberData.email) {
+          // do not pass members list
+          delete newGroupObj[newGroup].members;
+          // create object with previous allGroupsInfo and updated data
+          const allGroupsInfo = {
+            ...flagged.props.allGroupsInfo,
+            ...newGroupObj,
+          };
+          const newFlaggedMember = (
+            <FlaggedMember
+              {...flagged.props}
+              key={flagged.props.email}
+              allGroupsInfo={allGroupsInfo}
+            />
+          );
+          newFlagged.push(newFlaggedMember);
+        }
+      });
+      this.setState({ flaggedMembers: newFlagged });
+    });
   }
 
   fetchPlacement(fetchURL) {
@@ -79,11 +140,10 @@ class Placement extends React.Component {
 
     // add placed members
     data.results.placed.forEach((memberData) => {
-      const fullName = `${memberData.first} ${memberData.last}`;
       const newMember = (
         <Member
           {...memberData}
-          key={fullName}
+          key={memberData.email}
         />
       );
       const groupInfo = data.results.groups[memberData.group_id - 1];
@@ -109,6 +169,7 @@ class Placement extends React.Component {
           {...memberData}
           key={fullName}
           allGroupsInfo={allGroupsInfo}
+          placeFlaggedMember={this.placeFlaggedMember}
         />
       );
       flaggedMembers.push(newFlagged);

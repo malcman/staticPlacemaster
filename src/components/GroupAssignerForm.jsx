@@ -13,14 +13,15 @@ class GroupAssignerForm extends React.Component {
 
   setAssignedGroup(e) {
     this.setState({
-      assignedGroup: e.target.value,
+      assignedGroup: Number(e.target.value),
     });
   }
 
   getGroupsPreview() {
     const previewList = [];
     const { allGroupsInfo } = this.props;
-    Object.keys(allGroupsInfo).forEach((group) => {
+    Object.keys(allGroupsInfo).forEach((groupStr) => {
+      const group = Number(groupStr);
       const previewID = `groupPreview${group}`;
       const groupPreview = (
         <label

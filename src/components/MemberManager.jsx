@@ -24,8 +24,7 @@ class MemberManager extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (Object.entries(prevProps.groupData).length === 0
-      && Object.entries(this.props.groupData).length > 0) {
+    if (prevProps.groupData !== this.props.groupData) {
       const members = this.getMembers();
       const validHeaders = ['Email', 'Campus', 'Gender'];
       this.extendHeaders(validHeaders);
@@ -50,6 +49,9 @@ class MemberManager extends React.Component {
   }
 
   extendHeaders(validHeaders) {
+    if (this.memberHeaders.length - validHeaders.length === 2) {
+      return;
+    }
     validHeaders.forEach((header) => {
       const newHeader = {
         label: header,

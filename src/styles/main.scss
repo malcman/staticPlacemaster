@@ -94,6 +94,9 @@ ul {
     padding-bottom: 5px;
     width: 70%;
   }
+  input.hidden {
+    display: none;
+  }
   h3 {
     font-size: 1.5em;
     font-weight: 400;
@@ -473,6 +476,14 @@ ul {
   input[type=submit] {
     width: 100%;
     cursor: pointer;
+    height: 40px;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 -3px 6px lightgrey;
+    font-size: 1.2em;
+    &:not([disabled]) {
+      color: green;
+    }
   }
 }
 
