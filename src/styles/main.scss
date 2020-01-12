@@ -422,6 +422,7 @@ ul {
 
 .GroupAssigner {
   width: 100%;
+  background-color: white;
   button {
     color: $mainDark;
     border: none;
@@ -431,27 +432,50 @@ ul {
     border-radius: 5px;
     margin-bottom: 20px;
   }
+  &.expanded {
+    border-radius: 5px;
+    box-shadow: 5px 4px 10px;
+    button {
+      box-shadow: none;
+    }
+  }
 }
 
 .groupsPreview {
   width: 100%;
-  max-height: 50vh;
-  overflow: scroll;
   margin-bottom: 20px;
   .previewHeaders {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 50px;
     h6 {
       display: inline-block;
     }
   }
   .groupsPreviewList {
+    max-height: 40vh;
+    overflow: scroll;
     li {
       display: grid;
-      grid-template-columns: 50px repeat(4, 1fr);
+      grid-template-columns: 50px repeat(3, 1fr);
+      input[type="radio"] {
+        display: block;
+        margin: auto;
+      }
+    }
+    label:nth-of-type(even) li {
+      background-color: #F0F6FD;
+    }
+    label:hover li {
+      background-color: darken(#F0F6FD, 10%);
     }
   }
+  input[type=submit] {
+    width: 100%;
+    cursor: pointer;
+  }
 }
+
 
 .expandToggle {
   position: absolute;

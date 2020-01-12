@@ -4,7 +4,7 @@ class GroupAssignerForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      assignedGroup: null,
+      assignedGroup: '',
     };
     this.setAssignedGroup = this.setAssignedGroup.bind(this);
     this.getGroupsPreview = this.getGroupsPreview.bind(this);
@@ -59,7 +59,11 @@ class GroupAssignerForm extends React.Component {
         <ul className="groupsPreviewList">
           {groupsPreview}
         </ul>
-        <input type="submit" />
+        <input
+          type="submit"
+          disabled={this.state.assignedGroup === ''}
+          value={`Assign Group ${this.state.assignedGroup}`}
+        />
       </form>
     );
   }

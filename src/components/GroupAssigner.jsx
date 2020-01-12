@@ -20,7 +20,6 @@ class GroupAssigner extends React.Component {
       <div className="groupsPreview">
         <div className="previewHeaders">
           <h6>Group</h6>
-          <h6>Day</h6>
           <h6>Time</h6>
           <h6>Size</h6>
         </div>
@@ -48,7 +47,10 @@ class GroupAssigner extends React.Component {
   }
 
   render() {
-    const assignerClass = classNames('GroupAssigner');
+    const assignerClass = classNames(
+      'GroupAssigner',
+      { expanded: this.state.expanded },
+    );
     const groupInfo = this.getExpandedInfo();
     return (
       <div className={assignerClass}>
