@@ -1,34 +1,43 @@
 import React from 'react';
 
 import GroupManager from './GroupManager';
-import Group from './Group';
 import MemberManager from './MemberManager';
 import Member from './Member';
 import FlaggedMember from './FlaggedMember';
 
-import JSONData from '../../content/placement_generated.json';
+import JSONData from '../../content/placement.json';
 
 const classNames = require('classnames');
 
 class Placement extends React.Component {
-  static updateGroupData(groupData, member) {
-    if (!groupData.hasOwnProperty(member.props.group)) {
-      groupData[member.props.group] = [];
+  static updateGroupData(allGroups, groupData, member) {
+    // if this groupID is not yet in group data,
+    // create appropriate object
+    // regardless, add new member to group
+    const groupID = member.props.group_id;
+    if (!allGroups.hasOwnProperty(groupID)) {
+      allGroups[groupID] = {
+        members: [],
+        size: 0,
+        time: groupData.time,
+        campus: groupData.campus,
+        gradStanding: groupData.grad_standing,
+      };
     }
-    groupData[member.props.group].push(member);
+    allGroups[groupID].members.push(member);
+    allGroups[groupID].size += 1;
   }
 
   constructor(props) {
     super(props);
     this.state = {
-      groupData: {},
-      members: [],
+      allGroups: {},
       flaggedMembers: [],
       groupFocus: true,
     };
     this.fetchPlacement = this.fetchPlacement.bind(this);
     this.toggleFocusEl = this.toggleFocusEl.bind(this);
-    this.sortMembers = this.sortMembers.bind(this);
+    this.sortFlaggedMembers = this.sortFlaggedMembers.bind(this);
     this.createMembersAndGroups = this.createMembersAndGroups.bind(this);
   }
 
@@ -44,16 +53,10 @@ class Placement extends React.Component {
     });
   }
 
-  sortMembers(sortFunc, flagged = false) {
-    if (flagged) {
-      this.setState((prevState) => ({
-        flaggedMembers: prevState.flaggedMembers.sort(sortFunc),
-      }));
-    } else {
-      this.setState((prevState) => ({
-        members: prevState.members.sort(sortFunc),
-      }));
-    }
+  sortFlaggedMembers(sortFunc) {
+    this.setState((prevState) => ({
+      flaggedMembers: prevState.flaggedMembers.sort(sortFunc),
+    }));
   }
 
   fetchPlacement(fetchURL) {
@@ -71,33 +74,41 @@ class Placement extends React.Component {
   }
 
   createMembersAndGroups(data) {
-    const groupData = {};
+    const allGroups = {};
     const flaggedMembers = [];
 
     // add placed members
     data.results.placed.forEach((memberData) => {
+      const fullName = `${memberData.first} ${memberData.last}`;
       const newMember = (
         <Member
           {...memberData}
-          key={memberData.name}
+          key={fullName}
         />
       );
-      // members.push(newMember);
-      Placement.updateGroupData(groupData, newMember);
+      const groupInfo = data.results.groups[memberData.group_id - 1];
+      // console.log(groupInfo);
+      // console.log(memberData.group_id)
+      // console.log(data.results.groups)
+      Placement.updateGroupData(allGroups, groupInfo, newMember);
+    });
+
+    // create object with group data that does not include
+    // huge lists of members
+    const allGroupsInfo = {};
+    Object.keys(allGroups).forEach((group) => {
+      const { members, ...groupInfo } = allGroups[group];
+      allGroupsInfo[group] = groupInfo;
     });
 
     // add flagged members
-    const groupSizes = {};
-    // get size of each group
-    Object.keys(groupData).forEach((group) => {
-      groupSizes[group] = groupData[group].length;
-    });
-    data.results.flagged.forEach((memberData) => {
+    data.results.unplaced.forEach((memberData) => {
+      const fullName = `${memberData.first} ${memberData.last}`;
       const newFlagged = (
         <FlaggedMember
           {...memberData}
-          key={memberData.name}
-          groupSizes={groupSizes}
+          key={fullName}
+          allGroupsInfo={allGroupsInfo}
         />
       );
       flaggedMembers.push(newFlagged);
@@ -106,15 +117,7 @@ class Placement extends React.Component {
     // save in state
     this.setState({
       flaggedMembers,
-      groupData,
-    }, () => {
-      const allMembers = Object.keys(this.state.groupData).reduce(
-        (accum, groupNum) => accum.concat(this.state.groupData[groupNum]),
-        [],
-      );
-      this.setState({
-        members: allMembers,
-      });
+      allGroups,
     });
   }
 
@@ -154,15 +157,15 @@ class Placement extends React.Component {
         <GroupManager
           role="tabpanel"
           focused={this.state.groupFocus}
-          groupData={this.state.groupData}
+          groupData={this.state.allGroups}
           sortHandler={this.sortGroups}
         />
         <MemberManager
           role="tabpanel"
           focused={!this.state.groupFocus}
-          members={this.state.members}
+          groupData={this.state.allGroups}
           flaggedMembers={this.state.flaggedMembers}
-          sortHandler={this.sortMembers}
+          sortFlaggedHandler={this.sortFlaggedMembers}
         />
       </section>
     );

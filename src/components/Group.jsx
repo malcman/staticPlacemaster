@@ -46,10 +46,9 @@ class Group extends React.Component {
       >
         <div className="infoRow">
           <p>{this.props.number}</p>
-          <p>{this.props.day}</p>
           <p>{this.props.time}</p>
           <p>{this.props.campus}</p>
-          <p>{this.props.level}</p>
+          <p>{this.props.gradStanding}</p>
         </div>
         <button
           type="button"

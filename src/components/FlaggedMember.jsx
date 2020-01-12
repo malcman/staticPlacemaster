@@ -22,7 +22,7 @@ class FlaggedMember extends React.Component {
           <h6 className="conflictHeader">Conflict</h6>
           <p>{this.props.conflictMessage}</p>
           <GroupAssigner
-            groupSizes={this.props.groupSizes}
+            allGroupsInfo={this.props.allGroupsInfo}
             setGroup={this.setGroup}
           />
         </div>
@@ -57,6 +57,7 @@ class FlaggedMember extends React.Component {
       { expanded: this.state.expanded },
     );
     let { group } = this.state;
+    const name = `${this.props.first} ${this.props.last}`;
     if (group === -1) group = 'None';
     return (
       <li
@@ -66,11 +67,10 @@ class FlaggedMember extends React.Component {
       >
         <div className="infoRow">
           <p>{group}</p>
-          <p>{this.props.name}</p>
+          <p>{name}</p>
           <p>{this.props.email}</p>
           <p>{this.props.campus}</p>
           <p>{this.props.gender}</p>
-          <p>{this.props.year}</p>
         </div>
         <button
           type="button"

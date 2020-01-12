@@ -25,5 +25,6 @@ module.exports = {
     "react/jsx-props-no-spreading": "off",
     "react/destructuring-assignment": "off",
     "react/prop-types": "off",
+    "no-param-reassign": ["error", { "props": false }],
   },
 };

@@ -15,9 +15,10 @@ class HeadersManager extends React.Component {
     this.props.headers.forEach((header) => {
       const newHeader = (
         <ToggleSortHeader
-          headerName={header}
-          key={header}
-          active={header === this.state.currentSort}
+          headerName={header.label}
+          headerKey={header.headerKey}
+          key={header.label}
+          active={header.label === this.state.currentSort}
           setSortHandler={this.selectActiveHeader}
           sortHandler={this.props.sortHandler}
           flagged={this.props.flagged}

@@ -7,15 +7,60 @@ class MemberManager extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      members: [],
     };
+    this.getMembers = this.getMembers.bind(this);
+    this.sortMembers = this.sortMembers.bind(this);
+    this.memberHeaders = [
+      {
+        label: 'Group',
+        headerKey: 'group_id',
+      },
+      {
+        label: 'Name',
+        headerKey: 'first',
+      },
+    ];
+  }
+
+  componentDidUpdate(prevProps) {
+    if (Object.entries(prevProps.groupData).length === 0
+      && Object.entries(this.props.groupData).length > 0) {
+      const members = this.getMembers();
+      const validHeaders = ['Email', 'Campus', 'Gender'];
+      this.extendHeaders(validHeaders);
+      this.setState({
+        members,
+      });
+    }
+  }
+
+  getMembers() {
+    const members = Object.keys(this.props.groupData).reduce(
+      (accum, groupNum) => accum.concat(this.props.groupData[groupNum].members),
+      [],
+    );
+    return members;
+  }
+
+  sortMembers(sortFunc) {
+    this.setState((prevState) => ({
+      members: prevState.members.sort(sortFunc),
+    }));
+  }
+
+  extendHeaders(validHeaders) {
+    validHeaders.forEach((header) => {
+      const newHeader = {
+        label: header,
+        headerKey: header.toLowerCase(),
+      };
+      this.memberHeaders.push(newHeader);
+    });
   }
 
   render() {
     const className = classNames('Manager', { hidden: !this.props.focused });
-
-    // TODO: change to get this from data
-    // column headers for each member
-    const memberHeaders = ['Group', 'Name', 'Email', 'Campus', 'Gender', 'Year'];
 
     const flaggedSection = (!this.props.flaggedMembers.length) ? null : (
       <div>
@@ -26,9 +71,8 @@ class MemberManager extends React.Component {
           </div>
         </h4>
         <HeadersManager
-          headers={memberHeaders}
-          sortHandler={this.props.sortHandler}
-          flagged
+          headers={this.memberHeaders}
+          sortHandler={this.props.sortFlaggedHandler}
         />
         <ul id="FlaggedMemberList">
           {this.props.flaggedMembers}
@@ -46,12 +90,11 @@ class MemberManager extends React.Component {
         <div>
           <h4>Placed</h4>
           <HeadersManager
-            headers={memberHeaders}
-            sortHandler={this.props.sortHandler}
-            flagged={false}
+            headers={this.memberHeaders}
+            sortHandler={this.sortMembers}
           />
           <ul id="MemberList">
-            {this.props.members}
+            {this.state.members}
           </ul>
         </div>
       </section>

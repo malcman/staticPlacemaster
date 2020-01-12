@@ -2,9 +2,6 @@ import React from 'react';
 import Group from './Group';
 import HeadersManager from './HeadersManager';
 
-import roomData from '../../content/roomData.json';
-
-
 const classNames = require('classnames');
 
 class GroupManager extends React.Component {
@@ -22,25 +19,50 @@ class GroupManager extends React.Component {
     // create Group components after groupData object has properly loaded
     if (Object.entries(prevProps.groupData).length === 0
       && Object.entries(this.props.groupData).length > 0) {
-      this.getGroups(roomData);
+      this.getGroups(this.props.groupData);
     }
   }
 
-  getGroups(groupData) {
+  getGroups(groupObjs) {
     const groups = [];
-    let groupHeaders = [];
+    const groupHeaders = [
+      {
+        label: 'Number',
+        headerKey: 'number',
+      },
+    ];
+    const initialLength = groupHeaders.length;
     // create groups from groupData
-    groupData.rooms.forEach((group) => {
+    Object.keys(groupObjs).forEach((groupNum) => {
       // record data headers
-      if (group.number === 1) {
-        groupHeaders = Object.keys(group);
+      const groupObj = groupObjs[groupNum];
+      if (groupHeaders.length === initialLength) {
+        Object.keys(groupObj).forEach((headerKey) => {
+          // perfrom necessary modifications to header fields
+
+          // only add headers for string fields
+          if (typeof groupObj[headerKey] !== typeof String()) {
+            return;
+          }
+          // fix some labels up
+          let label = `${headerKey.charAt(0).toUpperCase()}${headerKey.substr(1)}`;
+          if (label === 'GradStanding') label = 'Grad Standing';
+          // create a new data object for the header
+          const newHeader = {
+            label,
+            headerKey,
+          };
+          // add data to list
+          groupHeaders.push(newHeader);
+        });
       }
+      const { members, ...rest } = groupObj;
       const newGroup = (
         <Group
-          key={group.number}
-          number={group}
-          members={this.props.groupData[group.number]}
-          {...group}
+          key={groupNum}
+          number={Number(groupNum)}
+          members={members}
+          {...rest}
         />
       );
       groups.push(newGroup);

@@ -25,7 +25,7 @@ class GroupAssigner extends React.Component {
           <h6>Size</h6>
         </div>
         <GroupAssignerForm
-          groupSizes={this.props.groupSizes}
+          allGroupsInfo={this.props.allGroupsInfo}
           setGroup={this.props.setGroup}
         />
       </div>

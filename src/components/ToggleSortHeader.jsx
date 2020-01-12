@@ -17,10 +17,10 @@ class ToggleSortHeader extends React.Component {
     if (!prevProps.active && this.props.active) {
       if (this.state.ascending) {
         // perform ascending comparisons of a.props.headerName and b.props.headerName
-        this.props.sortHandler(this.ascendingComp, this.props.flagged);
+        this.props.sortHandler(this.ascendingComp);
       } else {
         // perform descending comparisons
-        this.props.sortHandler(this.descendingComp, this.props.flagged);
+        this.props.sortHandler(this.descendingComp);
       }
     }
   }
@@ -33,10 +33,10 @@ class ToggleSortHeader extends React.Component {
       }), () => {
         if (this.state.ascending) {
           // perform ascending comparisons of a.props.headerName and b.props.headerName
-          this.props.sortHandler(this.ascendingComp, this.props.flagged);
+          this.props.sortHandler(this.ascendingComp, this.props);
         } else {
           // perform descending comparisons
-          this.props.sortHandler(this.descendingComp, this.props.flagged);
+          this.props.sortHandler(this.descendingComp, this.props);
         }
       });
     }
@@ -44,7 +44,8 @@ class ToggleSortHeader extends React.Component {
   }
 
   ascendingComp(a, b) {
-    const propField = this.props.headerName.toLowerCase();
+    const propField = this.props.headerKey;
+    console.log(propField)
     if (a.props[propField] < b.props[propField]) {
       return -1;
     }
@@ -55,7 +56,7 @@ class ToggleSortHeader extends React.Component {
   }
 
   descendingComp(a, b) {
-    const propField = this.props.headerName.toLowerCase();
+    const propField = this.props.headerKey;
     if (a.props[propField] > b.props[propField]) {
       return -1;
     }
@@ -75,10 +76,10 @@ class ToggleSortHeader extends React.Component {
         up: !this.state.ascending && this.props.active,
       },
     );
-    const upperHeader = `${this.props.headerName.charAt(0).toUpperCase()}${this.props.headerName.substr(1)}`;
+
     return (
       <div className={headerClass} onClick={this.handleToggle}>
-        <h5>{upperHeader}</h5>
+        <h5>{this.props.headerName}</h5>
       </div>
     );
   }

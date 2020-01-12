@@ -1,7 +1,5 @@
 import React from 'react';
 
-import roomData from '../../content/roomData.json';
-
 class GroupAssignerForm extends React.Component {
   constructor(props) {
     super(props);
@@ -21,7 +19,8 @@ class GroupAssignerForm extends React.Component {
 
   getGroupsPreview() {
     const previewList = [];
-    Object.keys(this.props.groupSizes).forEach((group) => {
+    const { allGroupsInfo } = this.props;
+    Object.keys(allGroupsInfo).forEach((group) => {
       const previewID = `groupPreview${group}`;
       const groupPreview = (
         <label
@@ -38,9 +37,8 @@ class GroupAssignerForm extends React.Component {
               onChange={this.setAssignedGroup}
             />
             <p>{group}</p>
-            <p>{roomData.rooms[group].day}</p>
-            <p>{roomData.rooms[group].time}</p>
-            <p>{this.props.groupSizes[group]}</p>
+            <p>{allGroupsInfo[group].time}</p>
+            <p>{allGroupsInfo[group].size}</p>
           </li>
         </label>
       );
