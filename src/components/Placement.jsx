@@ -1,4 +1,5 @@
 import React from 'react';
+import { CSVLink } from 'react-csv';
 
 import GroupManager from './GroupManager';
 import MemberManager from './MemberManager';
@@ -7,7 +8,15 @@ import FlaggedMember from './FlaggedMember';
 
 import JSONData from '../../content/placement_flagged.json';
 
-const classNames = require('classnames');
+// headers for the CSV file that will be downloaded
+const csvMemberHeaders = [
+  { label: 'Group', key: 'group_id' },
+  { label: 'First', key: 'first' },
+  { label: 'Last', key: 'last' },
+  { label: 'Email', key: 'email' },
+  { label: 'Gender', key: 'gender' },
+  { label: 'Grad Standing', key: 'grad_standing' },
+];
 
 class Placement extends React.Component {
   static updateGroupData(allGroups, groupData, member) {
@@ -40,11 +49,36 @@ class Placement extends React.Component {
     this.sortFlaggedMembers = this.sortFlaggedMembers.bind(this);
     this.placeFlaggedMember = this.placeFlaggedMember.bind(this);
     this.createMembersAndGroups = this.createMembersAndGroups.bind(this);
+    this.getCSVMemberData = this.getCSVMemberData.bind(this);
   }
 
   componentDidMount() {
     // this.fetchPlacement('./data/placement.json');
     this.createMembersAndGroups(JSONData);
+  }
+
+  getCSVMemberData() {
+    // Return list of objects with member properties
+    // for CSVLink component
+
+    // go through allGroups
+    const allMemberData = Object.keys(this.state.allGroups).map(
+      // create list of objects with expanded member props for each group
+      (groupNum) => {
+        const group = this.state.allGroups[groupNum];
+        const groupMembersData = [];
+        group.members.forEach((member) => {
+          // push expanded member props onto this group's list
+          groupMembersData.push({ ...member.props });
+        });
+        return groupMembersData;
+      },
+    // reduce list of group lists to a single list
+    ).reduce(
+      (accum, groupMemberList) => accum.concat([...groupMemberList]),
+      [],
+    );
+    return allMemberData;
   }
 
   toggleFocusEl(groupFocus) {
@@ -183,11 +217,22 @@ class Placement extends React.Component {
   }
 
   render() {
+    const csvData = this.getCSVMemberData();
+    const flaggedAlert = !this.state.flaggedMembers.length ? null : (
+      <div className="alert" />
+    );
     return (
       <section className="Placement">
         <div id="PlacementHeader">
           <h1 className="placementName">{this.props.title}</h1>
-          <button type="button" id="csvButton">Generate Attendance File</button>
+          <CSVLink
+            id="csvButton"
+            headers={csvMemberHeaders}
+            data={csvData}
+            filename="placement.csv"
+          >
+          Generate Attendance File
+          </CSVLink>
           <ul
             id="placementTabs"
             role="tablist"
@@ -211,7 +256,10 @@ class Placement extends React.Component {
               aria-controls="MemberManager"
               onClick={(e) => this.toggleFocusEl(false, e)}
             >
-              <h3>Members</h3>
+              <h3>
+              Members
+              {flaggedAlert}
+              </h3>
             </li>
           </ul>
         </div>

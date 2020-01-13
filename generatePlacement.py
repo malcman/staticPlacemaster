@@ -68,8 +68,8 @@ for x in range(0, len(GROUP_TIMES)):
     GROUP_OPTIONS.append(x + 1)
 
 NAME_LEN = 8
-NUM_MEMBERS = 2
-NUM_FLAGGED = 5
+NUM_MEMBERS = 20
+NUM_FLAGGED = 0
 
 
 def generate_placed_members(json_data):
@@ -143,5 +143,5 @@ generate_unplaced_members(JSON_DATA)
 generate_groups(JSON_DATA)
 
 # write file
-with open('content/placement_flagged.json', 'w') as out_f:
+with open('content/placement_no_flagged.json', 'w') as out_f:
     out_f.write(json.dumps(JSON_DATA, indent=2))

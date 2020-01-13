@@ -45,7 +45,6 @@ class ToggleSortHeader extends React.Component {
 
   ascendingComp(a, b) {
     const propField = this.props.headerKey;
-    console.log(propField)
     if (a.props[propField] < b.props[propField]) {
       return -1;
     }
