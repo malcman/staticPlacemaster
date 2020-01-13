@@ -41,7 +41,7 @@ class FlaggedMember extends React.Component {
   }
 
   toggleExpand(e) {
-    const flaggedID = `${this.props.name}Flagged`;
+    const flaggedID = `${this.props.email}Flagged`;
     if (this.state.expanded
       && e.target.id !== flaggedID
       && e.target.parentNode.id !== flaggedID) {
@@ -63,7 +63,7 @@ class FlaggedMember extends React.Component {
     if (group === -1) group = 'None';
     return (
       <li
-        id={`${this.props.name}Flagged`}
+        id={`${this.props.email}Flagged`}
         className={flaggedClass}
         onClick={this.toggleExpand}
       >

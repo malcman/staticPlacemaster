@@ -6,7 +6,7 @@ import MemberManager from './MemberManager';
 import Member from './Member';
 import FlaggedMember from './FlaggedMember';
 
-import JSONData from '../../content/placement_flagged.json';
+import JSONData from '../../content/placement.json';
 
 // headers for the CSV file that will be downloaded
 const csvMemberHeaders = [
@@ -50,6 +50,7 @@ class Placement extends React.Component {
     this.placeFlaggedMember = this.placeFlaggedMember.bind(this);
     this.createMembersAndGroups = this.createMembersAndGroups.bind(this);
     this.getCSVMemberData = this.getCSVMemberData.bind(this);
+    this.validateBeforeDownload = this.validateBeforeDownload.bind(this);
   }
 
   componentDidMount() {
@@ -216,6 +217,14 @@ class Placement extends React.Component {
     });
   }
 
+  validateBeforeDownload(e) {
+    if (this.state.flaggedMembers.length) {
+      console.log('Still Flagged Members present!');
+      return false;
+    }
+    return true;
+  }
+
   render() {
     const csvData = this.getCSVMemberData();
     const flaggedAlert = !this.state.flaggedMembers.length ? null : (
@@ -230,6 +239,7 @@ class Placement extends React.Component {
             headers={csvMemberHeaders}
             data={csvData}
             filename="placement.csv"
+            onClick={(e) => this.validateBeforeDownload(e)}
           >
           Generate Attendance File
           </CSVLink>

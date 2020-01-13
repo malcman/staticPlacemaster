@@ -4,7 +4,38 @@ import HeadersManager from './HeadersManager';
 
 const classNames = require('classnames');
 
+
 class GroupManager extends React.Component {
+  static getNumericTimeVal(timeStr) {
+    // returns a number representing the time of the week
+    // to allow for more accurate sorting
+    // Day Value: 4th digit
+    // Time value: remaining digits of start time
+
+    // "Monday 6:30-7:30" => 1630
+    // "Thursday 5:00-6:00" => 4500
+    const dayValues = {
+      Monday: 1000,
+      Tuesday: 2000,
+      Wednesday: 3000,
+      Thursday: 4000,
+      Friday: 5000,
+      Saturday: 6000,
+      Sunday: 7000,
+    };
+    let numericTimeVal = 0;
+    // gets day and first time period
+    const regex = /^(?<day>\w+) (?<time>\d:\d+)/g;
+    const matches = regex.exec(timeStr);
+    if (matches && matches.groups) {
+      numericTimeVal += dayValues[matches.groups.day];
+      let hourStr = matches.groups.time;
+      hourStr = hourStr.replace(':', '');
+      numericTimeVal += Number(hourStr);
+    }
+    return numericTimeVal;
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -47,6 +78,7 @@ class GroupManager extends React.Component {
           // fix some labels up
           let label = `${headerKey.charAt(0).toUpperCase()}${headerKey.substr(1)}`;
           if (label === 'GradStanding') label = 'Grad Standing';
+          if (label === 'Time') headerKey = 'time_numeric';
           // create a new data object for the header
           const newHeader = {
             label,
@@ -57,11 +89,13 @@ class GroupManager extends React.Component {
         });
       }
       const { members, ...rest } = groupObj;
+      const numericTime = GroupManager.getNumericTimeVal(rest.time);
       const newGroup = (
         <Group
           key={groupNum}
           number={Number(groupNum)}
           members={members}
+          time_numeric={numericTime}
           {...rest}
         />
       );

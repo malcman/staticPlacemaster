@@ -2,6 +2,8 @@ $mainDark: #275076;
 $mainDark: #323138;
 $darkerMain: #2B4157;
 $warningRed: #BC1E1E;
+$superLightBlue: #F0F6FD;
+$superLightGrey: #f4f4f4;
 
 * {
   margin: 0;
@@ -272,7 +274,7 @@ ul {
   width: 100%;
   background-color: lighten(lightgrey, 5%);
   display: inline-grid;
-  grid-template-columns: repeat(6, 1fr) 50px;
+  grid-template-columns: repeat(5, 1fr) 50px;
 }
 
 .ToggleSortHeader {
@@ -402,7 +404,7 @@ ul {
   .infoRow {
     width: 95%;
     display: inline-grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
   p {
     display: inline-block;
@@ -414,6 +416,12 @@ ul {
     overflow: scroll;
 
     &:first-of-type {
+      font-family: 'Montserrat', sans-serif;
+      color: $mainDark;
+      display: block;
+      margin-left: 40%;
+      padding-top: 10px;
+      font-weight: normal;
     }
 
     &:last-of-type {
@@ -424,24 +432,31 @@ ul {
     background-color: white;
   }
   &:nth-of-type(even) {
-    background-color: #F0F6FD;
+    background-color: $superLightBlue;
+    background-color: $superLightGrey;
   }
   &.expanded {
     .expandToggle {
-      transform: rotate(45deg) translateX(3px);
+      transform: rotate(45deg) translate(-2px, -2px);
     }
   }
 }
 
-.FlaggedMember .flaggedExpandedInfo {
+.FlaggedMember {
   p {
-    margin-left: 0;
+    &:first-of-type {
+      margin-left: 30%;
+    }
+  }
+  .flaggedExpandedInfo {
+    p {
+      margin-left: 0;
+    }
   }
 }
 
 .GroupAssigner {
   width: 100%;
-  background-color: white;
   button {
     color: $mainDark;
     border: none;
@@ -452,6 +467,7 @@ ul {
     margin-bottom: 20px;
   }
   &.expanded {
+    background-color: white;
     border-radius: 5px;
     box-shadow: 5px 4px 10px;
     button {
@@ -483,10 +499,10 @@ ul {
       }
     }
     label:nth-of-type(even) li {
-      background-color: #F0F6FD;
+      background-color: $superLightGrey;
     }
     label:hover li {
-      background-color: darken(#F0F6FD, 10%);
+      background-color: darken($superLightGrey, 10%);
     }
   }
   input[type=submit] {
@@ -499,6 +515,7 @@ ul {
     font-size: 1.2em;
     &:not([disabled]) {
       color: green;
+      font-weight: bold;
     }
   }
 }
@@ -511,19 +528,23 @@ ul {
   background-color: transparent;
   font-size: 1.5em;
   transition: transform 0.3s;
+  padding: 5px 10px 10px;
 }
 
 .groupExpandedInfo, .flaggedExpandedInfo {
-  width: 90%;
+  width: 80%;
   margin-left: 10%;
   h6 {
     font-family: 'Montserrat', sans-serif;
     font-style: italic;
   }
   .groupMembers {
-    width: 90%;
-    margin-bottom: 5%;
+    width: 100%;
+    padding-bottom: 5%;
     list-style-type: none;
+    .infoRow {
+      grid-template-columns: repeat(3, 1fr) 50px;
+    }
     p:first-of-type {
       display: none;
     }
@@ -535,6 +556,19 @@ ul {
     font-weight: normal;
     font-size: 1.4em;
     margin-top: 3%;
+  }
+}
+
+.membersPreviewHeaders {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr) 100px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  div {
+    display: inline-block;
+    margin-left: 15px;
   }
 }
 

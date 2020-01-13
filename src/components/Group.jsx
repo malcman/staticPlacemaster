@@ -19,6 +19,12 @@ class Group extends React.Component {
           <h6 className="groupLeadersHeader">Leader(s)</h6>
           {this.props.leader}
           <h6 className="groupMembersHeader">Members</h6>
+          <div className="membersPreviewHeaders">
+            <div>Name</div>
+            <div>Email</div>
+            <div>Campus</div>
+            <div>Gender</div>
+          </div>
           <ul className="groupMembers">
             {this.props.members}
           </ul>
@@ -29,10 +35,21 @@ class Group extends React.Component {
     return null;
   }
 
-  toggleExpand() {
-    this.setState((prevState) => ({
-      expanded: !prevState.expanded,
-    }));
+  toggleExpand(e) {
+    const targetParentClasses = e.target.parentNode.classList;
+    // If already expanded and expanded group member list triggered
+    // the event, don't close
+    if (!this.state.expanded
+      || (this.state.expanded
+        && !targetParentClasses.contains('infoRow')
+        && !targetParentClasses.contains('groupMembers')
+        && !e.target.classList.contains('groupMembers')
+        && !e.target.classList.contains('infoRow')
+      )) {
+      this.setState((prevState) => ({
+        expanded: !prevState.expanded,
+      }));
+    }
   }
 
 
