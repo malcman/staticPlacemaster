@@ -89,10 +89,10 @@ def generate_placed_members(json_data):
             'gender': random.choice(GENDER_OPTIONS),
             'campus': random.choice(CAMPUS_OPTIONS),
             'grad_standing': random.choice(GRAD_OPTIONS),
-            't_mon': "6-7 pm,7-8 pm, 8-9pm",
-            't_tue': "6-7 pm,7-8 pm, 8-9pm",
-            't_wed': "6-7 pm,7-8 pm, 8-9pm",
-            't_thu': "6-7 pm,7-8 pm, 8-9pm",
+            't_mon': "6-7 pm,7-8 pm, 8-9 pm",
+            't_tue': "6-7 pm,7-8 pm, 8-9 pm",
+            't_wed': "6-7 pm,7-8 pm, 8-9 pm",
+            't_thu': "6-7 pm,7-8 pm, 8-9 pm",
             'group_id': random.choice(GROUP_OPTIONS),
         }
         json_data['results']['placed'].append(member_data)
@@ -115,10 +115,10 @@ def generate_unplaced_members(json_data):
             'gender': random.choice(GENDER_OPTIONS),
             'campus': random.choice(CAMPUS_OPTIONS),
             'grad_standing': random.choice(GRAD_OPTIONS),
-            't_mon': "6-7 pm,7-8 pm, 8-9pm",
-            't_tue': "6-7 pm,7-8 pm, 8-9pm",
-            't_wed': "6-7 pm,7-8 pm, 8-9pm",
-            't_thu': "6-7 pm,7-8 pm, 8-9pm",
+            't_mon': "6-7 pm,7-8 pm, 8-9 pm",
+            't_tue': "6-7 pm,7-8 pm, 8-9 pm",
+            't_wed': "6-7 pm,7-8 pm, 8-9 pm",
+            't_thu': "6-7 pm,7-8 pm, 8-9 pm",
         }
         json_data['results']['unplaced'].append(member_data)
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import CSVReader from 'react-csv-reader';
 
 const classNames = require('classnames');
 
@@ -7,8 +8,6 @@ class PlacementForm extends React.Component {
     super(props);
     this.state = {
       titleText: '',
-      signUpFile: null,
-      groupsFile: null,
     };
     this.getBackButton = this.getBackButton.bind(this);
     this.handleTitleChange = this.handleTitleChange.bind(this);
@@ -87,16 +86,22 @@ class PlacementForm extends React.Component {
             type="text"
             name="user"
             value="michigan_spring_2019_dev"
-            disabled
             className="hidden"
+            readOnly
           />
 
           <h3>Sign-Up File:</h3>
+
           <input
             type="file"
             name="responses_csv_file"
             onChange={this.handleSignUpChange}
           />
+          {
+          // <CSVReader
+          //   onFileLoaded={data => console.log(data)}
+          // />
+          }
 
           <h3>Groups File:</h3>
           <input

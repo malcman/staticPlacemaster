@@ -6,7 +6,7 @@ import MemberManager from './MemberManager';
 import Member from './Member';
 import FlaggedMember from './FlaggedMember';
 
-import JSONData from '../../content/placement.json';
+import JSONData from '../../content/placement_flagged.json';
 
 // headers for the CSV file that will be downloaded
 const csvMemberHeaders = [
@@ -61,6 +61,20 @@ class Placement extends React.Component {
   getCSVMemberData() {
     // Return list of objects with member properties
     // for CSVLink component
+    const flaggedMemberData = this.state.flaggedMembers.map(
+      (flagged) => {
+        const {
+          t_mon: tMon,
+          t_tue: tTue,
+          t_wed: tWed,
+          t_thu: tThu,
+          allGroupsInfo,
+          placeFlaggedMember,
+          ...rest
+        } = flagged.props;
+        return ({ group_id: 'NONE', ...rest });
+      },
+    );
 
     // go through allGroups
     const allMemberData = Object.keys(this.state.allGroups).map(
@@ -77,7 +91,7 @@ class Placement extends React.Component {
     // reduce list of group lists to a single list
     ).reduce(
       (accum, groupMemberList) => accum.concat([...groupMemberList]),
-      [],
+      flaggedMemberData,
     );
     return allMemberData;
   }
@@ -219,8 +233,9 @@ class Placement extends React.Component {
 
   validateBeforeDownload(e) {
     if (this.state.flaggedMembers.length) {
-      console.log('Still Flagged Members present!');
-      return false;
+      const confMsg = 'There are still unplaced members present.\nProceed with download?';
+      const proceed = window.confirm(confMsg);  // eslint-disable-line
+      return proceed;
     }
     return true;
   }

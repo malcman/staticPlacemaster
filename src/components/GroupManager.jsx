@@ -25,13 +25,15 @@ class GroupManager extends React.Component {
     };
     let numericTimeVal = 0;
     // gets day and first time period
-    const regex = /^(?<day>\w+) (?<time>\d:\d+)/g;
+    const regex = /^(?<day>\w+)? ?(?<time>\d:\d+)/g;
     const matches = regex.exec(timeStr);
     if (matches && matches.groups) {
-      numericTimeVal += dayValues[matches.groups.day];
+      if (matches.groups.day) {
+        numericTimeVal += dayValues[matches.groups.day];
+      }
       let hourStr = matches.groups.time;
       hourStr = hourStr.replace(':', '');
-      numericTimeVal += Number(hourStr);
+      numericTimeVal += Number(hourStr);;
     }
     return numericTimeVal;
   }
@@ -134,3 +136,6 @@ class GroupManager extends React.Component {
 }
 
 export default GroupManager;
+export function getNumericTimeVal(timeStr) {
+  return GroupManager.getNumericTimeVal(timeStr);
+}
