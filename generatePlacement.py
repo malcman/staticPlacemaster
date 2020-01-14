@@ -1,4 +1,5 @@
 """Generate example member placement json file."""
+import sys
 import json
 import random
 import string
@@ -68,8 +69,8 @@ for x in range(0, len(GROUP_TIMES)):
     GROUP_OPTIONS.append(x + 1)
 
 NAME_LEN = 8
-NUM_MEMBERS = 20
-NUM_FLAGGED = 0
+NUM_MEMBERS = 450
+NUM_FLAGGED = 5
 
 
 def generate_placed_members(json_data):
@@ -82,18 +83,20 @@ def generate_placed_members(json_data):
         last_name = ''.join(
             random.choices(string.ascii_uppercase + string.digits, k=NAME_LEN)
         )
+        group_num = random.choice(GROUP_OPTIONS)
+        group_campus = json_data['results']['groups'][group_num - 1]['campus']
         member_data = {
             'first': first_name,
             'last': last_name,
             'email': f'{last_name[0:4]}@umich.edu',
             'gender': random.choice(GENDER_OPTIONS),
-            'campus': random.choice(CAMPUS_OPTIONS),
+            'campus': group_campus,
             'grad_standing': random.choice(GRAD_OPTIONS),
             't_mon': "6-7 pm,7-8 pm, 8-9 pm",
             't_tue': "6-7 pm,7-8 pm, 8-9 pm",
             't_wed': "6-7 pm,7-8 pm, 8-9 pm",
             't_thu': "6-7 pm,7-8 pm, 8-9 pm",
-            'group_id': random.choice(GROUP_OPTIONS),
+            'group_id': group_num,
         }
         json_data['results']['placed'].append(member_data)
 
@@ -138,10 +141,16 @@ def generate_groups(json_data):
 
 # define export object
 JSON_DATA = {'results': {'placed': [], 'unplaced': [], 'groups': []}}
+generate_groups(JSON_DATA)
 generate_placed_members(JSON_DATA)
 generate_unplaced_members(JSON_DATA)
-generate_groups(JSON_DATA)
+
+filename = 'placement'
+if len(sys.argv) > 1:
+    filename = sys.argv[1]
+
+print(f'writing to {filename}.json')
 
 # write file
-with open('content/placement_no_flagged.json', 'w') as out_f:
+with open(f'content/{filename}.json', 'w') as out_f:
     out_f.write(json.dumps(JSON_DATA, indent=2))

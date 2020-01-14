@@ -6,7 +6,7 @@ import MemberManager from './MemberManager';
 import Member from './Member';
 import FlaggedMember from './FlaggedMember';
 
-import JSONData from '../../content/placement_flagged.json';
+import JSONData from '../../content/placement.json';
 
 // headers for the CSV file that will be downloaded
 const csvMemberHeaders = [
@@ -19,12 +19,12 @@ const csvMemberHeaders = [
 ];
 
 class Placement extends React.Component {
-  static updateGroupData(allGroups, groupData, member) {
+  static updateGroupData(allGroups, groupData, member = null) {
     // if this groupID is not yet in group data,
     // create appropriate object
     // regardless, add new member to group
-    const groupID = member.props.group_id;
-    if (!allGroups.hasOwnProperty(groupID)) {
+    const groupID = groupData.group_id;
+    if (!allGroups.hasOwnProperty(groupID)) {  // eslint-disable-line
       allGroups[groupID] = {
         members: [],
         size: 0,
@@ -33,8 +33,10 @@ class Placement extends React.Component {
         gradStanding: groupData.grad_standing,
       };
     }
-    allGroups[groupID].members.push(member);
-    allGroups[groupID].size += 1;
+    if (member) {
+      allGroups[groupID].members.push(member);
+      allGroups[groupID].size += 1;
+    }
   }
 
   constructor(props) {
@@ -187,6 +189,10 @@ class Placement extends React.Component {
     const allGroups = {};
     const flaggedMembers = [];
 
+
+    data.results.groups.forEach((groupData) => {
+      Placement.updateGroupData(allGroups, groupData);
+    });
     // add placed members
     data.results.placed.forEach((memberData) => {
       const newMember = (
@@ -196,9 +202,6 @@ class Placement extends React.Component {
         />
       );
       const groupInfo = data.results.groups[memberData.group_id - 1];
-      // console.log(groupInfo);
-      // console.log(memberData.group_id)
-      // console.log(data.results.groups)
       Placement.updateGroupData(allGroups, groupInfo, newMember);
     });
 
