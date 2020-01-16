@@ -1,4 +1,5 @@
 import React from 'react';
+import { navigate } from 'gatsby';
 import CSVReader from 'react-csv-reader';
 
 const classNames = require('classnames');
@@ -8,6 +9,8 @@ class PlacementForm extends React.Component {
     super(props);
     this.state = {
       titleText: '',
+      signUpFile: null,
+      groupsFile: null,
     };
     this.getBackButton = this.getBackButton.bind(this);
     this.handleTitleChange = this.handleTitleChange.bind(this);
@@ -46,11 +49,34 @@ class PlacementForm extends React.Component {
   }
 
   handleGroupsChange(e) {
-    console.log(e.target.files);
+    this.setState({
+      groupsFile: e.target.files[0],
+    });
   }
 
   handleSubmit(e) {
-    console.log(e);
+    e.preventDefault();
+    // create FormData object from the form
+    // note: use network inspector to observe behavior
+    // will not show up on console.log
+    const formData = new FormData(e.target);
+
+    // send the form data to this.props.actionURL
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', this.props.actionURL, true);
+    xhr.setRequestHeader('credentials', 'same-origin');
+    xhr.onload = () => {
+      // make sure all is kosher
+      if (xhr.status >= 200 && xhr.status < 300) {
+        // get JSON data to send to placement page
+        const data = JSON.parse(xhr.response);
+        // send the data and navigate the user to placement
+        navigate('/placement/', { state: { data } });
+      }
+    };
+    xhr.send(formData);
+    // display loading module
+    this.props.nextHandler();
   }
 
   render() {
@@ -63,15 +89,15 @@ class PlacementForm extends React.Component {
       },
     );
     const backButton = this.getBackButton();
+    const formID = 'newPlacementForm';
     return (
       <div id="newPlacementModule" className={moduleClass}>
         {backButton}
         <form
-          id="newPlacementForm"
-          action={this.props.actionURL}
+          id={formID}
+          onSubmit={this.handleSubmit}
           method="POST"
           encType="multipart/form-data"
-          onSubmit={this.handleSubmit}
         >
           <h3>Title: </h3>
           <input
@@ -80,6 +106,7 @@ class PlacementForm extends React.Component {
             name="placementTitle"
             onChange={this.handleTitleChange}
             value={this.state.titleText}
+            form={formID}
           />
 
           <input
@@ -88,6 +115,7 @@ class PlacementForm extends React.Component {
             value="michigan_spring_2019_dev"
             className="hidden"
             readOnly
+            form={formID}
           />
 
           <h3>Sign-Up File:</h3>
@@ -96,6 +124,7 @@ class PlacementForm extends React.Component {
             type="file"
             name="responses_csv_file"
             onChange={this.handleSignUpChange}
+            form={formID}
           />
           {
           // <CSVReader
@@ -108,12 +137,13 @@ class PlacementForm extends React.Component {
             type="file"
             name="rooms_csv_file"
             onChange={this.handleGroupsChange}
+            form={formID}
           />
           <input
             type="submit"
             name="placementSubmit"
             value="Create and Optimize"
-            onClick={this.handleSubmit}
+            form={formID}
           />
         </form>
       </div>

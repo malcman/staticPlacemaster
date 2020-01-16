@@ -5,13 +5,11 @@ import SEO from '../components/seo';
 import Header from '../components/header';
 import Placement from '../components/Placement';
 
-import JSONData from '../../content/placement.json';
-
-const PlacementPage = () => (
+const PlacementPage = ({ location }) => (
   <section>
     <SEO title="Placement" />
     <Header siteTitle="Placemaster" />
-    <Placement title="WSN Fall '19" data={JSONData} />
+    <Placement title="WSN Fall '19" data={location.state.data} />
   </section>
 );
 

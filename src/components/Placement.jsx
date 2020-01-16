@@ -56,8 +56,7 @@ class Placement extends React.Component {
   }
 
   componentDidMount() {
-    // this.fetchPlacement('./data/placement.json');
-    this.createMembersAndGroups(JSONData);
+    this.createMembersAndGroups(this.props.data);
   }
 
   getCSVMemberData() {
@@ -190,18 +189,18 @@ class Placement extends React.Component {
     const flaggedMembers = [];
 
 
-    data.results.groups.forEach((groupData) => {
+    data.groups.forEach((groupData) => {
       Placement.updateGroupData(allGroups, groupData);
     });
     // add placed members
-    data.results.placed.forEach((memberData) => {
+    data.placed.forEach((memberData) => {
       const newMember = (
         <Member
           {...memberData}
           key={memberData.email}
         />
       );
-      const groupInfo = data.results.groups[memberData.group_id - 1];
+      const groupInfo = data.groups[memberData.group_id - 1];
       Placement.updateGroupData(allGroups, groupInfo, newMember);
     });
 
@@ -214,7 +213,7 @@ class Placement extends React.Component {
     });
 
     // add flagged members
-    data.results.unplaced.forEach((memberData) => {
+    data.unplaced.forEach((memberData) => {
       const fullName = `${memberData.first} ${memberData.last}`;
       const newFlagged = (
         <FlaggedMember

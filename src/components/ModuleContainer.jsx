@@ -3,6 +3,7 @@ import React from 'react';
 
 import WelcomeModule from './WelcomeModule';
 import PlacementForm from './PlacementForm';
+import LoadingModule from './LoadingModule';
 
 class ModuleContainer extends React.Component {
   constructor(props) {
@@ -74,16 +75,24 @@ class ModuleContainer extends React.Component {
 
   getPanels() {
     const panels = [
+      // basic panel to initiate sequence
       <WelcomeModule
         key={0}
         activeIndex={this.getActiveIndex(0)}
         nextHandler={this.incrementFocusIndex}
       />,
+      // actual form with data for placement
       <PlacementForm
         key={1}
         activeIndex={this.getActiveIndex(1)}
         backHandler={this.decrementFocusIndex}
-        actionURL={'http://localhost:8080/create-groups'}
+        nextHandler={this.incrementFocusIndex}
+        actionURL="http://localhost:8080/create-groups"
+      />,
+      // informational loading module while server creates placement
+      <LoadingModule
+        key={2}
+        activeIndex={this.getActiveIndex(2)}
       />,
     ];
     return panels;
