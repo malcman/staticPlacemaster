@@ -1,26 +1,22 @@
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import PlacemasterLogo from './PlacemasterLogo';
 
 const Header = ({ siteTitle }) => (
   <header>
     <div
-      style={{
-        maxWidth: 960,
-        padding: `1.45rem 20px`,
-      }}
+      id="logoContainer"
     >
-      <h2 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h2>
+      <Link
+        to="/"
+        style={{
+          color: 'white',
+          textDecoration: 'none',
+        }}
+      >
+        <PlacemasterLogo />
+      </Link>
     </div>
   </header>
 );

@@ -70,8 +70,9 @@ class PlacementForm extends React.Component {
       if (xhr.status >= 200 && xhr.status < 300) {
         // get JSON data to send to placement page
         const data = JSON.parse(xhr.response);
+        const title = this.state.titleText;
         // send the data and navigate the user to placement
-        navigate('/placement/', { state: { data } });
+        navigate('/placement/', { state: { data, title } });
       }
     };
     xhr.send(formData);

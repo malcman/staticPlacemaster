@@ -9,15 +9,31 @@ class Group extends React.Component {
       expanded: false,
     };
     this.getExpandedInfo = this.getExpandedInfo.bind(this);
+    this.getLeaderInfo = this.getLeaderInfo.bind(this);
     this.toggleExpand = this.toggleExpand.bind(this);
+  }
+
+  getLeaderInfo() {
+    // if leader info has been specified, return displayed info
+    // else return null
+    if (this.props.leader) {
+      const leaderInfo = (
+        <div className="groupLeader">
+          <h6 className="groupLeadersHeader">Leader(s)</h6>
+          <p>{this.props.leader}</p>
+        </div>
+      );
+      return leaderInfo;
+    }
+    return null;
   }
 
   getExpandedInfo() {
     if (this.state.expanded) {
+      // display member list and leader info (if present)
       const expandedInfo = (
         <div className="groupExpandedInfo">
-          <h6 className="groupLeadersHeader">Leader(s)</h6>
-          {this.props.leader}
+          {this.getLeaderInfo()}
           <h6 className="groupMembersHeader">Members</h6>
           <div className="membersPreviewHeaders">
             <div>Name</div>

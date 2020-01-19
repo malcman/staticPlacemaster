@@ -84,7 +84,7 @@ def generate_placed_members(json_data):
             random.choices(string.ascii_uppercase + string.digits, k=NAME_LEN)
         )
         group_num = random.choice(GROUP_OPTIONS)
-        group_campus = json_data['results']['groups'][group_num - 1]['campus']
+        group_campus = json_data['groups'][group_num - 1]['campus']
         member_data = {
             'first': first_name,
             'last': last_name,
@@ -98,7 +98,7 @@ def generate_placed_members(json_data):
             't_thu': "6-7 pm,7-8 pm, 8-9 pm",
             'group_id': group_num,
         }
-        json_data['results']['placed'].append(member_data)
+        json_data['placed'].append(member_data)
 
 
 def generate_unplaced_members(json_data):
@@ -123,7 +123,7 @@ def generate_unplaced_members(json_data):
             't_wed': "6-7 pm,7-8 pm, 8-9 pm",
             't_thu': "6-7 pm,7-8 pm, 8-9 pm",
         }
-        json_data['results']['unplaced'].append(member_data)
+        json_data['unplaced'].append(member_data)
 
 
 def generate_groups(json_data):
@@ -136,11 +136,11 @@ def generate_groups(json_data):
             'grad_standing': random.choice(GRAD_OPTIONS),
         }
 
-        json_data['results']['groups'].append(group_data)
+        json_data['groups'].append(group_data)
 
 
 # define export object
-JSON_DATA = {'results': {'placed': [], 'unplaced': [], 'groups': []}}
+JSON_DATA = {'placed': [], 'unplaced': [], 'groups': []}
 generate_groups(JSON_DATA)
 generate_placed_members(JSON_DATA)
 generate_unplaced_members(JSON_DATA)

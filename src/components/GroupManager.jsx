@@ -124,7 +124,6 @@ class GroupManager extends React.Component {
       >
         <HeadersManager
           headers={this.state.groupHeaders}
-          currentSort={this.state.groupHeaders[0]}
           sortHandler={this.sortGroups}
         />
         <ul id="GroupList">

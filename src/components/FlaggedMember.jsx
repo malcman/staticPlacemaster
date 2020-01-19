@@ -82,7 +82,7 @@ class FlaggedMember extends React.Component {
     const groupStart = getNumericTimeVal(groupStartStr.trim());
     const groupEnd = getNumericTimeVal(groupEndStr.trim());
 
-    if (this.props[timeKey] === 'null') {
+    if (!this.props[timeKey] || this.props[timeKey] === 'null') {
       return false;
     }
     const availableTimes = this.props[timeKey].split(',');

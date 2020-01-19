@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { CSVLink } from 'react-csv';
 
 import GroupManager from './GroupManager';
@@ -6,7 +7,8 @@ import MemberManager from './MemberManager';
 import Member from './Member';
 import FlaggedMember from './FlaggedMember';
 
-import JSONData from '../../content/placement.json';
+// use for local testing without live optimization
+// import JSONData from '../../content/placement.json';
 
 // headers for the CSV file that will be downloaded
 const csvMemberHeaders = [
@@ -57,6 +59,7 @@ class Placement extends React.Component {
 
   componentDidMount() {
     this.createMembersAndGroups(this.props.data);
+    // this.createMembersAndGroups(JSONData);
   }
 
   getCSVMemberData() {
@@ -188,43 +191,50 @@ class Placement extends React.Component {
     const allGroups = {};
     const flaggedMembers = [];
 
+    if (data && data.groups) {
+      // populate group data
+      data.groups.forEach((groupData) => {
+        Placement.updateGroupData(allGroups, groupData);
+      });
+    }
 
-    data.groups.forEach((groupData) => {
-      Placement.updateGroupData(allGroups, groupData);
-    });
     // add placed members
-    data.placed.forEach((memberData) => {
-      const newMember = (
-        <Member
-          {...memberData}
-          key={memberData.email}
-        />
-      );
-      const groupInfo = data.groups[memberData.group_id - 1];
-      Placement.updateGroupData(allGroups, groupInfo, newMember);
-    });
+    if (data && data.placed) {
+      data.placed.forEach((memberData) => {
+        const newMember = (
+          <Member
+            {...memberData}
+            key={memberData.email}
+          />
+        );
+        const groupInfo = data.groups[memberData.group_id - 1];
+        Placement.updateGroupData(allGroups, groupInfo, newMember);
+      });
+    }
 
-    // create object with group data that does not include
-    // huge lists of members
-    const allGroupsInfo = {};
-    Object.keys(allGroups).forEach((group) => {
-      const { members, ...groupInfo } = allGroups[group];
-      allGroupsInfo[group] = groupInfo;
-    });
+    if (data && data.unplaced) {
+      // create object with group data that does not include
+      // huge lists of members
+      const allGroupsInfo = {};
+      Object.keys(allGroups).forEach((group) => {
+        const { members, ...groupInfo } = allGroups[group];
+        allGroupsInfo[group] = groupInfo;
+      });
 
-    // add flagged members
-    data.unplaced.forEach((memberData) => {
-      const fullName = `${memberData.first} ${memberData.last}`;
-      const newFlagged = (
-        <FlaggedMember
-          {...memberData}
-          key={fullName}
-          allGroupsInfo={allGroupsInfo}
-          placeFlaggedMember={this.placeFlaggedMember}
-        />
-      );
-      flaggedMembers.push(newFlagged);
-    });
+      // add flagged members
+      data.unplaced.forEach((memberData) => {
+        const fullName = `${memberData.first} ${memberData.last}`;
+        const newFlagged = (
+          <FlaggedMember
+            {...memberData}
+            key={fullName}
+            allGroupsInfo={allGroupsInfo}
+            placeFlaggedMember={this.placeFlaggedMember}
+          />
+        );
+        flaggedMembers.push(newFlagged);
+      });
+    }
 
     // save in state
     this.setState({
@@ -255,7 +265,7 @@ class Placement extends React.Component {
             id="csvButton"
             headers={csvMemberHeaders}
             data={csvData}
-            filename="placement.csv"
+            filename={`${this.props.title}_Placement.csv`}
             onClick={(e) => this.validateBeforeDownload(e)}
           >
           Generate Attendance File
@@ -309,3 +319,17 @@ class Placement extends React.Component {
 }
 
 export default Placement;
+
+Placement.propTypes = {
+  title: PropTypes.string,
+  data: PropTypes.object,
+};
+
+Placement.defaultProps = {
+  title: 'Title',
+  data: {
+    groups: [],
+    placed: [],
+    unplaced: [],
+  },
+};

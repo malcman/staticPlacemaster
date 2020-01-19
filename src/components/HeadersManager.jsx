@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ToggleSortHeader from './ToggleSortHeader';
 
 class HeadersManager extends React.Component {
@@ -8,6 +9,15 @@ class HeadersManager extends React.Component {
       currentSort: 'Name',
     };
     this.selectActiveHeader = this.selectActiveHeader.bind(this);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.headers
+        && prevProps.headers.length !== this.props.headers.length) {
+      this.setState({
+        currentSort: this.props.headers[0].label,
+      });
+    }
   }
 
   getSortHeaders() {
@@ -46,3 +56,16 @@ class HeadersManager extends React.Component {
 }
 
 export default HeadersManager;
+
+HeadersManager.propTypes = {
+  headers: PropTypes.arrayOf(PropTypes.object),
+};
+
+// list of objects descibing elements being sorted
+// label: String to display on UI
+// headerKey: name of prop to sort elements by
+HeadersManager.defaultProps = {
+  headers: [
+    { label: '', headerKey: '' },
+  ],
+};
