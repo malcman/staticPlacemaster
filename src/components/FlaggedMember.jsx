@@ -13,9 +13,48 @@ class FlaggedMember extends React.Component {
     };
     this.toggleExpand = this.toggleExpand.bind(this);
     this.getExpandedInfo = this.getExpandedInfo.bind(this);
+    this.getConflictMessage = this.getConflictMessage.bind(this);
     this.getValidGroups = this.getValidGroups.bind(this);
     this.groupIsValid = this.groupIsValid.bind(this);
     this.setGroup = this.setGroup.bind(this);
+  }
+
+  getConflictMessage() {
+    // try to determine why there was a problem placing this member
+    // return jsx containing a basic descriptive message
+
+    const conflictMessages = [];
+    // if no availability was specified...
+    if (!this.props.t_mon && !this.props.t_tue
+      && !this.props.t_wed && !this.props.t_thu) {
+      const message = <li key={1}><p>No availability listed.</p></li>;
+      conflictMessages.push(message);
+    }
+
+    // North campus only students...
+    if (!this.props.campus.includes('Central')) {
+      const message = <li key={2}><p>Limited North Campus availability</p></li>;
+      conflictMessages.push(message);
+    }
+
+    // Grad students
+    if (!this.props.grad_standing.includes('Undergraduate')) {
+      const message = <li key={3}><p>Limited grad student availability</p></li>;
+      conflictMessages.push(message);
+    }
+
+    // don't create jsx if it wouldn't be helpful
+    if (conflictMessages.length === 0) {
+      return null;
+    }
+    return (
+      <div className="conflictInfo">
+        <h6 className="conflictHeader">Likely Conflict Reason:</h6>
+        <ul>
+          {conflictMessages}
+        </ul>
+      </div>
+    );
   }
 
   getExpandedInfo() {
@@ -25,8 +64,7 @@ class FlaggedMember extends React.Component {
       const validGroups = this.getValidGroups();
       const expandedInfo = (
         <div className="flaggedExpandedInfo">
-          <h6 className="conflictHeader">Conflict</h6>
-          <p>{this.props.conflictMessage}</p>
+          {this.getConflictMessage(validGroups)}
           <GroupAssigner
             allGroupsInfo={validGroups}
             setGroup={this.setGroup}
@@ -43,8 +81,9 @@ class FlaggedMember extends React.Component {
     const validGroups = {};
     const allGroups = this.props.allGroupsInfo;
     Object.keys(allGroups).forEach((groupKey) => {
-      // only consider valid campus matches
-      if (this.props.campus.includes(allGroups[groupKey].campus)) {
+      // only consider valid campus and grad level matches
+      if (this.props.campus.includes(allGroups[groupKey].campus)
+        && this.props.grad_standing.includes(allGroups[groupKey].gradStanding)) {
         // do time comparisons
         if (this.groupIsValid(allGroups[groupKey])) {
           validGroups[groupKey] = allGroups[groupKey];
@@ -76,7 +115,10 @@ class FlaggedMember extends React.Component {
     // get the day for this group
     // format: "Monday 6:00-7:00"
     const [groupDay, groupTimeStr] = groupObj.time.split(' ');
+
+    // get the prop key associated with this day's time availability
     const timeKey = dayMappings[groupDay];
+
     // get numeric time values for the group's time
     const [groupStartStr, groupEndStr] = groupTimeStr.trim().split('-');
     const groupStart = getNumericTimeVal(groupStartStr.trim());

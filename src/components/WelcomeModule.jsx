@@ -19,6 +19,15 @@ const WelcomeModule = (props) => {
       className={moduleClass}
     >
       <h2>Welcome.</h2>
+      <p>
+        This is a scheduling app for Wolverine Support Network,
+        a peer-support organization at the University of Michigan.
+      </p>
+      <h3>You will need</h3>
+      <ul>
+        <li><p>a .csv file specifying member availability (from Qualtrics)</p></li>
+        <li><p>a .csv file specifying this semester&apos;s groups.</p></li>
+      </ul>
       <button
         type="button"
         id="newPlacementButton"

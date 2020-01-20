@@ -59,7 +59,7 @@ ul {
   border: none;
   width: 70%;
   display: block;
-  margin:  5% auto 10%;
+  margin:  10% auto 10%;
   font-size: 1.3em;
   background-color: white;
 }
@@ -200,6 +200,12 @@ ul {
   padding-bottom: 5px;
   h2 {
     padding-top: 5%;
+  }
+  h3 {
+    margin-top: 10%;
+  }
+  ul {
+    margin-left: 10%;
   }
   &.pushedLeft {
     left: -100%;
@@ -480,6 +486,7 @@ ul {
 
 .GroupAssigner {
   width: 100%;
+  margin-top: 5%;
   button {
     color: $mainDark;
     border: none;
@@ -496,6 +503,12 @@ ul {
     button {
       box-shadow: none;
     }
+  }
+}
+
+.conflictInfo {
+  ul {
+    margin-left: 5%;
   }
 }
 
@@ -528,6 +541,16 @@ ul {
       background-color: darken($superLightGrey, 10%);
     }
   }
+
+  h6.noGroups {
+    display: block;
+    margin: auto;
+    width: fit-content;
+    padding-bottom: 5%;
+    font-size: 1em;
+    font-style: normal;
+  }
+
   input[type=submit] {
     width: 100%;
     cursor: pointer;

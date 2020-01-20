@@ -16,6 +16,16 @@ class GroupAssigner extends React.Component {
   }
 
   getGroupsPreview() {
+    if (Object.entries(this.props.allGroupsInfo).length === 0) {
+      return (
+        <div className="groupsPreview">
+          <h6 className="noGroups">
+            No Valid Groups
+            <span role="img" aria-label="Pensive sad face emoji"> 😔 </span>
+          </h6>
+        </div>
+      );
+    }
     return (
       <div className="groupsPreview">
         <div className="previewHeaders">
