@@ -87,7 +87,7 @@ class ModuleContainer extends React.Component {
         activeIndex={this.getActiveIndex(1)}
         backHandler={this.decrementFocusIndex}
         nextHandler={this.incrementFocusIndex}
-        actionURL="http://localhost:8080/create-groups"
+        actionURL={process.env.PLACEMENT_FORM_ACTION}
       />,
       // informational loading module while server creates placement
       <LoadingModule
