@@ -103,6 +103,7 @@ ul {
     border-radius: 0 0 5px 5px;
     position: relative;
     top: 15px;
+    background-color: white;
   }
   input {
     margin-left: 10%;
@@ -183,8 +184,11 @@ ul {
   transition: left 0.5s;
   left: 0;
   margin-bottom: 10%;
+  p {
+    width: 90%;
+  }
   &.pushedLeft {
-    left: -100%;
+    left: -101%;
   }
   &.pushedRight {
     left: 100%;
@@ -196,7 +200,6 @@ ul {
 }
 
 #WelcomeModule {
-  left: 0;
   padding-bottom: 5px;
   h2 {
     padding-top: 5%;
@@ -206,9 +209,6 @@ ul {
   }
   ul {
     margin-left: 10%;
-  }
-  &.pushedLeft {
-    left: -100%;
   }
 }
 
@@ -461,8 +461,10 @@ ul {
     background-color: white;
   }
   &:nth-of-type(even) {
-    background-color: $superLightBlue;
     background-color: $superLightGrey;
+  }
+  &:hover:not(.expanded) {
+    background-color: darken($superLightGrey, 10%);
   }
   &.expanded {
     .expandToggle {

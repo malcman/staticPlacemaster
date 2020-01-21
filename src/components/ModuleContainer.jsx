@@ -93,6 +93,7 @@ class ModuleContainer extends React.Component {
       <LoadingModule
         key={2}
         activeIndex={this.getActiveIndex(2)}
+        backHandler={this.decrementFocusIndex}
       />,
     ];
     return panels;

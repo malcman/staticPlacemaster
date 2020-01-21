@@ -9,14 +9,15 @@ class PlacementForm extends React.Component {
     super(props);
     this.state = {
       titleText: '',
-      signUpFile: null,
-      groupsFile: null,
     };
     this.getBackButton = this.getBackButton.bind(this);
     this.handleTitleChange = this.handleTitleChange.bind(this);
     this.handleSignUpChange = this.handleSignUpChange.bind(this);
     this.handleGroupsChange = this.handleGroupsChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.validateForm = this.validateForm.bind(this);
+    this.signUpRef = React.createRef();
+    this.groupsRef = React.createRef();
   }
 
   getBackButton() {
@@ -54,12 +55,29 @@ class PlacementForm extends React.Component {
     });
   }
 
+  validateForm() {
+    // Return true if titleText has a value and both files are present.
+    return (this.state.titleText && this.state.titleText !== ''
+      && this.signUpRef.current.files.length > 0
+      && this.groupsRef.current.files.length > 0
+    );
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     // create FormData object from the form
     // note: use network inspector to observe behavior
     // will not show up on console.log
     const formData = new FormData(e.target);
+
+    if (!this.validateForm()) {
+      if (!this.signUpRef.current.files.length
+        || !this.groupsRef.current.files.length) {
+        window.alert('Make sure both signups.csv and groups.csv are chosen.');
+      }
+      return;
+    }
+
 
     // send the form data to this.props.actionURL
     const xhr = new XMLHttpRequest();
@@ -74,6 +92,11 @@ class PlacementForm extends React.Component {
         // send the data and navigate the user to placement
         navigate('/placement/', { state: { data, title } });
       }
+    };
+    xhr.onerror = () => {
+      const alertText = 'There was a problem submitting the form.\n Please make sure the right files have been selected and try again.';
+      window.alert(alertText);
+      this.props.backHandler();
     };
     xhr.send(formData);
     // display loading module
@@ -108,8 +131,9 @@ class PlacementForm extends React.Component {
             onChange={this.handleTitleChange}
             value={this.state.titleText}
             form={formID}
+            required
           />
-
+          {/* Currently needed for form to be accepted on server. */}
           <input
             type="text"
             name="user"
@@ -120,18 +144,14 @@ class PlacementForm extends React.Component {
           />
 
           <h3>Sign-Up File:</h3>
-
           <input
             type="file"
             name="responses_csv_file"
             onChange={this.handleSignUpChange}
             form={formID}
+            ref={this.signUpRef}
+            required
           />
-          {
-          // <CSVReader
-          //   onFileLoaded={data => console.log(data)}
-          // />
-          }
 
           <h3>Groups File:</h3>
           <input
@@ -139,6 +159,8 @@ class PlacementForm extends React.Component {
             name="rooms_csv_file"
             onChange={this.handleGroupsChange}
             form={formID}
+            ref={this.groupsRef}
+            required
           />
           <input
             type="submit"
