@@ -1,6 +1,5 @@
 import React from 'react';
 import { navigate } from 'gatsby';
-import CSVReader from 'react-csv-reader';
 
 const classNames = require('classnames');
 
@@ -9,11 +8,13 @@ class PlacementForm extends React.Component {
     super(props);
     this.state = {
       titleText: '',
+      groupMin: undefined,
+      groupMax: undefined,
     };
     this.getBackButton = this.getBackButton.bind(this);
     this.handleTitleChange = this.handleTitleChange.bind(this);
-    this.handleSignUpChange = this.handleSignUpChange.bind(this);
-    this.handleGroupsChange = this.handleGroupsChange.bind(this);
+    this.handleMaxChange = this.handleMaxChange.bind(this);
+    this.handleMinChange = this.handleMinChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.validateForm = this.validateForm.bind(this);
     this.signUpRef = React.createRef();
@@ -36,22 +37,21 @@ class PlacementForm extends React.Component {
     return null;
   }
 
+  handleMaxChange(e) {
+    this.setState({
+      groupMax: e.target.value,
+    });
+  }
+
+  handleMinChange(e) {
+    this.setState({
+      groupMin: e.target.value,
+    });
+  }
+
   handleTitleChange(e) {
     this.setState({
       titleText: e.target.value,
-    });
-  }
-
-  handleSignUpChange(e) {
-    // TODO do some header/size checking in here
-    this.setState({
-      signUpFile: e.target.files[0],
-    });
-  }
-
-  handleGroupsChange(e) {
-    this.setState({
-      groupsFile: e.target.files[0],
     });
   }
 
@@ -70,6 +70,9 @@ class PlacementForm extends React.Component {
     // will not show up on console.log
     const formData = new FormData(e.target);
     formData.append('API_KEY', process.env.API_KEY);
+    // delete unset values
+    if (!this.state.groupMin) formData.delete('group_min');
+    if (!this.state.groupMax) formData.delete('group_max');
 
     if (!this.validateForm()) {
       if (!this.signUpRef.current.files.length
@@ -105,6 +108,11 @@ class PlacementForm extends React.Component {
   }
 
   render() {
+    const numOptions = [];
+    numOptions.push(<option key={-1} value={undefined}>{undefined}</option>);
+    for (let i = 1; i < 26; i += 1) {
+      numOptions.push(<option key={i} value={i}>{i}</option>);
+    }
     const moduleClass = classNames(
       'modulePane',
       {
@@ -163,6 +171,33 @@ class PlacementForm extends React.Component {
             ref={this.groupsRef}
             required
           />
+          <h3 id="OptionalHeader">Optional</h3>
+          <div className="groupNumContainer">
+            <h4>Group Min</h4>
+            <select
+              name="group_min"
+              form={formID}
+              id="group_min"
+              value={this.state.groupMin}
+              onChange={this.handleMinChange}
+            >
+              {numOptions}
+            </select>
+          </div>
+
+          <div className="groupNumContainer">
+            <h4>Group Max</h4>
+            <select
+              name="group_max"
+              form={formID}
+              id="group_max"
+              value={this.state.groupMax}
+              onChange={this.handleMaxChange}
+            >
+              {numOptions}
+            </select>
+          </div>
+
           <input
             type="submit"
             name="placementSubmit"

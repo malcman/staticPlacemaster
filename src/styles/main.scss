@@ -104,12 +104,16 @@ ul {
     position: relative;
     top: 15px;
     background-color: white;
+    -webkit-appearance: none;
   }
   input {
     margin-left: 10%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     padding-bottom: 5px;
     width: 70%;
+  }
+  select {
+    margin-top: 5px;
   }
   input.hidden {
     display: none;
@@ -121,6 +125,20 @@ ul {
   & > * {
     margin-top: 4%;
     margin-left: 5%;
+  }
+}
+
+h3#OptionalHeader {
+  font-style: italic;
+  font-size: 1.2em;
+  margin-top: 10%;
+}
+
+.groupNumContainer {
+  display: inline-block;
+  width: 40%;
+  h4 {
+    font-family: 'Montserrat', sans-serif;
   }
 }
 
