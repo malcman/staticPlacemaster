@@ -71,8 +71,8 @@ class PlacementForm extends React.Component {
     const formData = new FormData(e.target);
     formData.append('API_KEY', process.env.API_KEY);
     // delete unset values
-    if (!this.state.groupMin) formData.delete('group_min');
-    if (!this.state.groupMax) formData.delete('group_max');
+    // if (!this.state.groupMin) formData.delete('group_min');
+    // if (!this.state.groupMax) formData.delete('group_max');
 
     if (!this.validateForm()) {
       if (!this.signUpRef.current.files.length
@@ -171,32 +171,34 @@ class PlacementForm extends React.Component {
             ref={this.groupsRef}
             required
           />
-          <h3 id="OptionalHeader">Optional</h3>
-          <div className="groupNumContainer">
-            <h4>Group Min</h4>
-            <select
-              name="group_min"
-              form={formID}
-              id="group_min"
-              value={this.state.groupMin}
-              onChange={this.handleMinChange}
-            >
-              {numOptions}
-            </select>
-          </div>
+          {
+            // <h3 id="OptionalHeader">Optional</h3>
+            //   <div className="groupNumContainer">
+            //     <h4>Group Min</h4>
+            //     <select
+            //       name="group_min"
+            //       form={formID}
+            //       id="group_min"
+            //       value={this.state.groupMin}
+            //       onChange={this.handleMinChange}
+            //     >
+            //       {numOptions}
+            //     </select>
+            //   </div>
 
-          <div className="groupNumContainer">
-            <h4>Group Max</h4>
-            <select
-              name="group_max"
-              form={formID}
-              id="group_max"
-              value={this.state.groupMax}
-              onChange={this.handleMaxChange}
-            >
-              {numOptions}
-            </select>
-          </div>
+            //   <div className="groupNumContainer">
+            //     <h4>Group Max</h4>
+            //     <select
+            //       name="group_max"
+            //       form={formID}
+            //       id="group_max"
+            //       value={this.state.groupMax}
+            //       onChange={this.handleMaxChange}
+            //     >
+            //       {numOptions}
+            //     </select>
+            //   </div>
+          }
 
           <input
             type="submit"
