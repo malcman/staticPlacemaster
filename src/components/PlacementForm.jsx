@@ -69,6 +69,7 @@ class PlacementForm extends React.Component {
     // note: use network inspector to observe behavior
     // will not show up on console.log
     const formData = new FormData(e.target);
+    formData.append('API_KEY', process.env.API_KEY);
 
     if (!this.validateForm()) {
       if (!this.signUpRef.current.files.length
