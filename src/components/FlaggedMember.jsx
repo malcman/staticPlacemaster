@@ -66,7 +66,7 @@ class FlaggedMember extends React.Component {
         <div className="flaggedExpandedInfo">
           {this.getConflictMessage(validGroups)}
           <GroupAssigner
-            allGroupsInfo={validGroups}
+            allGroupsInfo={this.props.allGroupsInfo}
             setGroup={this.setGroup}
           />
         </div>

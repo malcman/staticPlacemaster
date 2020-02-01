@@ -70,6 +70,8 @@ class PlacementForm extends React.Component {
     // will not show up on console.log
     const formData = new FormData(e.target);
     formData.append('API_KEY', process.env.API_KEY);
+    // formData.append('group_min', 4);
+    // formData.append('group_max', 12);
     // delete unset values
     // if (!this.state.groupMin) formData.delete('group_min');
     // if (!this.state.groupMax) formData.delete('group_max');
@@ -171,34 +173,6 @@ class PlacementForm extends React.Component {
             ref={this.groupsRef}
             required
           />
-          {
-            // <h3 id="OptionalHeader">Optional</h3>
-            //   <div className="groupNumContainer">
-            //     <h4>Group Min</h4>
-            //     <select
-            //       name="group_min"
-            //       form={formID}
-            //       id="group_min"
-            //       value={this.state.groupMin}
-            //       onChange={this.handleMinChange}
-            //     >
-            //       {numOptions}
-            //     </select>
-            //   </div>
-
-            //   <div className="groupNumContainer">
-            //     <h4>Group Max</h4>
-            //     <select
-            //       name="group_max"
-            //       form={formID}
-            //       id="group_max"
-            //       value={this.state.groupMax}
-            //       onChange={this.handleMaxChange}
-            //     >
-            //       {numOptions}
-            //     </select>
-            //   </div>
-          }
 
           <input
             type="submit"
