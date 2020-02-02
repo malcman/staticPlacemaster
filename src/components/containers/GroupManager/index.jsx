@@ -1,6 +1,6 @@
 import React from 'react';
-import Group from './Group';
-import HeadersManager from './HeadersManager';
+import Group from '../../Group';
+import HeadersManager from '../HeadersManager/';
 
 const classNames = require('classnames');
 

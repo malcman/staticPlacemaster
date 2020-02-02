@@ -1,17 +1,14 @@
 import React from 'react';
+import styles from './LoadingPanel.module.scss';
 
 const classNames = require('classnames');
 
-const LoadingModule = (props) => {
-  const moduleClass = classNames(
-    'modulePane',
-    {
-      pushedLeft: props.activeIndex < 0,
-      center: props.activeIndex === 0,
-      pushedRight: props.activeIndex > 0,
-    },
+const LoadingPanel = (props) => {
+  const panelClass = classNames(
+    'panel',
+    props.panelClass,
   );
-  const backButton = props.activeIndex !== 0 ? null : (
+  const backButton = props.visualIndex !== 0 ? null : (
     <button
       className="backButton"
       type="button"
@@ -22,8 +19,8 @@ const LoadingModule = (props) => {
   );
   return (
     <div
-      id="LoadingModule"
-      className={moduleClass}
+      id={styles.LoadingPanel}
+      className={panelClass}
     >
       {backButton}
       <h2>Please Wait</h2>
@@ -33,4 +30,4 @@ const LoadingModule = (props) => {
   );
 };
 
-export default LoadingModule;
+export default LoadingPanel;

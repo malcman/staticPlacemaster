@@ -1,52 +1,20 @@
 import React from 'react';
 import { navigate } from 'gatsby';
+import styles from './PlacementFormPanel.module.scss';
 
 const classNames = require('classnames');
 
-class PlacementForm extends React.Component {
+class PlacementFormPanel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       titleText: '',
-      groupMin: undefined,
-      groupMax: undefined,
     };
-    this.getBackButton = this.getBackButton.bind(this);
     this.handleTitleChange = this.handleTitleChange.bind(this);
-    this.handleMaxChange = this.handleMaxChange.bind(this);
-    this.handleMinChange = this.handleMinChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.validateForm = this.validateForm.bind(this);
     this.signUpRef = React.createRef();
     this.groupsRef = React.createRef();
-  }
-
-  getBackButton() {
-    const backButton = (
-      <button
-        className="backButton"
-        type="button"
-        onClick={this.props.backHandler}
-      >
-      Back
-      </button>
-    );
-    if (this.props.activeIndex === 0) {
-      return backButton;
-    }
-    return null;
-  }
-
-  handleMaxChange(e) {
-    this.setState({
-      groupMax: e.target.value,
-    });
-  }
-
-  handleMinChange(e) {
-    this.setState({
-      groupMin: e.target.value,
-    });
   }
 
   handleTitleChange(e) {
@@ -100,32 +68,21 @@ class PlacementForm extends React.Component {
     xhr.onerror = () => {
       const alertText = 'There was a problem submitting the form.\n Please make sure the right files have been selected and try again.';
       window.alert(alertText);
-      this.props.backHandler();
+      this.props.backHandler(this.props.index);
     };
     xhr.send(formData);
     // display loading module
-    this.props.nextHandler();
+    this.props.nextHandler(this.props.index);
   }
 
   render() {
-    const numOptions = [];
-    numOptions.push(<option key={-1} value={undefined}>{undefined}</option>);
-    for (let i = 1; i < 26; i += 1) {
-      numOptions.push(<option key={i} value={i}>{i}</option>);
-    }
-    const moduleClass = classNames(
-      'modulePane',
-      {
-        pushedLeft: this.props.activeIndex < 0,
-        center: this.props.activeIndex === 0,
-        pushedRight: this.props.activeIndex > 0,
-      },
+    const panelClass = classNames(
+      'panel',
+      this.props.panelClass,
     );
-    const backButton = this.getBackButton();
     const formID = 'newPlacementForm';
     return (
-      <div id="newPlacementModule" className={moduleClass}>
-        {backButton}
+      <div className={panelClass}>
         <form
           id={formID}
           onSubmit={this.handleSubmit}
@@ -147,7 +104,7 @@ class PlacementForm extends React.Component {
             type="text"
             name="user"
             value="michigan_spring_2019_dev"
-            className="hidden"
+            className={styles.hidden}
             readOnly
             form={formID}
           />
@@ -171,34 +128,6 @@ class PlacementForm extends React.Component {
             ref={this.groupsRef}
             required
           />
-          {
-            // <h3 id="OptionalHeader">Optional</h3>
-            //   <div className="groupNumContainer">
-            //     <h4>Group Min</h4>
-            //     <select
-            //       name="group_min"
-            //       form={formID}
-            //       id="group_min"
-            //       value={this.state.groupMin}
-            //       onChange={this.handleMinChange}
-            //     >
-            //       {numOptions}
-            //     </select>
-            //   </div>
-
-            //   <div className="groupNumContainer">
-            //     <h4>Group Max</h4>
-            //     <select
-            //       name="group_max"
-            //       form={formID}
-            //       id="group_max"
-            //       value={this.state.groupMax}
-            //       onChange={this.handleMaxChange}
-            //     >
-            //       {numOptions}
-            //     </select>
-            //   </div>
-          }
 
           <input
             type="submit"
@@ -212,4 +141,4 @@ class PlacementForm extends React.Component {
   }
 }
 
-export default PlacementForm;
+export default PlacementFormPanel;

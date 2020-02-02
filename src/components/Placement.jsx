@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CSVLink } from 'react-csv';
 
-import GroupManager from './GroupManager';
-import MemberManager from './MemberManager';
-import Member from './Member';
+import GroupManager from './containers/GroupManager/';
+import MemberManager from './containers/MemberManager/';
 import FlaggedMember from './FlaggedMember';
+import Member from './Member';
 
 // use for local testing without live optimization
 // import JSONData from '../../content/placement.json';

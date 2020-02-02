@@ -1,5 +1,5 @@
 import React from 'react';
-import HeadersManager from './HeadersManager';
+import HeadersManager from '../HeadersManager/';
 
 const classNames = require('classnames');
 

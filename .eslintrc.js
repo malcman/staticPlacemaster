@@ -27,5 +27,6 @@ module.exports = {
     "react/prop-types": "off",
     "no-param-reassign": ["error", { "props": false }],
     "react/forbid-prop-types": "off",
+    "import/no-useless-path-segments": "warn",
   },
 };

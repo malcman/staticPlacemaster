@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ToggleSortHeader from './ToggleSortHeader';
+import ToggleSortHeader from '../../ToggleSortHeader';
 
 class HeadersManager extends React.Component {
   constructor(props) {

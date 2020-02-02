@@ -1,6 +1,6 @@
 import React from 'react';
 import GroupAssigner from './GroupAssigner';
-import { getNumericTimeVal } from './GroupManager';
+import { getNumericTimeVal } from './containers/GroupManager/';
 
 const classNames = require('classnames');
 
