@@ -19,7 +19,6 @@ function updateActiveIndex(state, newIndex) {
 export default function (state = initialState, action) {
   switch (action.type) {
     case INCREMENT_MODULE:
-      return updateActiveIndex(state, action.index);
     case DECREMENT_MODULE:
       return updateActiveIndex(state, action.index);
     default:

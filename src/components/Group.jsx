@@ -16,6 +16,8 @@ class Group extends React.Component {
   getLeaderInfo() {
     // if leader info has been specified, return displayed info
     // else return null
+    // NOTE: optimization implementation as of 01/31/2020 does not
+    // return this info
     if (this.props.leader) {
       const leaderInfo = (
         <div className="groupLeader">

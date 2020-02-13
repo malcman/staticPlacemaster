@@ -1,6 +1,6 @@
 import React from 'react';
-import Group from '../../Group';
-import HeadersManager from '../HeadersManager/';
+import Group from '../Group';
+import HeadersManager from './HeadersManager';
 
 const classNames = require('classnames');
 
@@ -48,9 +48,13 @@ class GroupManager extends React.Component {
     this.getGroups = this.getGroups.bind(this);
   }
 
+  componentDidMount() {
+    this.getGroups(this.props.groupData);
+  }
+
   componentDidUpdate(prevProps) {
     // create Group components after groupData object has properly loaded
-    if (Object.entries(prevProps.groupData).length === 0
+    if ((!prevProps.groupData || Object.entries(prevProps.groupData).length === 0)
       && Object.entries(this.props.groupData).length > 0) {
       this.getGroups(this.props.groupData);
     }

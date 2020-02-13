@@ -1,5 +1,6 @@
 import React from 'react';
-import { navigate } from 'gatsby';
+import { connect } from 'react-redux';
+import { updateTitle, fetchPlacement } from '../../actions/PlacementActions';
 import styles from './PlacementFormPanel.module.scss';
 
 const classNames = require('classnames');
@@ -7,9 +8,6 @@ const classNames = require('classnames');
 class PlacementFormPanel extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      titleText: '',
-    };
     this.handleTitleChange = this.handleTitleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.validateForm = this.validateForm.bind(this);
@@ -17,18 +15,17 @@ class PlacementFormPanel extends React.Component {
     this.groupsRef = React.createRef();
   }
 
-  handleTitleChange(e) {
-    this.setState({
-      titleText: e.target.value,
-    });
+  handleTitleChange(title) {
+    this.props.dispatch(updateTitle(title));
   }
 
   validateForm() {
     // Return true if titleText has a value and both files are present.
-    return (this.state.titleText && this.state.titleText !== ''
+    const valid = (this.props.title && this.props.title !== ''
       && this.signUpRef.current.files.length > 0
       && this.groupsRef.current.files.length > 0
     );
+    return valid;
   }
 
   handleSubmit(e) {
@@ -38,6 +35,8 @@ class PlacementFormPanel extends React.Component {
     // will not show up on console.log
     const formData = new FormData(e.target);
     formData.append('API_KEY', process.env.API_KEY);
+    formData.append('user', 'michigan_spring_2019_dev');
+
     // delete unset values
     // if (!this.state.groupMin) formData.delete('group_min');
     // if (!this.state.groupMax) formData.delete('group_max');
@@ -50,27 +49,8 @@ class PlacementFormPanel extends React.Component {
       return;
     }
 
-
-    // send the form data to this.props.actionURL
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', this.props.actionURL, true);
-    xhr.setRequestHeader('credentials', 'same-origin');
-    xhr.onload = () => {
-      // make sure all is kosher
-      if (xhr.status >= 200 && xhr.status < 300) {
-        // get JSON data to send to placement page
-        const data = JSON.parse(xhr.response);
-        const title = this.state.titleText;
-        // send the data and navigate the user to placement
-        navigate('/placement/', { state: { data, title } });
-      }
-    };
-    xhr.onerror = () => {
-      const alertText = 'There was a problem submitting the form.\n Please make sure the right files have been selected and try again.';
-      window.alert(alertText);
-      this.props.backHandler(this.props.index);
-    };
-    xhr.send(formData);
+    const { actionURL } = this.props;
+    this.props.dispatch(fetchPlacement(formData, actionURL));
     // display loading module
     this.props.nextHandler(this.props.index);
   }
@@ -94,26 +74,16 @@ class PlacementFormPanel extends React.Component {
             type="text"
             placeholder="i.e. WSN Fall '20"
             name="placementTitle"
-            onChange={this.handleTitleChange}
-            value={this.state.titleText}
+            onChange={(e) => this.handleTitleChange(e.target.value)}
+            value={this.props.title}
             form={formID}
             required
-          />
-          {/* Currently needed for form to be accepted on server. */}
-          <input
-            type="text"
-            name="user"
-            value="michigan_spring_2019_dev"
-            className={styles.hidden}
-            readOnly
-            form={formID}
           />
 
           <h3>Sign-Up File:</h3>
           <input
             type="file"
             name="responses_csv_file"
-            onChange={this.handleSignUpChange}
             form={formID}
             ref={this.signUpRef}
             required
@@ -123,7 +93,6 @@ class PlacementFormPanel extends React.Component {
           <input
             type="file"
             name="rooms_csv_file"
-            onChange={this.handleGroupsChange}
             form={formID}
             ref={this.groupsRef}
             required
@@ -132,7 +101,7 @@ class PlacementFormPanel extends React.Component {
           <input
             type="submit"
             name="placementSubmit"
-            value="Create and Optimize"
+            value="Optimize"
             form={formID}
           />
         </form>
@@ -141,4 +110,19 @@ class PlacementFormPanel extends React.Component {
   }
 }
 
-export default PlacementFormPanel;
+function mapStateToProps(state) {
+  const {
+    isFetching,
+    didInvalidate,
+    title,
+    placementResponse,
+  } = state.Placement;
+  return {
+    isFetching,
+    didInvalidate,
+    title,
+    placementResponse,
+  };
+}
+
+export default connect(mapStateToProps)(PlacementFormPanel);

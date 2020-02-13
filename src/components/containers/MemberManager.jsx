@@ -1,5 +1,5 @@
 import React from 'react';
-import HeadersManager from '../HeadersManager/';
+import HeadersManager from './HeadersManager';
 
 const classNames = require('classnames');
 
@@ -21,6 +21,12 @@ class MemberManager extends React.Component {
         headerKey: 'first',
       },
     ];
+  }
+
+  componentDidMount() {
+    const members = this.getMembers();
+    const validHeaders = ['Email', 'Campus', 'Gender'];
+    this.extendHeaders(validHeaders);
   }
 
   componentDidUpdate(prevProps) {
