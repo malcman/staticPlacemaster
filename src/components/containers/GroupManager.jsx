@@ -49,15 +49,15 @@ class GroupManager extends React.Component {
   }
 
   componentDidMount() {
-    this.getGroups(this.props.groupData);
+    // this.getGroups(this.props.groupData);
   }
 
   componentDidUpdate(prevProps) {
     // create Group components after groupData object has properly loaded
-    if ((!prevProps.groupData || Object.entries(prevProps.groupData).length === 0)
-      && Object.entries(this.props.groupData).length > 0) {
-      this.getGroups(this.props.groupData);
-    }
+    // if ((!prevProps.groupData || Object.entries(prevProps.groupData).length === 0)
+    //   && Object.entries(this.props.groupData).length > 0) {
+    //   this.getGroups(this.props.groupData);
+    // }
   }
 
   getGroups(groupObjs) {

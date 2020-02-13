@@ -24,20 +24,20 @@ class MemberManager extends React.Component {
   }
 
   componentDidMount() {
-    const members = this.getMembers();
-    const validHeaders = ['Email', 'Campus', 'Gender'];
-    this.extendHeaders(validHeaders);
+    // const members = this.getMembers();
+    // const validHeaders = ['Email', 'Campus', 'Gender'];
+    // this.extendHeaders(validHeaders);
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.groupData !== this.props.groupData) {
-      const members = this.getMembers();
-      const validHeaders = ['Email', 'Campus', 'Gender'];
-      this.extendHeaders(validHeaders);
-      this.setState({
-        members,
-      });
-    }
+    // if (prevProps.groupData !== this.props.groupData) {
+    //   const members = this.getMembers();
+    //   const validHeaders = ['Email', 'Campus', 'Gender'];
+    //   this.extendHeaders(validHeaders);
+    //   this.setState({
+    //     members,
+    //   });
+    // }
   }
 
   getMembers() {
@@ -102,7 +102,7 @@ class MemberManager extends React.Component {
             sortHandler={this.sortMembers}
           />
           <ul id="MemberList">
-            {this.state.members}
+            {this.props.members}
           </ul>
         </div>
       </section>

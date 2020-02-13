@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   REQUEST_PLACEMENT,
   RECEIVE_PLACEMENT,
@@ -5,6 +6,8 @@ import {
   LOAD_PLACEMENT,
   UPDATE_TITLE,
 } from '../actions/actionTypes';
+import Member from '../components/Member';
+import FlaggedMember from '../components/FlaggedMember';
 
 const initialState = {
   // data pertaining to form
@@ -14,10 +17,9 @@ const initialState = {
   title: '',
 
   // application data
-  groupIDs: [],
-  allGroupsData: {},
-  allGroupsUI: {},
+  members: [],
   flaggedMembers: [],
+  groups: [],
 };
 
 // placement data reducer
@@ -46,6 +48,16 @@ function placement(state = initialState, action) {
         placementResponse: action.data,
         isFetching: false,
         didInvalidate: false,
+        members: action.data.placed.map((memberData) =>
+          <Member
+            {...memberData}
+            key={memberData.email}
+          />),
+        flaggedMembers: action.data.unplaced.map((memberData) =>
+          <FlaggedMember
+            {...memberData}
+            key={memberData.email}
+          />),
       };
     case LOAD_PLACEMENT:
       return {

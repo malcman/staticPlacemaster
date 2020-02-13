@@ -147,7 +147,7 @@ export function fetchPlacement(formData, actionURL) {
         // get JSON data to send to placement page
         const data = JSON.parse(xhr.response);
         dispatch(receivePlacement(data));
-        dispatch(loadPlacement(data));
+        // dispatch(loadPlacement(data));
         navigate('/placement/');
       }
     };

@@ -2,7 +2,7 @@ import React from 'react';
 
 import SEO from '../components/seo';
 import Header from '../components/header';
-import Placement from '../components/containers/Placement/';
+import Placement from '../components/containers/Placement';
 
 const PlacementPage = ({ location }) => {
   let title;

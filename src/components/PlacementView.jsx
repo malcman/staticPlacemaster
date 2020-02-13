@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CSVLink } from 'react-csv';
 
-import GroupManager from './containers/GroupManager/';
-import MemberManager from './containers/MemberManager/';
+import GroupManager from './containers/GroupManager';
+import MemberManager from './containers/MemberManager';
 
 
 // headers for the CSV file that will be downloaded
@@ -67,6 +67,7 @@ const PlacementView = (props) => {
   const {
     groupFocus,
     allGroups,
+    members,
     flaggedMembers,
     sortFlaggedMembers,
     title,
@@ -74,7 +75,8 @@ const PlacementView = (props) => {
   const flaggedAlert = (flaggedMembers && !flaggedMembers.length) ? null : (
     <div className="alert" />
   );
-  const csvData = getCSVMemberData(flaggedMembers, allGroups);
+  // const csvData = getCSVMemberData(flaggedMembers, allGroups);
+  const csvData = '';
   return (
     <section className="Placement">
       <div id="PlacementHeader">
@@ -127,6 +129,7 @@ const PlacementView = (props) => {
         role="tabpanel"
         focused={!groupFocus}
         groupData={allGroups}
+        members={members}
         flaggedMembers={flaggedMembers}
         sortFlaggedHandler={sortFlaggedMembers}
       />

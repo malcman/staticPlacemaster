@@ -215,12 +215,12 @@ Placement.defaultProps = {
 function mapStateToProps(state) {
   return {
     groupFocus: state.PlacementUI.groupFocus,
-    // allGroups: state.Placement.allGroupsData,
-    allGroups,
-    // flaggedMembers: state.Placement.flaggedMembers,
-    flaggedMembers,
-    // title: state.Placement.title,
-    title: 'Test',
+    allGroups: state.Placement.allGroupsData,
+    // allGroups,
+    members: state.Placement.members,
+    flaggedMembers: state.Placement.flaggedMembers,
+    // flaggedMembers,
+    title: state.Placement.title,
   };
 }
 
