@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 import { createLogger } from 'redux-logger';
-import placemasterApp from './src/reducers';
+import placemasterApp from './src/appReducer';
 
 
 const loggerMiddleWare = createLogger();

@@ -1,13 +1,10 @@
-import React from 'react';
 import {
   REQUEST_PLACEMENT,
   RECEIVE_PLACEMENT,
   INVALIDATE_PLACEMENT,
   LOAD_PLACEMENT,
   UPDATE_TITLE,
-} from '../actions/actionTypes';
-import Member from '../components/Member';
-import FlaggedMember from '../components/FlaggedMember';
+} from './PlacementActions';
 
 const initialState = {
   // data pertaining to form
@@ -48,16 +45,9 @@ function placement(state = initialState, action) {
         placementResponse: action.data,
         isFetching: false,
         didInvalidate: false,
-        members: action.data.placed.map((memberData) =>
-          <Member
-            {...memberData}
-            key={memberData.email}
-          />),
-        flaggedMembers: action.data.unplaced.map((memberData) =>
-          <FlaggedMember
-            {...memberData}
-            key={memberData.email}
-          />),
+        members: action.data.placed,
+        flaggedMembers: action.data.unplaced,
+        groups: action.data.groups,
       };
     case LOAD_PLACEMENT:
       return {

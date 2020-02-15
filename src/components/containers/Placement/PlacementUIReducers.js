@@ -1,10 +1,7 @@
 import {
   FOCUS_GROUPS,
   FOCUS_MEMBERS,
-  SORT_FLAGGED,
-  SORT_MEMBERS,
-  SORT_GROUPS,
-} from '../actions/actionTypes';
+} from './PlacementUIActions';
 
 const initialState = {
   groupFocus: true,

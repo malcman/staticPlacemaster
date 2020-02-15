@@ -1,5 +1,7 @@
 import React from 'react';
-import HeadersManager from './HeadersManager';
+import HeadersManager from '../HeadersManager/HeadersManager';
+import MemberList from '../../MemberList';
+import FlaggedMember from '../../FlaggedMember';
 
 const classNames = require('classnames');
 
@@ -83,7 +85,12 @@ class MemberManager extends React.Component {
           sortHandler={this.props.sortFlaggedHandler}
         />
         <ul id="FlaggedMemberList">
-          {this.props.flaggedMembers}
+          {this.props.flaggedMembers.map((flagged) => (
+            <FlaggedMember
+              key={flagged.email}
+              {...flagged}
+            />
+          ))}
         </ul>
       </div>
     );
@@ -101,9 +108,7 @@ class MemberManager extends React.Component {
             headers={this.memberHeaders}
             sortHandler={this.sortMembers}
           />
-          <ul id="MemberList">
-            {this.props.members}
-          </ul>
+          <MemberList members={this.props.members}/>
         </div>
       </section>
     );

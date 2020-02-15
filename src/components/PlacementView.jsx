@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CSVLink } from 'react-csv';
 
-import GroupManager from './containers/GroupManager';
-import MemberManager from './containers/MemberManager';
+import GroupManager from './containers/GroupManager/GroupManager';
+import MemberManager from './containers/MemberManager/MemberManager';
 
 
 // headers for the CSV file that will be downloaded
@@ -69,7 +69,7 @@ const PlacementView = (props) => {
     allGroups,
     members,
     flaggedMembers,
-    sortFlaggedMembers,
+    groups,
     title,
   } = props;
   const flaggedAlert = (flaggedMembers && !flaggedMembers.length) ? null : (
@@ -98,9 +98,15 @@ const PlacementView = (props) => {
           <li
             id="GroupTag"
             role="tab"
+            tabIndex="0"
             aria-selected={groupFocus}
             aria-controls="GroupManager"
             onClick={() => props.focusGroups()}
+            onKeyDown={(e) => {
+              if (e.keyCode === 13) {
+                props.focusGroups();
+              }
+            }}
           >
             <h3>Groups</h3>
           </li>
@@ -109,9 +115,15 @@ const PlacementView = (props) => {
           <li
             id="MemberTag"
             role="tab"
+            tabIndex="0"
             aria-selected={!groupFocus}
             aria-controls="MemberManager"
             onClick={() => props.focusMembers()}
+            onKeyDown={(e) => {
+              if (e.keyCode === 13) {
+                props.focusMembers();
+              }
+            }}
           >
             <h3>
             Members
@@ -124,6 +136,7 @@ const PlacementView = (props) => {
         role="tabpanel"
         focused={groupFocus}
         groupData={allGroups}
+        groups={groups}
       />
       <MemberManager
         role="tabpanel"
@@ -131,7 +144,6 @@ const PlacementView = (props) => {
         groupData={allGroups}
         members={members}
         flaggedMembers={flaggedMembers}
-        sortFlaggedHandler={sortFlaggedMembers}
       />
     </section>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
-import Group from '../Group';
-import HeadersManager from './HeadersManager';
+import Group from '../../Group';
+import HeadersManager from '../HeadersManager/HeadersManager';
+import GroupList from '../../GroupList';
 
 const classNames = require('classnames');
 
@@ -33,7 +34,7 @@ class GroupManager extends React.Component {
       }
       let hourStr = matches.groups.time;
       hourStr = hourStr.replace(':', '');
-      numericTimeVal += Number(hourStr);;
+      numericTimeVal += Number(hourStr);
     }
     return numericTimeVal;
   }
@@ -130,9 +131,7 @@ class GroupManager extends React.Component {
           headers={this.state.groupHeaders}
           sortHandler={this.sortGroups}
         />
-        <ul id="GroupList">
-          {this.state.groups}
-        </ul>
+        <GroupList groups={this.props.groups} />
       </section>
     );
   }

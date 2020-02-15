@@ -3,7 +3,7 @@ import React from 'react';
 import SEO from '../components/seo';
 import Header from '../components/header';
 
-import PanelContainer from '../components/containers/PanelContainer';
+import PanelContainer from '../components/containers/PanelContainer/PanelContainer';
 
 
 const IndexPage = () => {

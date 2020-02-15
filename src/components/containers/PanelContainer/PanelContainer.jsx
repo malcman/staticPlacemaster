@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import {
   incrementModule,
   decrementModule,
-} from '../../actions/PanelContainerActions';
+} from './PanelContainerActions';
 
-import StartupPanels from '../StartupPanels/';
+import StartupPanels from '../../StartupPanels/';
 
 // props being passed to presentational components
 const mapStateToProps = (state) => ({

@@ -1,7 +1,6 @@
-import {
-  INCREMENT_MODULE,
-  DECREMENT_MODULE,
-} from './actionTypes';
+// ModuleContainer Actions
+export const INCREMENT_MODULE = 'INCREMENT_MODULE';
+export const DECREMENT_MODULE = 'DECREMENT_MODULE';
 
 // action creators
 export function incrementModule(index) {

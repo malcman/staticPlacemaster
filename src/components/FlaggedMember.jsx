@@ -1,6 +1,6 @@
 import React from 'react';
 import GroupAssigner from './GroupAssigner';
-import { getNumericTimeVal } from './containers/GroupManager';
+import { getNumericTimeVal } from './containers/GroupManager/GroupManager';
 
 const classNames = require('classnames');
 
@@ -179,6 +179,10 @@ class FlaggedMember extends React.Component {
         id={`${this.props.email}Flagged`}
         className={flaggedClass}
         onClick={this.toggleExpand}
+        tabIndex="0"
+        onKeyDown={(e) => {
+          if (e.keyCode === 13) this.toggleExpand(e);
+        }}
       >
         <div className="infoRow">
           <p>{group}</p>
