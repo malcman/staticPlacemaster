@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import Group from '../../Group';
 import HeadersManager from '../HeadersManager/HeadersManager';
 import GroupList from '../../GroupList';
@@ -126,6 +127,7 @@ class GroupManager extends React.Component {
         className={className}
         id="GroupManager"
         aria-labelledby="GroupTag"
+        role="tabpanel"
       >
         <HeadersManager
           headers={this.state.groupHeaders}
@@ -137,7 +139,14 @@ class GroupManager extends React.Component {
   }
 }
 
-export default GroupManager;
+function mapStateToProps(state) {
+  return {
+    groups: state.Placement.groups,
+    focused: state.PlacementUI.groupFocus,
+  };
+}
+
+export default connect(mapStateToProps)(GroupManager);
 export function getNumericTimeVal(timeStr) {
   return GroupManager.getNumericTimeVal(timeStr);
 }

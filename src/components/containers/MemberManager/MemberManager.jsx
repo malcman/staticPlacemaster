@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import HeadersManager from '../HeadersManager/HeadersManager';
 import MemberList from '../../MemberList';
 import FlaggedMember from '../../FlaggedMember';
@@ -100,6 +101,7 @@ class MemberManager extends React.Component {
         className={className}
         id="MemberManager"
         aria-labelledby="MemberTag"
+        role="tabpanel"
       >
         {flaggedSection}
         <div>
@@ -108,11 +110,19 @@ class MemberManager extends React.Component {
             headers={this.memberHeaders}
             sortHandler={this.sortMembers}
           />
-          <MemberList members={this.props.members}/>
+          <MemberList members={this.props.members} />
         </div>
       </section>
     );
   }
 }
 
-export default MemberManager;
+function mapStateToProps(state) {
+  return {
+    members: state.Placement.members,
+    focused: !state.PlacementUI.groupFocus,
+    flaggedMembers: state.Placement.flaggedMembers,
+  };
+}
+
+export default connect(mapStateToProps)(MemberManager);

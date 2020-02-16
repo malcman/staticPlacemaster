@@ -132,19 +132,8 @@ const PlacementView = (props) => {
           </li>
         </ul>
       </div>
-      <GroupManager
-        role="tabpanel"
-        focused={groupFocus}
-        groupData={allGroups}
-        groups={groups}
-      />
-      <MemberManager
-        role="tabpanel"
-        focused={!groupFocus}
-        groupData={allGroups}
-        members={members}
-        flaggedMembers={flaggedMembers}
-      />
+      <GroupManager />
+      <MemberManager />
     </section>
   );
 };
