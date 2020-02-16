@@ -2,18 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import HeadersManager from '../HeadersManager/HeadersManager';
 import MemberList from '../../MemberList';
-import FlaggedMember from '../../FlaggedMember';
+import FlaggedMemberList from '../../FlaggedMemberList';
 
 const classNames = require('classnames');
 
 class MemberManager extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      members: [],
-    };
-    this.getMembers = this.getMembers.bind(this);
-    this.sortMembers = this.sortMembers.bind(this);
     this.memberHeaders = [
       {
         label: 'Group',
@@ -23,76 +18,42 @@ class MemberManager extends React.Component {
         label: 'Name',
         headerKey: 'first',
       },
+      {
+        label: 'Email',
+        headerKey: 'email',
+      },
+      {
+        label: 'Campus',
+        headerKey: 'campus',
+      },
+      {
+        label: 'Gender',
+        headerKey: 'gender',
+      },
     ];
-  }
-
-  componentDidMount() {
-    // const members = this.getMembers();
-    // const validHeaders = ['Email', 'Campus', 'Gender'];
-    // this.extendHeaders(validHeaders);
-  }
-
-  componentDidUpdate(prevProps) {
-    // if (prevProps.groupData !== this.props.groupData) {
-    //   const members = this.getMembers();
-    //   const validHeaders = ['Email', 'Campus', 'Gender'];
-    //   this.extendHeaders(validHeaders);
-    //   this.setState({
-    //     members,
-    //   });
-    // }
-  }
-
-  getMembers() {
-    const members = Object.keys(this.props.groupData).reduce(
-      (accum, groupNum) => accum.concat(this.props.groupData[groupNum].members),
-      [],
-    );
-    return members;
-  }
-
-  sortMembers(sortFunc) {
-    this.setState((prevState) => ({
-      members: prevState.members.sort(sortFunc),
-    }));
-  }
-
-  extendHeaders(validHeaders) {
-    if (this.memberHeaders.length - validHeaders.length === 2) {
-      return;
-    }
-    validHeaders.forEach((header) => {
-      const newHeader = {
-        label: header,
-        headerKey: header.toLowerCase(),
-      };
-      this.memberHeaders.push(newHeader);
-    });
   }
 
   render() {
     const className = classNames('Manager', { hidden: !this.props.focused });
+    const {
+      flaggedMembers,
+      members,
+      groups,
+    } = this.props;
 
-    const flaggedSection = (!this.props.flaggedMembers.length) ? null : (
+    const flaggedSection = (!flaggedMembers.length) ? null : (
       <div>
         <h4 id="flaggedHeader">
           Flagged
           <div className="alert">
-            <p>{this.props.flaggedMembers.length}</p>
+            <p>{flaggedMembers.length}</p>
           </div>
         </h4>
         <HeadersManager
           headers={this.memberHeaders}
           sortHandler={this.props.sortFlaggedHandler}
         />
-        <ul id="FlaggedMemberList">
-          {this.props.flaggedMembers.map((flagged) => (
-            <FlaggedMember
-              key={flagged.email}
-              {...flagged}
-            />
-          ))}
-        </ul>
+        <FlaggedMemberList members={flaggedMembers} groups={groups} />
       </div>
     );
 
@@ -110,7 +71,7 @@ class MemberManager extends React.Component {
             headers={this.memberHeaders}
             sortHandler={this.sortMembers}
           />
-          <MemberList members={this.props.members} />
+          <MemberList members={members} />
         </div>
       </section>
     );
@@ -120,6 +81,7 @@ class MemberManager extends React.Component {
 function mapStateToProps(state) {
   return {
     members: state.Placement.members,
+    groups: state.Placement.groups,
     focused: !state.PlacementUI.groupFocus,
     flaggedMembers: state.Placement.flaggedMembers,
   };

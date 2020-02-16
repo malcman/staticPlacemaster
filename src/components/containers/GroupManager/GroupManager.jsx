@@ -133,7 +133,10 @@ class GroupManager extends React.Component {
           headers={this.state.groupHeaders}
           sortHandler={this.sortGroups}
         />
-        <GroupList groups={this.props.groups} />
+        <GroupList
+          groups={this.props.groups}
+          members={this.props.members}
+        />
       </section>
     );
   }
@@ -143,6 +146,7 @@ function mapStateToProps(state) {
   return {
     groups: state.Placement.groups,
     focused: state.PlacementUI.groupFocus,
+    members: state.Placement.members,
   };
 }
 

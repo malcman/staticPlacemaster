@@ -1,4 +1,5 @@
 import React from 'react';
+import Member from './Member';
 
 const classNames = require('classnames');
 
@@ -44,7 +45,7 @@ class Group extends React.Component {
             <div>Gender</div>
           </div>
           <ul className="groupMembers">
-            {this.props.members}
+            {this.props.members.map((member) => <Member key={member.email} {...member} />)}
           </ul>
         </div>
       );
@@ -83,7 +84,7 @@ class Group extends React.Component {
           <p>{this.props.number}</p>
           <p>{this.props.time}</p>
           <p>{this.props.campus}</p>
-          <p>{this.props.gradStanding}</p>
+          <p>{this.props.grad_standing}</p>
         </div>
         <button
           type="button"

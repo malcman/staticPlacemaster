@@ -3,16 +3,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import PlacementView from '../../PlacementView';
-// import FlaggedMember from '../FlaggedMember';
-// import Member from '../Member';
 
 import {
   focusGroups,
   focusMembers,
 } from './PlacementUIActions';
-
-// use for local testing without live optimization
-// import JSONData from '../../../content/placement.json';
 
 function updateGroupData(allGroups, groupData, member = null) {
   // if this groupID is not yet in group data,

@@ -34,17 +34,23 @@ function getNumericTimeVal(timeStr) {
   return numericTimeVal;
 }
 
-const GroupList = ({ groups }) => (
+const GroupList = ({ groups, members }) => (
   <ul id="GroupList">
-    {groups.map((groupData) => (
-      <Group
-        key={groupData.group_id}
-        number={groupData.group_id}
-        time_numeric={getNumericTimeVal(groupData.time)}
-        gradStanding={groupData.grad_standing}
-        {...groupData}
-      />
-    ))}
+    {groups.map((groupData) => {
+      const memberInfo = [];
+      groupData.members.forEach((memberIndex) => {
+        memberInfo.push(members[memberIndex]);
+      });
+      return (
+        <Group
+          key={groupData.group_id}
+          number={groupData.group_id}
+          time_numeric={getNumericTimeVal(groupData.time)}
+          {...groupData}
+          members={memberInfo}
+        />
+      );
+    })}
   </ul>
 );
 

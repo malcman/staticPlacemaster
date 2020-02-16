@@ -35,26 +35,6 @@ export function requestPlacement(formData) {
   };
 }
 
-// function updateGroupData(allGroups, groupData, member = null) {
-//   // if this groupID is not yet in group data,
-//   // create appropriate object
-//   // regardless, add new member to group
-//   const groupID = groupData.group_id;
-//   if (!allGroups.hasOwnProperty(groupID)) {  // eslint-disable-line
-//     allGroups[groupID] = {
-//       members: [],
-//       size: 0,
-//       time: groupData.time,
-//       campus: groupData.campus,
-//       gradStanding: groupData.grad_standing,
-//     };
-//   }
-//   if (member) {
-//     allGroups[groupID].members.push(member);
-//     allGroups[groupID].size += 1;
-//   }
-// }
-
 export function fetchPlacement(formData, actionURL) {
   return (dispatch) => {
     // notify the store we have requested an async call
