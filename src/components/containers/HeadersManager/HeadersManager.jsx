@@ -1,64 +1,49 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ToggleSortHeader from '../../ToggleSortHeader';
 
+import {
+  registerHeaders,
+  toggleListAscend,
+  setCurrentSort,
+} from './HeadersManagerActions';
+
 class HeadersManager extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      currentSort: 'Name',
-    };
-    this.selectActiveHeader = this.selectActiveHeader.bind(this);
-  }
-
-  componentDidUpdate(prevProps) {
-    if (this.props.headers
-        && prevProps.headers.length !== this.props.headers.length) {
-      this.setState({
-        currentSort: this.props.headers[0].label,
-      });
-    }
-  }
-
-  getSortHeaders() {
-    const headers = [];
-    this.props.headers.forEach((header) => {
-      const newHeader = (
-        <ToggleSortHeader
-          headerName={header.label}
-          headerKey={header.headerKey}
-          key={header.label}
-          active={header.label === this.state.currentSort}
-          setSortHandler={this.selectActiveHeader}
-          sortHandler={this.props.sortHandler}
-          flagged={this.props.flagged}
-        />
-      );
-      headers.push(newHeader);
-    });
-    return headers;
-  }
-
-  selectActiveHeader(headerName) {
-    this.setState({
-      currentSort: headerName,
-    });
+  componentDidMount() {
+    const { headers, register } = this.props;
+    const sortKeys = headers.map((header) => header.headerKey);
+    register(sortKeys);
   }
 
   render() {
-    const sortHeaders = this.getSortHeaders();
+    const {
+      setSort,
+      toggleAscend,
+      headers,
+      headersAscending,
+    } = this.props;
     return (
       <div className="headersContainer">
-        {sortHeaders}
+        {headers.map((header) => (
+          <ToggleSortHeader
+            key={header.label}
+            headerName={header.label}
+            headerKey={header.headerKey}
+            active={header.headerKey === this.props.currentSort}
+            ascending={headersAscending[header.headerKey]}
+            setSort={setSort}
+            toggleAscend={toggleAscend}
+          />
+        ))}
       </div>
     );
   }
 }
 
-export default HeadersManager;
-
 HeadersManager.propTypes = {
   headers: PropTypes.arrayOf(PropTypes.object),
+  list: PropTypes.string.isRequired,
 };
 
 // list of objects descibing elements being sorted
@@ -69,3 +54,34 @@ HeadersManager.defaultProps = {
     { label: '', headerKey: '' },
   ],
 };
+
+function mapStateToProps(state, ownProps) {
+  const { list } = ownProps;
+  let currentSort = '';
+  let headersAscending = {};
+  if (list && state.HeadersManager[list]) {
+    currentSort = state.HeadersManager[list].currentSort;
+    headersAscending = state.HeadersManager[list].headersAscending;
+  }
+  return {
+    currentSort,
+    headersAscending,
+  };
+}
+
+function mapDispatchToProps(dispatch, ownProps) {
+  const { list } = ownProps;
+  return {
+    setSort: (sortKey) => {
+      dispatch(setCurrentSort(list, sortKey));
+    },
+    toggleAscend: (sortKey) => {
+      dispatch(toggleListAscend(list, sortKey));
+    },
+    register: (sortKeys) => {
+      dispatch(registerHeaders(list, sortKeys));
+    },
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(HeadersManager);

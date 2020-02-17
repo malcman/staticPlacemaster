@@ -42,82 +42,26 @@ class GroupManager extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      groups: [],
-      groupHeaders: [],
-    };
-    this.sortGroups = this.sortGroups.bind(this);
-    this.getGroups = this.getGroups.bind(this);
-  }
-
-  componentDidMount() {
-    // this.getGroups(this.props.groupData);
-  }
-
-  componentDidUpdate(prevProps) {
-    // create Group components after groupData object has properly loaded
-    // if ((!prevProps.groupData || Object.entries(prevProps.groupData).length === 0)
-    //   && Object.entries(this.props.groupData).length > 0) {
-    //   this.getGroups(this.props.groupData);
-    // }
-  }
-
-  getGroups(groupObjs) {
-    const groups = [];
-    const groupHeaders = [
+    this.groupListName = 'groups';
+    this.groupHeaders = [
       {
-        label: 'Number',
+        label: 'Group',
         headerKey: 'number',
       },
+      {
+        label: 'Time',
+        headerKey: 'time_numeric',
+      },
+      {
+        label: 'Campus',
+        headerKey: 'campus',
+      },
+      {
+        label: 'Grad Standing',
+        headerKey: 'grad_standing',
+      },
     ];
-    const initialLength = groupHeaders.length;
-    // create groups from groupData
-    Object.keys(groupObjs).forEach((groupNum) => {
-      // record data headers
-      const groupObj = groupObjs[groupNum];
-      if (groupHeaders.length === initialLength) {
-        Object.keys(groupObj).forEach((headerKey) => {
-          // perfrom necessary modifications to header fields
-
-          // only add headers for string fields
-          if (typeof groupObj[headerKey] !== typeof String()) {
-            return;
-          }
-          // fix some labels up
-          let label = `${headerKey.charAt(0).toUpperCase()}${headerKey.substr(1)}`;
-          if (label === 'GradStanding') label = 'Grad Standing';
-          if (label === 'Time') headerKey = 'time_numeric';
-          // create a new data object for the header
-          const newHeader = {
-            label,
-            headerKey,
-          };
-          // add data to list
-          groupHeaders.push(newHeader);
-        });
-      }
-      const { members, ...rest } = groupObj;
-      const numericTime = GroupManager.getNumericTimeVal(rest.time);
-      const newGroup = (
-        <Group
-          key={groupNum}
-          number={Number(groupNum)}
-          members={members}
-          time_numeric={numericTime}
-          {...rest}
-        />
-      );
-      groups.push(newGroup);
-    });
-    this.setState({ groups, groupHeaders });
   }
-
-  sortGroups(sortFunc) {
-    this.setState((prevState) => ({
-      groups: prevState.groups.sort(sortFunc),
-    }));
-  }
-
 
   render() {
     const className = classNames('Manager', { hidden: !this.props.focused });
@@ -130,8 +74,8 @@ class GroupManager extends React.Component {
         role="tabpanel"
       >
         <HeadersManager
-          headers={this.state.groupHeaders}
-          sortHandler={this.sortGroups}
+          headers={this.groupHeaders}
+          list={this.groupListName}
         />
         <GroupList
           groups={this.props.groups}

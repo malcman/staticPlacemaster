@@ -1,10 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { createSelector } from 'reselect';
+
 import HeadersManager from '../HeadersManager/HeadersManager';
 import MemberList from '../../MemberList';
 import FlaggedMemberList from '../../FlaggedMemberList';
 
 const classNames = require('classnames');
+
+const membersSelector = (state) => state.Placement.members;
 
 class MemberManager extends React.Component {
   constructor(props) {
@@ -31,16 +35,20 @@ class MemberManager extends React.Component {
         headerKey: 'gender',
       },
     ];
+    this.unplacedName = 'unplaced';
+    this.placedName = 'placed';
   }
 
   render() {
-    const className = classNames('Manager', { hidden: !this.props.focused });
     const {
       flaggedMembers,
       members,
       groups,
+      focused,
     } = this.props;
+    const className = classNames('Manager', { hidden: !focused });
 
+    // get unplaced members section if unplaced members present
     const flaggedSection = (!flaggedMembers.length) ? null : (
       <div>
         <h4 id="flaggedHeader">
@@ -51,7 +59,7 @@ class MemberManager extends React.Component {
         </h4>
         <HeadersManager
           headers={this.memberHeaders}
-          sortHandler={this.props.sortFlaggedHandler}
+          list={this.unplacedName}
         />
         <FlaggedMemberList members={flaggedMembers} groups={groups} />
       </div>
@@ -69,7 +77,7 @@ class MemberManager extends React.Component {
           <h4>Placed</h4>
           <HeadersManager
             headers={this.memberHeaders}
-            sortHandler={this.sortMembers}
+            list={this.placedName}
           />
           <MemberList members={members} />
         </div>
