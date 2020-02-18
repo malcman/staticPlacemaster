@@ -3,6 +3,7 @@ export const ASCEND_SORT = 'ASCEND_SORT';
 export const DESCEND_SORT = 'DESCEND_SORT';
 export const TOGGLE_ASCEND = 'TOGGLE_ASCEND';
 export const SET_CURRENT_SORT = 'SET_CURRENT_SORT';
+export const SET_SORT_FUNC = 'SET_SORT_FUNC';
 
 
 export function registerHeaders(list, sortKeys) {
@@ -47,12 +48,23 @@ export function toggleListAscend(list, sortKey) {
   };
 }
 
-export function setCurrentSort(list, sortKey) {
+export function setListSortKey(list, sortKey) {
   // list: string, name of list being sorted
   // // sortKey: string, key/prop being set as currentSort
   return {
     type: SET_CURRENT_SORT,
     list,
     sortKey,
+  };
+}
+
+
+export function setListSortFunc(list, sortFunc) {
+  // list: string, name of list being sorted
+  // // sortFunc: function used to sort list
+  return {
+    type: SET_SORT_FUNC,
+    list,
+    sortFunc,
   };
 }

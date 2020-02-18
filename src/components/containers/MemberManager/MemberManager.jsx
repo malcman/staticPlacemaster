@@ -8,37 +8,50 @@ import FlaggedMemberList from '../../FlaggedMemberList';
 
 const classNames = require('classnames');
 
-const membersSelector = (state) => state.Placement.members;
+const PLACED_LIST_NAME = 'placed';
+const UNPLACED_LIST_NAME = 'unplaced';
+const MEMBER_HEADERS = [
+  {
+    label: 'Group',
+    headerKey: 'group_id',
+  },
+  {
+    label: 'Name',
+    headerKey: 'first',
+  },
+  {
+    label: 'Email',
+    headerKey: 'email',
+  },
+  {
+    label: 'Campus',
+    headerKey: 'campus',
+  },
+  {
+    label: 'Gender',
+    headerKey: 'gender',
+  },
+];
+
+// const getMembers = (state) => state.Placement.members;
+// const getCurrentMembersSort = (state) => state.HeadersManager[PLACED_LIST_NAME].currentSort;
+// const getAscendingInfo = (state) => state.HeadersManager[PLACED_LIST_NAME].ascendingHeaders;
+// const getSortAscend = createSelector(
+//   [getAscendingInfo, getCurrentMembersSort],
+//   (ascending, sort) => ascending[sort],
+// );
+
+// const getSortedMembers = createSelector(
+//   [getSortAscend, getCurrentMembersSort, getMembers],
+//   (ascending, sortKey, members) => {
+//     if (ascending) {
+//       // statement
+//     }
+//     return members.sort()
+//   },
+// );
 
 class MemberManager extends React.Component {
-  constructor(props) {
-    super(props);
-    this.memberHeaders = [
-      {
-        label: 'Group',
-        headerKey: 'group_id',
-      },
-      {
-        label: 'Name',
-        headerKey: 'first',
-      },
-      {
-        label: 'Email',
-        headerKey: 'email',
-      },
-      {
-        label: 'Campus',
-        headerKey: 'campus',
-      },
-      {
-        label: 'Gender',
-        headerKey: 'gender',
-      },
-    ];
-    this.unplacedName = 'unplaced';
-    this.placedName = 'placed';
-  }
-
   render() {
     const {
       flaggedMembers,
@@ -58,10 +71,14 @@ class MemberManager extends React.Component {
           </div>
         </h4>
         <HeadersManager
-          headers={this.memberHeaders}
-          list={this.unplacedName}
+          headers={MEMBER_HEADERS}
+          list={UNPLACED_LIST_NAME}
         />
-        <FlaggedMemberList members={flaggedMembers} groups={groups} />
+        <FlaggedMemberList
+          members={flaggedMembers}
+          groups={groups}
+          sortFunc={this.props.unplacedSort}
+        />
       </div>
     );
 
@@ -76,10 +93,10 @@ class MemberManager extends React.Component {
         <div>
           <h4>Placed</h4>
           <HeadersManager
-            headers={this.memberHeaders}
-            list={this.placedName}
+            headers={MEMBER_HEADERS}
+            list={PLACED_LIST_NAME}
           />
-          <MemberList members={members} />
+          <MemberList members={members} sortFunc={this.props.memberSort} />
         </div>
       </section>
     );
@@ -87,11 +104,21 @@ class MemberManager extends React.Component {
 }
 
 function mapStateToProps(state) {
+  let memberSort;
+  let unplacedSort;
+  const memberHeaders = state.HeadersManager[PLACED_LIST_NAME];
+  const unplacedHeaders = state.HeadersManager[UNPLACED_LIST_NAME];
+  if (memberHeaders) {
+    memberSort = memberHeaders.sortFunc;
+    unplacedSort = unplacedHeaders.sortFunc;
+  }
   return {
-    members: state.Placement.members,
-    groups: state.Placement.groups,
     focused: !state.PlacementUI.groupFocus,
+    members: state.Placement.members,
+    memberSort,
     flaggedMembers: state.Placement.flaggedMembers,
+    unplacedSort,
+    groups: state.Placement.groups,
   };
 }
 

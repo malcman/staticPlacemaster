@@ -73,7 +73,7 @@ function getValidGroups(allGroups, memberData) {
 }
 
 
-const FlaggedMemberList = ({ members, groups }) => (
+const FlaggedMemberList = ({ members, groups, sortFunc }) => (
   <ul id="FlaggedMemberList">
     {members.map((memberData) => {
       const validGroups = getValidGroups(groups, memberData);
@@ -84,7 +84,7 @@ const FlaggedMemberList = ({ members, groups }) => (
           {...memberData}
         />
       );
-    })}
+    }).sort(sortFunc)}
   </ul>
 );
 

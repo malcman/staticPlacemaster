@@ -11,43 +11,45 @@ class ToggleSortHeader extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    // if (!prevProps.active && this.props.active) {
-    //   if (this.state.ascending) {
-    //     // perform ascending comparisons of a.props.headerName and b.props.headerName
-    //     this.props.sortHandler(this.ascendingComp);
-    //   } else {
-    //     // perform descending comparisons
-    //     this.props.sortHandler(this.descendingComp);
-    //   }
-    // }
+    // updates list sortFunc based on received props
+    const {
+      active,
+      ascending,
+      setSortFunc,
+    } = this.props;
+
+    // handle selection when not previously active
+    // sort by previously stored order
+    if (!prevProps.active && active) {
+      if (ascending) {
+        setSortFunc(this.ascendingComp);
+      } else {
+        setSortFunc(this.descendingComp);
+      }
+      return;
+    }
+
+    //  handle toggle when already active
+    if (!prevProps.ascending && ascending) {
+      setSortFunc(this.ascendingComp);
+    } else if (prevProps.ascending && !ascending) {
+      setSortFunc(this.descendingComp);
+    }
   }
 
   handleToggle() {
-    // switch between ascending and descending sorts
-    // if (this.props.active) {
-    //   this.setState((prevState) => ({
-    //     ascending: !prevState.ascending,
-    //   }), () => {
-    //     if (this.state.ascending) {
-    //       // perform ascending comparisons of a.props.headerName and b.props.headerName
-    //       this.props.sortHandler(this.ascendingComp, this.props);
-    //     } else {
-    //       // perform descending comparisons
-    //       this.props.sortHandler(this.descendingComp, this.props);
-    //     }
-    //   });
-    // }
-    // this.props.setSortHandler(this.props.headerName);
+    // ensures this SortHeader is specified as active for this list
+    // if already active, toggle sort direction
     const {
       active,
       headerKey,
       toggleAscend,
-      setSort,
+      setSortKey,
     } = this.props;
     if (active) {
       toggleAscend(headerKey);
     }
-    setSort(headerKey);
+    setSortKey(headerKey);
   }
 
   ascendingComp(a, b) {

@@ -34,7 +34,7 @@ function getNumericTimeVal(timeStr) {
   return numericTimeVal;
 }
 
-const GroupList = ({ groups, members }) => (
+const GroupList = ({ groups, members, sortFunc }) => (
   <ul id="GroupList">
     {groups.map((groupData) => {
       const memberInfo = [];
@@ -50,7 +50,7 @@ const GroupList = ({ groups, members }) => (
           members={memberInfo}
         />
       );
-    })}
+    }).sort(sortFunc)}
   </ul>
 );
 

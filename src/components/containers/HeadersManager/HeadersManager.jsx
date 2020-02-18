@@ -6,7 +6,8 @@ import ToggleSortHeader from '../../ToggleSortHeader';
 import {
   registerHeaders,
   toggleListAscend,
-  setCurrentSort,
+  setListSortKey,
+  setListSortFunc,
 } from './HeadersManagerActions';
 
 class HeadersManager extends React.Component {
@@ -18,13 +19,15 @@ class HeadersManager extends React.Component {
 
   render() {
     const {
-      setSort,
+      list,
+      setSortKey,
+      setSortFunc,
       toggleAscend,
       headers,
       headersAscending,
     } = this.props;
     return (
-      <div className="headersContainer">
+      <div className="headersContainer" id={`${list}HeadersManager`}>
         {headers.map((header) => (
           <ToggleSortHeader
             key={header.label}
@@ -32,7 +35,8 @@ class HeadersManager extends React.Component {
             headerKey={header.headerKey}
             active={header.headerKey === this.props.currentSort}
             ascending={headersAscending[header.headerKey]}
-            setSort={setSort}
+            setSortKey={setSortKey}
+            setSortFunc={setSortFunc}
             toggleAscend={toggleAscend}
           />
         ))}
@@ -72,8 +76,11 @@ function mapStateToProps(state, ownProps) {
 function mapDispatchToProps(dispatch, ownProps) {
   const { list } = ownProps;
   return {
-    setSort: (sortKey) => {
-      dispatch(setCurrentSort(list, sortKey));
+    setSortKey: (sortKey) => {
+      dispatch(setListSortKey(list, sortKey));
+    },
+    setSortFunc: (sortFunc) => {
+      dispatch(setListSortFunc(list, sortFunc));
     },
     toggleAscend: (sortKey) => {
       dispatch(toggleListAscend(list, sortKey));

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Member from './Member';
 
-const MemberList = ({ members }) => {
+const MemberList = ({ members, sortFunc }) => {
   let placedSection = null;
   if (members) {
     // statement
@@ -10,7 +10,7 @@ const MemberList = ({ members }) => {
       <ul id="MemberList">
         {members.map((memberData) => (
           <Member key={memberData.email} {...memberData} />
-        ))}
+        )).sort(sortFunc)}
       </ul>
     );
   }

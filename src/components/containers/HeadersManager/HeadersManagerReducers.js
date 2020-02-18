@@ -4,6 +4,7 @@ import {
   DESCEND_SORT,
   TOGGLE_ASCEND,
   SET_CURRENT_SORT,
+  SET_SORT_FUNC,
 } from './HeadersManagerActions';
 
 
@@ -11,6 +12,7 @@ const initialState = {};
 
 const managerState = {
   currentSort: '',
+  sortFunc: () => {},
   headersAscending: {},
 };
 
@@ -75,6 +77,16 @@ export default function (state = initialState, action) {
         [list]: {
           ...state[list],
           currentSort: action.sortKey,
+        },
+      };
+
+    // set new sortFunc for list
+    case SET_SORT_FUNC:
+      return {
+        ...state,
+        [list]: {
+          ...state[list],
+          sortFunc: action.sortFunc,
         },
       };
     default:

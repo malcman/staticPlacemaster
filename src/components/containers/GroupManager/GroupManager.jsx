@@ -6,6 +6,25 @@ import GroupList from '../../GroupList';
 
 const classNames = require('classnames');
 
+const GROUP_LIST_NAME = 'groups';
+const GROUP_HEADERS = [
+  {
+    label: 'Group',
+    headerKey: 'number',
+  },
+  {
+    label: 'Time',
+    headerKey: 'time_numeric',
+  },
+  {
+    label: 'Campus',
+    headerKey: 'campus',
+  },
+  {
+    label: 'Grad Standing',
+    headerKey: 'grad_standing',
+  },
+];
 
 class GroupManager extends React.Component {
   static getNumericTimeVal(timeStr) {
@@ -43,24 +62,6 @@ class GroupManager extends React.Component {
   constructor(props) {
     super(props);
     this.groupListName = 'groups';
-    this.groupHeaders = [
-      {
-        label: 'Group',
-        headerKey: 'number',
-      },
-      {
-        label: 'Time',
-        headerKey: 'time_numeric',
-      },
-      {
-        label: 'Campus',
-        headerKey: 'campus',
-      },
-      {
-        label: 'Grad Standing',
-        headerKey: 'grad_standing',
-      },
-    ];
   }
 
   render() {
@@ -74,12 +75,13 @@ class GroupManager extends React.Component {
         role="tabpanel"
       >
         <HeadersManager
-          headers={this.groupHeaders}
-          list={this.groupListName}
+          headers={GROUP_HEADERS}
+          list={GROUP_LIST_NAME}
         />
         <GroupList
           groups={this.props.groups}
           members={this.props.members}
+          sortFunc={this.props.groupSort}
         />
       </section>
     );
@@ -87,8 +89,14 @@ class GroupManager extends React.Component {
 }
 
 function mapStateToProps(state) {
+  const groupHeaders = state.HeadersManager[GROUP_LIST_NAME];
+  let groupSort;
+  if (groupHeaders) {
+    groupSort = groupHeaders.sortFunc;
+  }
   return {
     groups: state.Placement.groups,
+    groupSort,
     focused: state.PlacementUI.groupFocus,
     members: state.Placement.members,
   };
