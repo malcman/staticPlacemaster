@@ -66,13 +66,10 @@ function validateBeforeDownload(numFlagged) {
 const PlacementView = (props) => {
   const {
     groupFocus,
-    allGroups,
-    members,
-    flaggedMembers,
-    groups,
+    numUnplaced,
     title,
   } = props;
-  const flaggedAlert = (flaggedMembers && !flaggedMembers.length) ? null : (
+  const flaggedAlert = (!numUnplaced) ? null : (
     <div className="alert" />
   );
   // const csvData = getCSVMemberData(flaggedMembers, allGroups);
@@ -86,7 +83,7 @@ const PlacementView = (props) => {
           headers={csvMemberHeaders}
           data={csvData}
           filename={`${title}_Placement.csv`}
-          onClick={() => validateBeforeDownload(flaggedMembers.length)}
+          onClick={() => validateBeforeDownload(numUnplaced)}
         >
         Generate Attendance File
         </CSVLink>

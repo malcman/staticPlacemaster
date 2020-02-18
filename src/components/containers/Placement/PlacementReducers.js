@@ -4,6 +4,7 @@ import {
   INVALIDATE_PLACEMENT,
   LOAD_PLACEMENT,
   UPDATE_TITLE,
+  PLACE_MEMBER,
 } from './PlacementActions';
 import JSONData from '../../../../content/placement.json';
 
@@ -57,6 +58,38 @@ function placement(state = initialState, action) {
         ...state,
         title: action.title,
       };
+    case PLACE_MEMBER: {
+      const groupIndex = action.groupNum - 1;
+      const newMemberIndex = state.members.length;
+      return {
+        ...state,
+        // add to members
+        members: [
+          ...state.members,
+          {
+            ...action.memberData,
+            group_id: action.groupNum,
+          },
+        ],
+        // remove from flagged
+        flaggedMembers: state.flaggedMembers.filter((unplaced) => {
+          const memberEmail = action.memberData.email;
+          return memberEmail !== unplaced.email;
+        }),
+        // update groups member list
+        groups: [
+          ...state.groups.slice(0, groupIndex),
+          {
+            ...state.groups[groupIndex],
+            members: [
+              ...state.groups[groupIndex].members,
+              newMemberIndex,
+            ],
+          },
+          ...state.groups.slice(groupIndex + 1),
+        ],
+      };
+    }
     case INVALIDATE_PLACEMENT:
       return {
         ...state,

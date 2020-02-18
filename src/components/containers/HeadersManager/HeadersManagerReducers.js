@@ -1,7 +1,5 @@
 import {
   REGISTER_HEADERS,
-  ASCEND_SORT,
-  DESCEND_SORT,
   TOGGLE_ASCEND,
   SET_CURRENT_SORT,
   SET_SORT_FUNC,
@@ -18,41 +16,18 @@ const managerState = {
 
 export default function (state = initialState, action) {
   const { list } = action;
-  const newState = {
-    ...state,
-  };
   switch (action.type) {
     // register new HeadersManager container
-    case REGISTER_HEADERS: {
-      newState[list] = managerState;
-      action.sortKeys.forEach((sortKey) => {
-        newState[list].headersAscending[sortKey] = true;
-      });
-
-      return newState;
-    }
-    // set sortKey of list to ascend
-    case ASCEND_SORT:
+    case REGISTER_HEADERS:
       return {
         ...state,
         [list]: {
-          ...state[list],
-          headersAscending: {
-            ...state[list].headersAscending,
-            [action.sortKey]: true,
-          },
-        },
-      };
-    // set sortKey of list to descend
-    case DESCEND_SORT:
-      return {
-        ...state,
-        [list]: {
-          ...state[list],
-          headersAscending: {
-            ...state[list].headersAscending,
-            [action.sortKey]: false,
-          },
+          ...managerState,
+          // set all headers to true (ascending)
+          headersAscending: action.sortKeys.reduce((accum, curr) => ({
+            ...accum,
+            [curr]: true,
+          }), {}),
         },
       };
     // toggle ascend of list's sortKey

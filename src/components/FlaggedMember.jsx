@@ -1,5 +1,8 @@
+// Unplaced/flagged member representation
+// Allows manual placement into groups that the optimization did not compute.
 import React from 'react';
-import GroupAssigner from './GroupAssigner';
+import PropTypes from 'prop-types';
+import GroupAssigner from './containers/GroupAssigner/GroupAssigner';
 
 const classNames = require('classnames');
 
@@ -9,9 +12,9 @@ class FlaggedMember extends React.Component {
     this.state = {
       expanded: false,
     };
-    this.toggleExpand = this.toggleExpand.bind(this);
-    this.getExpandedInfo = this.getExpandedInfo.bind(this);
     this.getConflictMessage = this.getConflictMessage.bind(this);
+    this.getExpandedInfo = this.getExpandedInfo.bind(this);
+    this.toggleExpand = this.toggleExpand.bind(this);
   }
 
   getConflictMessage() {
@@ -42,9 +45,11 @@ class FlaggedMember extends React.Component {
     if (conflictMessages.length === 0) {
       return null;
     }
+    const plural = conflictMessages.length > 1 ? 's' : '';
+    const headerText = `Likely Conflict Reason${plural}:`;
     return (
       <div className="conflictInfo">
-        <h6 className="conflictHeader">Likely Conflict Reason:</h6>
+        <h6 className="conflictHeader">{headerText}</h6>
         <ul>
           {conflictMessages}
         </ul>
@@ -54,15 +59,13 @@ class FlaggedMember extends React.Component {
 
   getExpandedInfo() {
     // Return fully expanded element allowing for placement in groups.
+    // Must pass member data to GroupAssigner to compute valid groups
     if (this.state.expanded) {
-      // only display valid groups for placement
-      const { validGroups } = this.props;
       const expandedInfo = (
         <div className="flaggedExpandedInfo">
-          {this.getConflictMessage(validGroups)}
+          {this.getConflictMessage()}
           <GroupAssigner
-            allGroupsInfo={validGroups}
-            setGroup={this.setGroup}
+            memberData={{ ...this.props }}
           />
         </div>
       );
@@ -71,13 +74,7 @@ class FlaggedMember extends React.Component {
     return null;
   }
 
-  toggleExpand(e) {
-    // const flaggedID = `${this.props.email}Flagged`;
-    // if (this.state.expanded
-    //   && e.target.id !== flaggedID
-    //   && e.target.parentNode.id !== flaggedID) {
-    //   return;
-    // }
+  toggleExpand() {
     this.setState((prevState) => ({
       expanded: !prevState.expanded,
     }));
@@ -121,5 +118,20 @@ class FlaggedMember extends React.Component {
     );
   }
 }
+
+FlaggedMember.propTypes = {
+  campus: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  first: PropTypes.string.isRequired,
+  last: PropTypes.string.isRequired,
+  gender: PropTypes.string.isRequired,
+  grad_standing: PropTypes.string.isRequired,
+
+  // strings containing time availability per day
+  t_mon: PropTypes.string.isRequired,
+  t_tue: PropTypes.string.isRequired,
+  t_wed: PropTypes.string.isRequired,
+  t_thu: PropTypes.string.isRequired,
+};
 
 export default FlaggedMember;

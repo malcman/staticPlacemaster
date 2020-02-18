@@ -1,3 +1,5 @@
+// Container component for Members and Flagged/unplaced members.
+// Renders lists of each and enables sorting.
 import React from 'react';
 import { connect } from 'react-redux';
 import { createSelector } from 'reselect';
@@ -51,61 +53,59 @@ const MEMBER_HEADERS = [
 //   },
 // );
 
-class MemberManager extends React.Component {
-  render() {
-    const {
-      flaggedMembers,
-      members,
-      groups,
-      focused,
-    } = this.props;
-    const className = classNames('Manager', { hidden: !focused });
+const MemberManager = (props) => {
+  const {
+    flaggedMembers,
+    members,
+    focused,
+    unplacedSort,
+    memberSort,
+  } = props;
+  const className = classNames('Manager', { hidden: !focused });
 
-    // get unplaced members section if unplaced members present
-    const flaggedSection = (!flaggedMembers.length) ? null : (
+  // get unplaced members section if unplaced members present
+  const flaggedSection = (!flaggedMembers.length) ? null : (
+    <div>
+      <h4 id="flaggedHeader">
+        Flagged
+        <div className="alert">
+          <p>{flaggedMembers.length}</p>
+        </div>
+      </h4>
+      <HeadersManager
+        headers={MEMBER_HEADERS}
+        list={UNPLACED_LIST_NAME}
+      />
+      <FlaggedMemberList
+        members={flaggedMembers}
+        sortFunc={unplacedSort}
+      />
+    </div>
+  );
+
+  return (
+    <section
+      className={className}
+      id="MemberManager"
+      aria-labelledby="MemberTag"
+      role="tabpanel"
+    >
+      {flaggedSection}
       <div>
-        <h4 id="flaggedHeader">
-          Flagged
-          <div className="alert">
-            <p>{flaggedMembers.length}</p>
-          </div>
-        </h4>
+        <h4>Placed</h4>
         <HeadersManager
           headers={MEMBER_HEADERS}
-          list={UNPLACED_LIST_NAME}
+          list={PLACED_LIST_NAME}
         />
-        <FlaggedMemberList
-          members={flaggedMembers}
-          groups={groups}
-          sortFunc={this.props.unplacedSort}
-        />
+        <MemberList members={members} sortFunc={memberSort} />
       </div>
-    );
-
-    return (
-      <section
-        className={className}
-        id="MemberManager"
-        aria-labelledby="MemberTag"
-        role="tabpanel"
-      >
-        {flaggedSection}
-        <div>
-          <h4>Placed</h4>
-          <HeadersManager
-            headers={MEMBER_HEADERS}
-            list={PLACED_LIST_NAME}
-          />
-          <MemberList members={members} sortFunc={this.props.memberSort} />
-        </div>
-      </section>
-    );
-  }
-}
+    </section>
+  );
+};
 
 function mapStateToProps(state) {
-  let memberSort;
-  let unplacedSort;
+  let memberSort = () => {};
+  let unplacedSort = () => {};
   const memberHeaders = state.HeadersManager[PLACED_LIST_NAME];
   const unplacedHeaders = state.HeadersManager[UNPLACED_LIST_NAME];
   if (memberHeaders) {
@@ -118,7 +118,6 @@ function mapStateToProps(state) {
     memberSort,
     flaggedMembers: state.Placement.flaggedMembers,
     unplacedSort,
-    groups: state.Placement.groups,
   };
 }
 

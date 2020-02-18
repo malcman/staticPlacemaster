@@ -30,10 +30,12 @@ class ToggleSortHeader extends React.Component {
     }
 
     //  handle toggle when already active
-    if (!prevProps.ascending && ascending) {
-      setSortFunc(this.ascendingComp);
-    } else if (prevProps.ascending && !ascending) {
-      setSortFunc(this.descendingComp);
+    if (active) {
+      if (!prevProps.ascending && ascending) {
+        setSortFunc(this.ascendingComp);
+      } else if (prevProps.ascending && !ascending) {
+        setSortFunc(this.descendingComp);
+      }
     }
   }
 

@@ -12,9 +12,10 @@ import {
 
 class HeadersManager extends React.Component {
   componentDidMount() {
-    const { headers, register } = this.props;
+    const { headers, register, setSortKey } = this.props;
     const sortKeys = headers.map((header) => header.headerKey);
     register(sortKeys);
+    setSortKey(sortKeys[0]);
   }
 
   render() {

@@ -18,26 +18,6 @@ export function registerHeaders(list, sortKeys) {
   };
 }
 
-export function ascendSort(list, sortKey) {
-  // list: string, name of list being sorted
-  // sortKey: string, key/prop being set to ascend = true
-  return {
-    type: ASCEND_SORT,
-    list,
-    sortKey,
-  };
-}
-
-export function descendSort(list, sortKey) {
-  // list: string, name of list being sorted
-  // sortKey: string, key/prop being set to ascend = false
-  return {
-    type: DESCEND_SORT,
-    list,
-    sortKey,
-  };
-}
-
 export function toggleListAscend(list, sortKey) {
   // list: string, name of list being sorted
   // sortKey: string, key/prop being toggled

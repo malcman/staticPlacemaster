@@ -1,13 +1,16 @@
 import { navigate } from 'gatsby';
 
+// Placement Actions (synchronous)
+export const UPDATE_TITLE = 'UPDATE_TITLE';
+export const PLACE_MEMBER = 'PLACE_MEMBER';
 // Placement Actions (Async)
 export const INVALIDATE_PLACEMENT = 'INVALIDATE_PLACEMENT';
 export const REQUEST_PLACEMENT = 'REQUEST_PLACEMENT';
 export const RECEIVE_PLACEMENT = 'RECEIVE_PLACEMENT';
 export const LOAD_PLACEMENT = 'LOAD_PLACEMENT';
-// Placement Actions (synchronous)
-export const UPDATE_TITLE = 'UPDATE_TITLE';
 
+
+// synchronous actions
 export function updateTitle(title) {
   return {
     type: UPDATE_TITLE,
@@ -15,13 +18,26 @@ export function updateTitle(title) {
   };
 }
 
+export function placeMember(groupNum, memberData) {
+  // action creator to create member from memberData and
+  // place that member in group indicated by groupNum
+  return {
+    type: PLACE_MEMBER,
+    groupNum,
+    memberData,
+  };
+}
+
+// async actions
 export function invalidatePlacement() {
+  // error loading server response
   return {
     type: INVALIDATE_PLACEMENT,
   };
 }
 
 export function receivePlacement(data) {
+  // handle response from server
   return {
     type: RECEIVE_PLACEMENT,
     data,
@@ -29,6 +45,7 @@ export function receivePlacement(data) {
 }
 
 export function requestPlacement(formData) {
+  // send request to server with formData
   return {
     type: REQUEST_PLACEMENT,
     formData,

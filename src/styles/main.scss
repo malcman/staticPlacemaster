@@ -224,6 +224,9 @@ h3#OptionalHeader {
   background-color: lighten(lightgrey, 5%);
   display: inline-grid;
   grid-template-columns: repeat(5, 1fr) 50px;
+  position: sticky;
+  top: 75px;
+  z-index: 2;
 }
 
 .ToggleSortHeader {
@@ -294,6 +297,9 @@ h3#OptionalHeader {
 #PlacementHeader {
   background-color: $mainDark;
   position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 .Manager {
@@ -398,11 +404,12 @@ h3#OptionalHeader {
   button {
     color: $mainDark;
     border: none;
-    padding: 10px 50% 10px 20px;
+    padding: 10px 50% 10px 0;
     font-size: 1.8em;
     box-shadow: 5px 4px 10px;
     border-radius: 5px;
     margin-bottom: 20px;
+    width: 100%;
   }
   &.expanded {
     background-color: white;
@@ -410,6 +417,7 @@ h3#OptionalHeader {
     box-shadow: 5px 4px 10px;
     button {
       box-shadow: none;
+      margin-bottom: 0;
     }
   }
 }
@@ -417,6 +425,31 @@ h3#OptionalHeader {
 .conflictInfo {
   ul {
     margin-left: 5%;
+  }
+}
+
+.groupsSelectorContainer {
+  width: 100%;
+  input[type="radio"] {
+    position:fixed;opacity:0;
+    width: 50%;
+  }
+  .groupsSelector {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    &.active {
+      font-weight: bold;
+      border-bottom: 2px solid $mainDark;
+    }
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 
@@ -434,6 +467,7 @@ h3#OptionalHeader {
   .groupsPreviewList {
     max-height: 40vh;
     overflow: scroll;
+    margin-left: 0;
     li {
       display: grid;
       grid-template-columns: 50px repeat(3, 1fr);
@@ -461,13 +495,13 @@ h3#OptionalHeader {
 
   input[type=submit] {
     width: 100%;
-    cursor: pointer;
     height: 40px;
     border: none;
     border-radius: 0 0 5px 5px;
     box-shadow: 0 -3px 6px lightgrey;
     font-size: 1.2em;
     &:not([disabled]) {
+      cursor: pointer;
       color: green;
       font-weight: bold;
     }
