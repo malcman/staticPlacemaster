@@ -62,7 +62,7 @@ class PlacementFormPanel extends React.Component {
     );
     const formID = 'newPlacementForm';
     return (
-      <div className={panelClass}>
+      <div className={panelClass} id={styles.placementFormCont}>
         <form
           id={formID}
           onSubmit={this.handleSubmit}
