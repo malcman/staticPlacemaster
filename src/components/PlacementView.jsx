@@ -70,7 +70,7 @@ const PlacementView = (props) => {
     title,
   } = props;
   const flaggedAlert = (!numUnplaced) ? null : (
-    <div className="alert" />
+    <div className={styles.alert} />
   );
   // const csvData = getCSVMemberData(flaggedMembers, allGroups);
   const csvData = '';
