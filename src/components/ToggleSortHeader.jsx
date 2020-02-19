@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../styles/ToggleSortHeader.module.scss';
 
 const classNames = require('classnames');
 
@@ -80,11 +81,11 @@ class ToggleSortHeader extends React.Component {
   render() {
     const { active, ascending } = this.props;
     const headerClass = classNames(
-      'ToggleSortHeader',
+      styles.ToggleSortHeader,
       {
-        active,
-        down: ascending && active,
-        up: !ascending && active,
+        [styles.active]: active,
+        [styles.down]: ascending && active,
+        [styles.up]: !ascending && active,
       },
     );
 

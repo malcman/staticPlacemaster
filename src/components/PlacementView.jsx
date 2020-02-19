@@ -4,7 +4,7 @@ import { CSVLink } from 'react-csv';
 
 import GroupManager from './containers/GroupManager/GroupManager';
 import MemberManager from './containers/MemberManager/MemberManager';
-
+import styles from '../styles/PlacementView.module.scss';
 
 // headers for the CSV file that will be downloaded
 const csvMemberHeaders = [
@@ -75,11 +75,11 @@ const PlacementView = (props) => {
   // const csvData = getCSVMemberData(flaggedMembers, allGroups);
   const csvData = '';
   return (
-    <section className="Placement">
-      <div id="PlacementHeader">
-        <h1 className="placementName">{title}</h1>
+    <section className={styles.Placement}>
+      <div id={styles.PlacementHeader}>
+        <h1 className={styles.placementName}>{title}</h1>
         <CSVLink
-          id="csvButton"
+          id={styles.csvButton}
           headers={csvMemberHeaders}
           data={csvData}
           filename={`${title}_Placement.csv`}
@@ -88,7 +88,7 @@ const PlacementView = (props) => {
         Generate Attendance File
         </CSVLink>
         <ul
-          id="placementTabs"
+          id={styles.placementTabs}
           role="tablist"
         >
           {/* group tab */}
@@ -133,6 +133,18 @@ const PlacementView = (props) => {
       <MemberManager />
     </section>
   );
+};
+
+PlacementView.propTypes = {
+  // indicates focus on GroupManager or MemberManager
+  groupFocus: PropTypes.bool,
+  // length of unplaced member list
+  numUnplaced: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+PlacementView.defaultProps = {
+  groupFocus: true,
 };
 
 export default PlacementView;

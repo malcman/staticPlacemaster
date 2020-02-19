@@ -60,7 +60,7 @@ class PlacementFormPanel extends React.Component {
       'panel',
       this.props.panelClass,
     );
-    const formID = 'newPlacementForm';
+    const formID = styles.newPlacementForm;
     return (
       <div className={panelClass} id={styles.placementFormCont}>
         <form

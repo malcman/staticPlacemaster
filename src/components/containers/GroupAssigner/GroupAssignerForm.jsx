@@ -2,6 +2,7 @@
 // lists groups and handles member assignment
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './GroupAssigner.module.scss';
 
 class GroupAssignerForm extends React.Component {
   constructor(props) {
@@ -33,6 +34,8 @@ class GroupAssignerForm extends React.Component {
     const { groups } = this.props;
     const previewList = groups.map((group) => {
       const previewID = `groupPreview${group.group_id}`;
+      let groupSize = 0;
+      if (group.members) groupSize = group.members.length;
       const groupPreview = (
         // wrap with label to improve selection UX
         <label
@@ -50,7 +53,7 @@ class GroupAssignerForm extends React.Component {
             />
             <p>{group.group_id}</p>
             <p>{group.time}</p>
-            <p>{group.members.length}</p>
+            <p>{groupSize}</p>
           </li>
         </label>
       );
@@ -70,7 +73,7 @@ class GroupAssignerForm extends React.Component {
     const groupsPreview = this.getGroupsPreview();
     return (
       <form action="" onSubmit={this.handleSubmit}>
-        <ul className="groupsPreviewList">
+        <ul className={styles.groupsPreviewList}>
           {groupsPreview}
         </ul>
         <input

@@ -1,0 +1,9 @@
+.headersContainer {
+  width: 100%;
+  background-color: lighten(lightgrey, 5%);
+  display: inline-grid;
+  grid-template-columns: repeat(5, 1fr) 50px;
+  position: sticky;
+  top: 75px;
+  z-index: 2;
+}

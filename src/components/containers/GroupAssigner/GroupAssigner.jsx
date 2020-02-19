@@ -8,6 +8,7 @@ import { connect } from 'react-redux';
 
 import { groupIsValid } from '../../../helpers/groups';
 import { placeMember } from '../Placement/PlacementActions';
+import styles from './GroupAssigner.module.scss';
 import GroupAssignerForm from './GroupAssignerForm';
 import GroupsSelector from './GroupsSelector';
 
@@ -35,7 +36,7 @@ class GroupAssigner extends React.Component {
     const { showAllGroups } = this.state;
 
     // class for inner group list
-    const groupListClass = 'groupList';
+    const groupListClass = 'groupFormContainer';
     // get email to construct unique ids
     const { email } = this.props.memberData;
 
@@ -45,7 +46,7 @@ class GroupAssigner extends React.Component {
     // by default, display list of valid groups
     let groupList = (
       <div className={groupListClass}>
-        <div className="previewHeaders">
+        <div className={styles.previewHeaders}>
           <h6>Group</h6>
           <h6>Time</h6>
           <h6>Size</h6>
@@ -61,7 +62,7 @@ class GroupAssigner extends React.Component {
     if (!groups.length) {
       groupList = (
         <div className={groupListClass}>
-          <h6 className="noGroups">
+          <h6 className={styles.noGroups}>
             No Valid Groups
             <span role="img" aria-label="Pensive sad face emoji"> 😔 </span>
           </h6>
@@ -69,7 +70,7 @@ class GroupAssigner extends React.Component {
       );
     }
     return (
-      <div className="groupsPreview">
+      <div className={styles.groupsPreview}>
         <GroupsSelector
           setShowAllGroups={this.setShowAllGroups}
           showAllGroups={showAllGroups}
@@ -113,8 +114,8 @@ class GroupAssigner extends React.Component {
   render() {
     const { expanded } = this.state;
     const assignerClass = classNames(
-      'GroupAssigner',
-      { expanded },
+      styles.GroupAssigner,
+      { [styles.expanded]: expanded },
     );
     return (
       <div className={assignerClass}>

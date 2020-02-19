@@ -7,6 +7,7 @@ import { createSelector } from 'reselect';
 import HeadersManager from '../HeadersManager/HeadersManager';
 import MemberList from '../../MemberList';
 import FlaggedMemberList from '../../FlaggedMemberList';
+import styles from './MemberManager.module.scss';
 
 const classNames = require('classnames');
 
@@ -66,9 +67,9 @@ const MemberManager = (props) => {
   // get unplaced members section if unplaced members present
   const flaggedSection = (!flaggedMembers.length) ? null : (
     <div>
-      <h4 id="flaggedHeader">
+      <h4 id={styles.flaggedHeader}>
         Flagged
-        <div className="alert">
+        <div className={styles.alert}>
           <p>{flaggedMembers.length}</p>
         </div>
       </h4>
@@ -108,10 +109,9 @@ function mapStateToProps(state) {
   let unplacedSort = () => {};
   const memberHeaders = state.HeadersManager[PLACED_LIST_NAME];
   const unplacedHeaders = state.HeadersManager[UNPLACED_LIST_NAME];
-  if (memberHeaders) {
-    memberSort = memberHeaders.sortFunc;
-    unplacedSort = unplacedHeaders.sortFunc;
-  }
+
+  if (memberHeaders) memberSort = memberHeaders.sortFunc;
+  if (unplacedHeaders) unplacedSort = unplacedHeaders.sortFunc;
   return {
     focused: !state.PlacementUI.groupFocus,
     members: state.Placement.members,

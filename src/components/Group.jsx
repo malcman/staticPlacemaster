@@ -1,5 +1,6 @@
 import React from 'react';
 import Member from './Member';
+import styles from '../styles/Group.module.scss';
 
 const classNames = require('classnames');
 
@@ -38,7 +39,7 @@ class Group extends React.Component {
         <div className="groupExpandedInfo">
           {this.getLeaderInfo()}
           <h6 className="groupMembersHeader">Members</h6>
-          <div className="membersPreviewHeaders">
+          <div className={styles.membersPreviewHeaders}>
             <div>Name</div>
             <div>Email</div>
             <div>Campus</div>
@@ -54,21 +55,10 @@ class Group extends React.Component {
     return null;
   }
 
-  toggleExpand(e) {
-    const targetParentClasses = e.target.parentNode.classList;
-    // If already expanded and expanded group member list triggered
-    // the event, don't close
-    if (!this.state.expanded
-      || (this.state.expanded
-        && !targetParentClasses.contains('infoRow')
-        && !targetParentClasses.contains('groupMembers')
-        && !e.target.classList.contains('groupMembers')
-        && !e.target.classList.contains('infoRow')
-      )) {
-      this.setState((prevState) => ({
-        expanded: !prevState.expanded,
-      }));
-    }
+  toggleExpand() {
+    this.setState((prevState) => ({
+      expanded: !prevState.expanded,
+    }));
   }
 
 
@@ -76,11 +66,8 @@ class Group extends React.Component {
     const expandedInfo = this.getExpandedInfo();
     const groupClass = classNames('Group', { expanded: this.state.expanded });
     return (
-      <li
-        className={groupClass}
-        onClick={this.toggleExpand}
-      >
-        <div className="infoRow">
+      <li className={groupClass}>
+        <div className="infoRow" onClick={this.toggleExpand}>
           <p>{this.props.number}</p>
           <p>{this.props.time}</p>
           <p>{this.props.campus}</p>
@@ -89,6 +76,7 @@ class Group extends React.Component {
         <button
           type="button"
           className="expandToggle"
+          onClick={this.toggleExpand}
         >
         +
         </button>

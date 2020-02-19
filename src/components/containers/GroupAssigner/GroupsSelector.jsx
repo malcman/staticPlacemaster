@@ -2,19 +2,20 @@
 // Handles switching between all groups and valid groups with supplied props.
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from './GroupsSelector.module.scss';
 
 const classNames = require('classnames');
 
 const GroupsSelector = ({ setShowAllGroups, showAllGroups, identifier }) => {
   const selectValidsID = `${identifier}ValidGroupsSelector`;
   const selectAllId = `${identifier}AllGroupsSelector`;
-  const selectorClass = 'groupsSelector';
+  const selectorClass = styles.groupsSelector;
   return (
-    <div className="groupsSelectorContainer">
+    <div className={styles.groupsSelectorContainer}>
       { /* "All Groups" header */ }
       <label htmlFor={selectAllId}>
         <div
-          className={classNames(selectorClass, { active: showAllGroups })}
+          className={classNames(selectorClass, { [styles.active]: showAllGroups })}
         >
           All Groups
         </div>
@@ -30,7 +31,7 @@ const GroupsSelector = ({ setShowAllGroups, showAllGroups, identifier }) => {
       { /* "Valid Groups" header */ }
       <label htmlFor={selectValidsID}>
         <div
-          className={classNames(selectorClass, { active: !showAllGroups })}
+          className={classNames(selectorClass, { [styles.active]: !showAllGroups })}
         >
           Valid Groups
         </div>

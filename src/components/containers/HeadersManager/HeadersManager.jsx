@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ToggleSortHeader from '../../ToggleSortHeader';
+import styles from './HeadersManager.module.scss';
 
 import {
   registerHeaders,
@@ -28,7 +29,7 @@ class HeadersManager extends React.Component {
       headersAscending,
     } = this.props;
     return (
-      <div className="headersContainer" id={`${list}HeadersManager`}>
+      <div className={styles.headersContainer} id={`${list}HeadersManager`}>
         {headers.map((header) => (
           <ToggleSortHeader
             key={header.label}

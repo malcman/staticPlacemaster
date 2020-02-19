@@ -1,0 +1,70 @@
+@import 'src/styles/globalVariables';
+
+//
+// IDs
+//
+#csvButton {
+  font-size: 0.9em;
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px 10px;
+  background-color: white;
+  border-radius: 5px;
+  margin-left: 15px;
+  border: none;
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  right: 15px;
+  top: 30%;
+}
+
+#placementTabs {
+  color: white;
+  background-color: $mainDark;
+}
+
+#PlacementHeader {
+  background-color: $mainDark;
+  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+
+//
+// Classes
+//
+.Placement {
+  li[role="tab"] {
+    display: inline-block;
+    margin: 10px 2%;
+    padding: 15px 1%;
+    cursor: pointer;
+    &[aria-selected="true"] {
+      border-bottom: 2px solid white;
+    }
+    h3 {
+      position: relative;
+      .alert {
+        position: absolute;
+        top: 0;
+        right: -15px;
+        width: 10px;
+        height: 10px;
+        background-color: $warningRed;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.placementName {
+  color: white;
+  background-color: $mainDark;
+  padding: 20px 0 10px 15px;
+  font-size: 2.5em;
+  position: absolute;
+  top: -90%;
+  right: 15px;
+}

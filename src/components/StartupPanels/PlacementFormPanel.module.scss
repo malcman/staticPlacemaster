@@ -1,7 +1,7 @@
+@import 'src/styles/globalVariables';
 // Styles for placement creation form
-$mainDark: #323138;
 
-#placementFormCont form {
+#newPlacementForm {
   input[type="text"] {
     background-color: $mainDark;
     font-size: 1.3em;
