@@ -2,57 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { CSVLink } from 'react-csv';
 
-import GroupManager from './containers/GroupManager/GroupManager';
-import MemberManager from './containers/MemberManager/MemberManager';
 import styles from '../styles/PlacementView.module.scss';
 
-// headers for the CSV file that will be downloaded
-const csvMemberHeaders = [
-  { label: 'Group', key: 'group_id' },
-  { label: 'First', key: 'first' },
-  { label: 'Last', key: 'last' },
-  { label: 'Email', key: 'email' },
-  { label: 'Gender', key: 'gender' },
-  { label: 'Grad Standing', key: 'grad_standing' },
-];
-
-function getCSVMemberData(flaggedMembers, allGroups) {
-  // Return list of objects with member properties
-  // for CSVLink component
-  const flaggedMemberData = flaggedMembers.map(
-    (flagged) => {
-      const {
-        t_mon: tMon,
-        t_tue: tTue,
-        t_wed: tWed,
-        t_thu: tThu,
-        allGroupsInfo,
-        placeFlaggedMember,
-        ...rest
-      } = flagged.props;
-      return ({ group_id: 'NONE', ...rest });
-    },
-  );
-
-  // go through allGroups
-  const allMemberData = Object.keys(allGroups).map(
-    // create list of objects with expanded member props for each group
-    (groupNum) => {
-      const group = allGroups[groupNum];
-      const groupMembersData = [];
-      group.members.forEach((member) => {
-        // push expanded member props onto this group's list
-        groupMembersData.push({ ...member.props });
-      });
-      return groupMembersData;
-    },
-  // reduce list of group lists to a single list
-  ).reduce(
-    (accum, groupMemberList) => accum.concat([...groupMemberList]),
-    flaggedMemberData,
-  );
-  return allMemberData;
-}
+import GroupManager from './containers/GroupManager/GroupManager';
+import MemberManager from './containers/MemberManager/MemberManager';
 
 function validateBeforeDownload(numFlagged) {
   if (numFlagged) {
@@ -68,19 +21,19 @@ const PlacementView = (props) => {
     groupFocus,
     numUnplaced,
     title,
+    csvHeaders,
+    csvData,
   } = props;
   const flaggedAlert = (!numUnplaced) ? null : (
     <div className={styles.alert} />
   );
-  // const csvData = getCSVMemberData(flaggedMembers, allGroups);
-  const csvData = '';
   return (
     <section className={styles.Placement}>
       <div id={styles.PlacementHeader}>
         <h1 className={styles.placementName}>{title}</h1>
         <CSVLink
           id={styles.csvButton}
-          headers={csvMemberHeaders}
+          headers={csvHeaders}
           data={csvData}
           filename={`${title}_Placement.csv`}
           onClick={() => validateBeforeDownload(numUnplaced)}

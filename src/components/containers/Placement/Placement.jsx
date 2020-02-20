@@ -1,5 +1,6 @@
-import React from 'react';
 import { connect } from 'react-redux';
+
+import { csvMemberHeaders, getCSVData } from '../../../helpers/export';
 
 import PlacementView from '../../PlacementView';
 
@@ -13,6 +14,8 @@ function mapStateToProps(state) {
     groupFocus: state.PlacementUI.groupFocus,
     numUnplaced: state.Placement.flaggedMembers.length,
     title: state.Placement.title,
+    csvHeaders: csvMemberHeaders,
+    csvData: getCSVData(state),
   };
 }
 
