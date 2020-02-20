@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {
   incrementModule,
   decrementModule,
-} from './PanelContainerActions';
+} from './actions';
 
 import StartupPanels from '../../StartupPanels/';
 

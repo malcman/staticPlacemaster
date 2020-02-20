@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { updateTitle, fetchPlacement } from '../containers/Placement/PlacementActions';
+import { updateTitle, fetchPlacement } from '../containers/Placement/actions';
 import styles from './PlacementFormPanel.module.scss';
 
 const classNames = require('classnames');

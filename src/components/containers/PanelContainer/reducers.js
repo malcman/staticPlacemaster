@@ -1,7 +1,7 @@
 import {
   INCREMENT_MODULE,
   DECREMENT_MODULE,
-} from './PanelContainerActions';
+} from './actions';
 
 const initialState = {
   // index of first panel to be displayed

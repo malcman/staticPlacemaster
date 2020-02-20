@@ -5,7 +5,7 @@ import {
   LOAD_PLACEMENT,
   UPDATE_TITLE,
   PLACE_MEMBER,
-} from './PlacementActions';
+} from './actions';
 import JSONData from '../../../../content/placement.json';
 
 // development convenience

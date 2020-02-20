@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import { groupIsValid } from '../../../helpers/groups';
-import { placeMember } from '../Placement/PlacementActions';
+import { placeMember } from '../Placement/actions';
 import styles from './GroupAssigner.module.scss';
 import GroupAssignerForm from './GroupAssignerForm';
 import GroupsSelector from './GroupsSelector';

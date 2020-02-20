@@ -9,7 +9,7 @@ import {
   toggleListAscend,
   setListSortKey,
   setListSortFunc,
-} from './HeadersManagerActions';
+} from './actions';
 
 class HeadersManager extends React.Component {
   componentDidMount() {

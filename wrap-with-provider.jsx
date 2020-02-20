@@ -8,7 +8,10 @@ import placemasterApp from './src/appReducer';
 
 const loggerMiddleWare = createLogger();
 let composeEnhancer = compose;
-if (window) {
+
+// enable redux dev tools
+// conditional is necessary on initial node build
+if (typeof window !== typeof undefined) {
   composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 }
 

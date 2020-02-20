@@ -3,7 +3,7 @@ import {
   TOGGLE_ASCEND,
   SET_CURRENT_SORT,
   SET_SORT_FUNC,
-} from './HeadersManagerActions';
+} from './actions';
 
 
 const initialState = {};
