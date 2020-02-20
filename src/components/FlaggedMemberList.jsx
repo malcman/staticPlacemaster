@@ -24,10 +24,10 @@ FlaggedMemberList.propTypes = {
     grad_standing: PropTypes.string.isRequired,
 
     // strings containing time availability per day
-    t_mon: PropTypes.string.isRequired,
-    t_tue: PropTypes.string.isRequired,
-    t_wed: PropTypes.string.isRequired,
-    t_thu: PropTypes.string.isRequired,
+    t_mon: PropTypes.string,
+    t_tue: PropTypes.string,
+    t_wed: PropTypes.string,
+    t_thu: PropTypes.string,
   })).isRequired,
   sortFunc: PropTypes.func.isRequired,
 };

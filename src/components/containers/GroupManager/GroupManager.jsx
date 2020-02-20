@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Group from '../../Group';
 import HeadersManager from '../HeadersManager/HeadersManager';
 import GroupList from '../../GroupList';
 
@@ -26,32 +25,38 @@ const GROUP_HEADERS = [
   },
 ];
 
-class GroupManager extends React.Component {
-  render() {
-    const className = classNames('Manager', { hidden: !this.props.focused });
+const GroupManager = (props) => {
+  const {
+    groups,
+    members,
+    groupSort,
+    focused,
+  } = props;
+  const className = classNames('Manager', { hidden: !focused });
 
-    return (
-      <section
-        className={className}
-        id="GroupManager"
-        aria-labelledby="GroupTag"
-        role="tabpanel"
-      >
-        <HeadersManager
-          headers={GROUP_HEADERS}
-          list={GROUP_LIST_NAME}
-        />
-        <GroupList
-          groups={this.props.groups}
-          members={this.props.members}
-          sortFunc={this.props.groupSort}
-        />
-      </section>
-    );
-  }
-}
+  return (
+    <section
+      className={className}
+      id="GroupManager"
+      aria-labelledby="GroupTag"
+      role="tabpanel"
+    >
+      <HeadersManager
+        headers={GROUP_HEADERS}
+        list={GROUP_LIST_NAME}
+      />
+      <GroupList
+        groups={groups}
+        members={members}
+        sortFunc={groupSort}
+      />
+    </section>
+  );
+};
 
 function mapStateToProps(state) {
+  // check that relevant HeadersManager components
+  // have mounted and registered before getting the sortFunction
   const groupHeaders = state.HeadersManager[GROUP_LIST_NAME];
   let groupSort;
   if (groupHeaders) {
@@ -60,7 +65,6 @@ function mapStateToProps(state) {
   return {
     groups: state.Placement.groups,
     groupSort,
-    focused: state.PlacementUI.groupFocus,
     members: state.Placement.members,
   };
 }

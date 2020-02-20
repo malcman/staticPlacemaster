@@ -2,7 +2,6 @@
 // Renders lists of each and enables sorting.
 import React from 'react';
 import { connect } from 'react-redux';
-import { createSelector } from 'reselect';
 
 import HeadersManager from '../HeadersManager/HeadersManager';
 import MemberList from '../../MemberList';
@@ -35,24 +34,6 @@ const MEMBER_HEADERS = [
     headerKey: 'gender',
   },
 ];
-
-// const getMembers = (state) => state.Placement.members;
-// const getCurrentMembersSort = (state) => state.HeadersManager[PLACED_LIST_NAME].currentSort;
-// const getAscendingInfo = (state) => state.HeadersManager[PLACED_LIST_NAME].ascendingHeaders;
-// const getSortAscend = createSelector(
-//   [getAscendingInfo, getCurrentMembersSort],
-//   (ascending, sort) => ascending[sort],
-// );
-
-// const getSortedMembers = createSelector(
-//   [getSortAscend, getCurrentMembersSort, getMembers],
-//   (ascending, sortKey, members) => {
-//     if (ascending) {
-//       // statement
-//     }
-//     return members.sort()
-//   },
-// );
 
 const MemberManager = (props) => {
   const {
@@ -98,13 +79,17 @@ const MemberManager = (props) => {
           headers={MEMBER_HEADERS}
           list={PLACED_LIST_NAME}
         />
-        <MemberList members={members} sortFunc={memberSort} />
+        {focused ? (
+          <MemberList members={members} sortFunc={memberSort} />
+        ) : null}
       </div>
     </section>
   );
 };
 
 function mapStateToProps(state) {
+  // check that relevant HeadersManager components
+  // have mounted and registered before getting the sortFunction
   let memberSort = () => {};
   let unplacedSort = () => {};
   const memberHeaders = state.HeadersManager[PLACED_LIST_NAME];
@@ -113,7 +98,6 @@ function mapStateToProps(state) {
   if (memberHeaders) memberSort = memberHeaders.sortFunc;
   if (unplacedHeaders) unplacedSort = unplacedHeaders.sortFunc;
   return {
-    focused: !state.PlacementUI.groupFocus,
     members: state.Placement.members,
     memberSort,
     flaggedMembers: state.Placement.flaggedMembers,
