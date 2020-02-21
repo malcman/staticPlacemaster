@@ -1,97 +1,41 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+# Placemaster
+## Scheduling Optimization Front-End
+This application provides a GUI to interact with response data from a scheduling optimization model. It is developed with [GatsbyJS](https://www.gatsbyjs.org/), a framework for building static React applications, and Redux.
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+## General Usage
+User can upload [two .csv files](/example_files/) (survey response data and groups) on the index page. When the application is live, optimized scheduling data will be returned. The user can then view the response data in browser. At this time, they can manually place any unplaced members into the desired group.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+To download a .csv of the results, click "Generate Attendance File" at the top right.
 
-## 🚀 Quick start
+## Upload File Structure
+In order to get a response from the server, files must be formatted correctly. See `example_files` for the necessary structure.
 
-1.  **Create a Gatsby site.**
+[Sign Up Response Example](/example_files/SignUp_Responses.csv)
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+[Group Data Example](/example_files/Groups_Example.csv)
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+## Pages
+All files in `src/pages` will create a page with a route of the same name.
+Thus, this application has two pages (excluding 404).
 
-1.  **Start developing.**
+### `index.jsx` -> `/`
 
-    Navigate into your new site’s directory and start it up.
+Provides form for uploading .csv files, navigates to `/placement` when data is received.
 
-    ```shell
-    cd my-default-starter/
-    gatsby develop
-    ```
+### `placement.jsx` -> `/placement`
 
-1.  **Open the source code and start editing!**
+View scheduling data and make manual placements. Provides option to download .csv of scheduling data.
 
-    Your site is now running at `http://localhost:8000`!
+`/placement` is not available via any DOM links, and will be navigated to automatically upon receiving scheduling data.
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+## State Management
+Response data is kept in a Redux store, and passed to relevant container components, stored in `src/components/containers`. If a container has specific reducers and actions, those are stored within the relevant container folder. These reducers are combined into a single application reducer in `src/appReducer.js`.
 
-    Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+`/wrap-with-provider.js` uses Gatsby-specific semantics to create a Redux store and provide it to the application. You can find more information about this on [Edward Beezer's blog post](https://www.edwardbeazer.com/setting-up-redux-with-gatsbyjs-v2/), which deserves credit for this implementation.
 
-## 🧐 What's inside?
+All UI-based state is stored locally within the respective components.
 
-A quick look at the top-level files and directories you'll see in a Gatsby project.
+### Credits
+The underlying optimization model was developed by [Evan Jonokuchi](https://github.com/ejonokuchi).
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    └── README.md
-
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-4.  **`.prettierrc`**: This is a configuration file for [Prettier](https://prettier.io/). Prettier is a tool to help keep the formatting of your code consistent.
-
-5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.org/docs/gatsby-config/) for more detail).
-
-7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
-
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+Providing store to Gatsby application done following tutorial on [Edward Beezer's blog post](https://www.edwardbeazer.com/setting-up-redux-with-gatsbyjs-v2/).
