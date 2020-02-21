@@ -10,7 +10,7 @@ To download a .csv of the results, click "Generate Attendance File" at the top r
 ## Upload File Structure
 In order to get a response from the server, files must be formatted correctly. See `example_files` for the necessary structure.
 
-[Sign Up Response Example](/example_files/SignUp_Responses.csv)
+[Sign Up Response Example](/example_files/SignUp_Responses_Example.csv)
 
 [Group Data Example](/example_files/Groups_Example.csv)
 
