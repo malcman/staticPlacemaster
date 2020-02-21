@@ -1,46 +1,58 @@
 import React from 'react';
+import styles from '../styles/ToggleSortHeader.module.scss';
 
 const classNames = require('classnames');
 
 class ToggleSortHeader extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      ascending: true,
-    };
     this.handleToggle = this.handleToggle.bind(this);
     this.ascendingComp = this.ascendingComp.bind(this);
     this.descendingComp = this.descendingComp.bind(this);
   }
 
   componentDidUpdate(prevProps) {
-    if (!prevProps.active && this.props.active) {
-      if (this.state.ascending) {
-        // perform ascending comparisons of a.props.headerName and b.props.headerName
-        this.props.sortHandler(this.ascendingComp);
+    // updates list sortFunc based on received props
+    const {
+      active,
+      ascending,
+      setSortFunc,
+    } = this.props;
+
+    // handle selection when not previously active
+    // sort by previously stored order
+    if (!prevProps.active && active) {
+      if (ascending) {
+        setSortFunc(this.ascendingComp);
       } else {
-        // perform descending comparisons
-        this.props.sortHandler(this.descendingComp);
+        setSortFunc(this.descendingComp);
+      }
+      return;
+    }
+
+    //  handle toggle when already active
+    if (active) {
+      if (!prevProps.ascending && ascending) {
+        setSortFunc(this.ascendingComp);
+      } else if (prevProps.ascending && !ascending) {
+        setSortFunc(this.descendingComp);
       }
     }
   }
 
   handleToggle() {
-    // switch between ascending and descending sorts
-    if (this.props.active) {
-      this.setState((prevState) => ({
-        ascending: !prevState.ascending,
-      }), () => {
-        if (this.state.ascending) {
-          // perform ascending comparisons of a.props.headerName and b.props.headerName
-          this.props.sortHandler(this.ascendingComp, this.props);
-        } else {
-          // perform descending comparisons
-          this.props.sortHandler(this.descendingComp, this.props);
-        }
-      });
+    // ensures this SortHeader is specified as active for this list
+    // if already active, toggle sort direction
+    const {
+      active,
+      headerKey,
+      toggleAscend,
+      setSortKey,
+    } = this.props;
+    if (active) {
+      toggleAscend(headerKey);
     }
-    this.props.setSortHandler(this.props.headerName);
+    setSortKey(headerKey);
   }
 
   ascendingComp(a, b) {
@@ -67,12 +79,13 @@ class ToggleSortHeader extends React.Component {
 
 
   render() {
+    const { active, ascending } = this.props;
     const headerClass = classNames(
-      'ToggleSortHeader',
+      styles.ToggleSortHeader,
       {
-        active: this.props.active,
-        down: this.state.ascending && this.props.active,
-        up: !this.state.ascending && this.props.active,
+        [styles.active]: active,
+        [styles.down]: ascending && active,
+        [styles.up]: !ascending && active,
       },
     );
 

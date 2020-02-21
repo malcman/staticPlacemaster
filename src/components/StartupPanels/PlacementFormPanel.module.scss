@@ -1,0 +1,55 @@
+@import 'src/styles/globalVariables';
+// Styles for placement creation form
+
+#newPlacementForm {
+  input[type="text"] {
+    background-color: $mainDark;
+    font-size: 1.3em;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 300;
+    color: white;
+    font-style: italic;
+    &::placeholder {
+      color: darken(white, 10%);
+    }
+  }
+  input[type="submit"] {
+    width: 100%;
+    cursor: pointer;
+    margin-left: 0;
+    border: 1px solid #275076;
+    font-size: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    padding: 15px 0;
+    border-radius: 0 0 5px 5px;
+    position: relative;
+    top: 15px;
+    background-color: white;
+    -webkit-appearance: none;
+  }
+  input {
+    margin-left: 10%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 5px;
+    width: 70%;
+  }
+  select {
+    margin-top: 5px;
+  }
+  input.hidden {
+    display: none;
+  }
+  h3 {
+    font-size: 1.5em;
+    font-weight: 400;
+  }
+  & > * {
+    margin-top: 4%;
+    margin-left: 5%;
+  }
+}
+
+.hidden {
+  display: none;
+}

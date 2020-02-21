@@ -1,0 +1,12 @@
+.membersPreviewHeaders {
+  width: 100%;
+  display: inline-grid;
+  grid-template-columns: repeat(3, 1fr) 100px;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  div {
+    display: inline-block;
+    margin-left: 15px;
+  }
+}

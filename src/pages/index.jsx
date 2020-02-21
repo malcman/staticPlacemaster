@@ -1,17 +1,19 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import SEO from '../components/seo';
 import Header from '../components/header';
-import ModuleContainer from '../components/ModuleContainer';
+
+import PanelContainer from '../components/containers/PanelContainer/PanelContainer';
 
 
-const IndexPage = () => (
-  <section>
-    <SEO title="Home" />
-    <Header siteTitle="Placemaster" />
-    <ModuleContainer />
-  </section>
-);
+const IndexPage = () => {
+  return (
+    <section>
+      <SEO title="Home" />
+      <Header siteTitle="Placemaster" />
+      <PanelContainer />
+    </section>
+  );
+};
 
 export default IndexPage;

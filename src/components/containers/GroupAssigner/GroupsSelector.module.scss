@@ -1,0 +1,26 @@
+@import 'src/styles/globalVariables';
+
+.groupsSelectorContainer {
+  width: 100%;
+  input[type="radio"] {
+    position:fixed;opacity:0;
+    width: 50%;
+  }
+  .groupsSelector {
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    &.active {
+      font-weight: bold;
+      border-bottom: 2px solid $mainDark;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

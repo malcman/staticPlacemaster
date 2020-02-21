@@ -5859,10 +5859,10 @@
       "gender": "M",
       "campus": "North Campus",
       "grad_standing": "Undergraduate",
-      "t_mon": "6-7 pm,7-8 pm, 8-9 pm",
-      "t_tue": "6-7 pm,7-8 pm, 8-9 pm",
-      "t_wed": "6-7 pm,7-8 pm, 8-9 pm",
-      "t_thu": "6-7 pm,7-8 pm, 8-9 pm"
+      "t_mon": "",
+      "t_tue": "",
+      "t_wed": "",
+      "t_thu": ""
     },
     {
       "first": "B7HJEHHB",

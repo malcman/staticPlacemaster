@@ -1,0 +1,40 @@
+.ToggleSortHeader {
+  display: inline-block;
+  padding: 5px 25px 5px 20px;
+  font-family: Helvetica Neue;
+  cursor: pointer;
+  h5 {
+    font-weight: 400;
+    position: relative;
+  }
+  &:last-of-type {
+    border-right: none;
+  }
+  &.active {
+    h5 {
+      font-weight: 600;
+    }
+    h5::after {
+      content: '';
+      transition: transform 0.3s;
+      position: absolute;
+      right: -15px;
+      top: 15%;
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 10px solid lighten(black, 20%);
+    }
+    &.down {
+      h5::after {
+        transform: rotate(90deg);
+      }
+    }
+    &.up {
+      h5::after {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}
